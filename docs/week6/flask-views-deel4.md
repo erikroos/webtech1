@@ -140,13 +140,15 @@ class Docent(db.Model):
         self.cursist_id = cursist_id
 ```
 
-Tot zover de code van de file `models.py`. Om de database aan te maken en om de wijzigingen door te voeren dienen nu de vier stappen van de vorige paragraaf uitgevoerd te worden:
+Tot zover de code van de file `models.py`. Om de database aan te maken en om de wijzigingen door te voeren dienen nu de vier stappen uitgevoerd te worden:
 
 - Stel de omgevingsvariabele FLASK_APP in
     - Voor een MacOS / Linux-machine is dat `export FLASK_APP = models.py`
     - Voor een Windows-machine `set FLASK_APP = models.py`
 
 - `flask db init`
+
+- `flask db migrate`
 
 - `flask db upgrade`
 
