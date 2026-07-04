@@ -1,7 +1,4 @@
-
-<!doctype html>
-<html lang="nl" class="no-js">
-  <head>
+<!DOCTYPE html><html lang="nl" class="no-js"><head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -10,7 +7,7 @@
       
       
       
-        <link rel="canonical" href="https://blackboard.hanze.nl/bbcswebdav/courses/itvt.1812.1-3-2019-20/webtech/index.html/week4/flask-deel2.html">
+        <link rel="canonical" href="https://erikroos.github.io/webtech1/week4/flask-deel2.html">
       
       
         <link rel="prev" href="flask-deel1.html">
@@ -18,8 +15,12 @@
       
         <link rel="next" href="flask-deel3.html">
       
+      
+        
+      
+      
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
       
@@ -27,51 +28,58 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.402914a4.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.a0c5b2b5.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
+
     
+    
+      
     
     
       
         
         
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
     
       <link rel="stylesheet" href="../css/extra.css">
     
-      <link rel="stylesheet" href="../css/ansi-colours.css">
-    
-      <link rel="stylesheet" href="../css/jupyter-cells.css">
-    
-      <link rel="stylesheet" href="../css/pandas-dataframe.css">
-    
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
-    
-  </head>
+  <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
   
   
     
+    
+      
     
     
     
     
     <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="orange">
   
-    
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -98,11 +106,12 @@
     <a href="../index.html" title="Webtechnologie 1" class="md-header__button md-logo" aria-label="Webtechnologie 1" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -121,8 +130,91 @@
       </div>
     </div>
     
+      
+        <form class="md-header__option" data-md-component="palette">
+  
     
     
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="orange" aria-label="Schakel naar donkere modus" type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Schakel naar donkere modus" for="__palette_1" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="orange" aria-label="Schakel naar lichte modus" type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Schakel naar lichte modus" for="__palette_0" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Zoeken" placeholder="Zoeken" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Zoeken">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Leegmaken" aria-label="Leegmaken" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix="">
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Zoeken initialiseren
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/erikroos/webtech1" title="Ga naar repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    erikroos/webtech1
+  </div>
+</a>
+      </div>
     
   </nav>
   
@@ -140,10 +232,11 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
+
 
 
 <nav class="md-nav md-nav--primary" aria-label="Navigatie" data-md-level="0">
@@ -151,24 +244,48 @@
     <a href="../index.html" title="Webtechnologie 1" class="md-nav__button md-logo" aria-label="Webtechnologie 1" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
 
     </a>
     Webtechnologie 1
   </label>
   
-  <ul class="md-nav__list" data-md-scrollfix>
+    <div class="md-nav__source">
+      <a href="https://github.com/erikroos/webtech1" title="Ga naar repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    erikroos/webtech1
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix="">
     
       
       
-      
-
+  
   
   
   
     <li class="md-nav__item">
       <a href="../index.html" class="md-nav__link">
-        Webtechnologie 1
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Start
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
@@ -176,972 +293,1707 @@
     
       
       
-      
-
+  
   
   
   
     
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
-          Projecten
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_2">
-          <span class="md-nav__icon md-icon"></span>
-          Projecten
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../projecten/index.html" class="md-nav__link">
-        Casuïsiek voor het project
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../projecten/bungelowpark.html" class="md-nav__link">
-        Bungelowpark
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../projecten/filmfan.html" class="md-nav__link">
-        Filmfan
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../projecten/programmeerles.html" class="md-nav__link">
-        Programmeerles
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../projecten/stage.html" class="md-nav__link">
-        Stage
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
     
       
+        
       
+        
       
-
-  
-  
-  
+        
+      
+        
+      
+    
+    
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
-          Week1
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3">
-          <span class="md-nav__icon md-icon"></span>
-          Week1
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2">
+        
           
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Week 1 - HTML, CSS en Bootstrap
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Week 1 - HTML, CSS en Bootstrap
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
             
               
+                
+  
   
   
   
     
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
-          1.html
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_1">
-          <span class="md-nav__icon md-icon"></span>
-          1.html
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1">
+        
           
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HTML
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    HTML
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../week1/1.html/html-deel1.html" class="md-nav__link">
-        HTML – Inleiding
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HTML – Inleiding
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../week1/1.html/html-deel2.html" class="md-nav__link">
-        HTML – tags
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HTML – tags
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../week1/1.html/html-deel3.html" class="md-nav__link">
-        HTML – Lists, Divs en Spans
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HTML – Lists, Divs en Spans
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../week1/1.html/html-deel4.html" class="md-nav__link">
-        HTML – Formulieren
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HTML – Formulieren
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
-          2.css
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_2">
-          <span class="md-nav__icon md-icon"></span>
-          2.css
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2">
+        
           
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CSS
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CSS
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../week1/2.css/css-deel1.html" class="md-nav__link">
-        CSS – Inleiding
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CSS – Inleiding
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../week1/2.css/css-deel2.html" class="md-nav__link">
-        CSS – selectors en matching-rules
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CSS – selectors en matching-rules
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../week1/2.css/css-deel3.html" class="md-nav__link">
-        CSS – Fonts
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CSS – Fonts
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
-          3.bootstrap
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_3">
-          <span class="md-nav__icon md-icon"></span>
-          3.bootstrap
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3">
+        
           
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bootstrap
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Bootstrap
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../week1/3.bootstrap/bootstrap-deel1.html" class="md-nav__link">
-        Bootstrap – Inleiding
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bootstrap – Inleiding
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../week1/3.bootstrap/bootstrap-deel2.html" class="md-nav__link">
-        Bootstrap – Voorbeeld
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bootstrap – Voorbeeld
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../week1/3.bootstrap/bootstrap-deel3.html" class="md-nav__link">
-        Bootstrap – Formulieren
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bootstrap – Formulieren
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../week1/3.bootstrap/bootstrap-deel4.html" class="md-nav__link">
-        Bootstrap – Navigatiebalk
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bootstrap – Navigatiebalk
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
-          Oefeningen
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_4">
-          <span class="md-nav__icon md-icon"></span>
-          Oefeningen
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4">
+        
           
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Oefeningen
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Oefeningen
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../week1/oefeningen/wk1oefening1.html" class="md-nav__link">
-        Oefening 1
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Oefening 1
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../week1/oefeningen/wk1oefening2.html" class="md-nav__link">
-        Oefening 2
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Oefening 2
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../week1/oefeningen/wk1oefening3.html" class="md-nav__link">
-        Oefening 3
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Oefening 3
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../week1/oefeningen/wk1oefening4.html" class="md-nav__link">
-        Oefening 4
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Oefening 4
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../week1/oefeningen/wk1oefening5.html" class="md-nav__link">
-        Oefening 5
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Oefening 5
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
     
       
       
+  
+  
+  
+  
+    
+    
       
-
-  
-  
-  
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
-          Week2
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_4">
-          <span class="md-nav__icon md-icon"></span>
-          Week2
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
+        
           
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Week 2 - Python OOP
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Week 2 - Python OOP
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../week2/oop-deel1.html" class="md-nav__link">
-        OOP Python – inleiding
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OOP Python – inleiding
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../week2/oop-deel2.html" class="md-nav__link">
-        OOP Python – Methoden
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OOP Python – Methoden en inkapseling
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../week2/oop-deel3.html" class="md-nav__link">
-        OOP Python - Meerdere klassen
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OOP Python - Meerdere klassen
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../week2/oop-deel4.html" class="md-nav__link">
-        OOP Python – Getters en Setters
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OOP Python – Getters en Setters
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../week2/oop-deel5.html" class="md-nav__link">
-        OOP Python – Overerving
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OOP Python – Overerving
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../week2/oop-deel6.html" class="md-nav__link">
-        OOP Python – Overriding en polymorfisme
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OOP Python – Overriding en polymorfisme
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../week2/oop-deel7.html" class="md-nav__link">
-        OOP Python – Compositie
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OOP Python – Compositie
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_8" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_4_8" id="__nav_4_8_label" tabindex="0">
-          Oefeningen
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_8_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_4_8">
-          <span class="md-nav__icon md-icon"></span>
-          Oefeningen
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8">
+        
           
+          <label class="md-nav__link" for="__nav_3_8" id="__nav_3_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Oefeningen
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Oefeningen
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../week2/oefeningen/oop-oefening1.html" class="md-nav__link">
-        OOP Python – Oefening 1
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OOP Python – Oefening 1
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../week2/oefeningen/oop-oefening2.html" class="md-nav__link">
-        OOP Python – Oefening 2
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OOP Python – Oefening 2
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../week2/oefeningen/oop-oefening3.html" class="md-nav__link">
-        OOP Python – Oefening 3
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OOP Python – Oefening 3
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
     
       
       
+  
+  
+  
+  
+    
+    
       
-
-  
-  
-  
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
-          Week3
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_5">
-          <span class="md-nav__icon md-icon"></span>
-          Week3
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4">
+        
           
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Week 3 - Python en databases
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Week 3 - Python en databases
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../week3/sql-deel1.html" class="md-nav__link">
-        Databasebeheer in Python
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Databasebeheer in Python
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../week3/sql-deel2.html" class="md-nav__link">
-        SQLite, basisvaardigheden
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SQLite, basisvaardigheden
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../week3/sql-deel3.html" class="md-nav__link">
-        De muziek databases
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    De muziek databases
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../week3/sql-deel4.html" class="md-nav__link">
-        SQL in Python
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SQL in Python
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../week3/sql-deel5.html" class="md-nav__link">
-        SQL-injectie
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SQL-injectie
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../week3/sql-deel6.html" class="md-nav__link">
-        Exceptions
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exceptions
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_7" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_5_7" id="__nav_5_7_label" tabindex="0">
-          Oefeningen
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_7_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_5_7">
-          <span class="md-nav__icon md-icon"></span>
-          Oefeningen
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7">
+        
           
+          <label class="md-nav__link" for="__nav_4_7" id="__nav_4_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Oefeningen
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Oefeningen
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../week3/oefeningen/sql-oefening1.html" class="md-nav__link">
-        Oefening 1
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Oefening 1
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../week3/oefeningen/sql-oefening2.html" class="md-nav__link">
-        Oefening 2
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Oefening 2
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../week3/oefeningen/sql-oefening3.html" class="md-nav__link">
-        Oefening 3
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Oefening 3
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../week3/oefeningen/sql-oefening4.html" class="md-nav__link">
-        Oefening 4
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Oefening 4
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
     
       
       
-      
-
   
   
     
   
   
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
     
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
-      
-      
-      
-        <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
-          Week4
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
-        <label class="md-nav__title" for="__nav_6">
-          <span class="md-nav__icon md-icon"></span>
-          Week4
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked="">
+        
           
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Week 4 - Flask en formulieren
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Week 4 - Flask en formulieren
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="flask-deel1.html" class="md-nav__link">
-        Flask – Inleiding
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Flask – Inleiding
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
     
+  
   
   
     <li class="md-nav__item md-nav__item--active">
@@ -1153,12 +2005,38 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Flask – Installatie
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Flask – Installatie
+  
+
+    
+  </span>
+  
+  
+
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="flask-deel2.html" class="md-nav__link md-nav__link--active">
-        Flask – Installatie
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Flask – Installatie
+  
+
+    
+  </span>
+  
+  
+
       </a>
       
         
@@ -1174,18 +2052,26 @@
       <span class="md-nav__icon md-icon"></span>
       Inhoudsopgave
     </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
   <a href="#wat-is-een-virtuele-omgeving" class="md-nav__link">
-    Wat is een virtuele omgeving?
+    <span class="md-ellipsis">
+      
+        Wat is een virtuele omgeving?
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#stappenplan-installatie" class="md-nav__link">
-    Stappenplan installatie:
+    <span class="md-ellipsis">
+      
+        Stappenplan installatie:
+      
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Stappenplan installatie:">
@@ -1193,35 +2079,55 @@
         
           <li class="md-nav__item">
   <a href="#stap-1-open-een-command-line" class="md-nav__link">
-    Stap 1: open een command line
+    <span class="md-ellipsis">
+      
+        Stap 1: open een command line
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#stap-2-een-directory-voor-virtuele-omgevingen" class="md-nav__link">
-    Stap 2: een directory voor virtuele omgevingen
+    <span class="md-ellipsis">
+      
+        Stap 2: een directory voor virtuele omgevingen
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#stap-3-het-aanmaken-van-een-virtuele-omgeving" class="md-nav__link">
-    Stap 3: het aanmaken van een virtuele omgeving
+    <span class="md-ellipsis">
+      
+        Stap 3: het aanmaken van een virtuele omgeving
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#stap-4-het-activeren-van-de-virtuele-omgeving" class="md-nav__link">
-    Stap 4: het activeren van de virtuele omgeving.
+    <span class="md-ellipsis">
+      
+        Stap 4: het activeren van de virtuele omgeving.
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#stap-5-toevoegen-module-flask" class="md-nav__link">
-    Stap 5: toevoegen module Flask.
+    <span class="md-ellipsis">
+      
+        Stap 5: toevoegen module Flask.
+      
+    </span>
   </a>
   
 </li>
@@ -1233,14 +2139,22 @@
       
         <li class="md-nav__item">
   <a href="#afsluiten-van-de-virtuele-omgeving" class="md-nav__link">
-    Afsluiten van de virtuele omgeving
+    <span class="md-ellipsis">
+      
+        Afsluiten van de virtuele omgeving
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#anaconda-python" class="md-nav__link">
-    Anaconda Python
+    <span class="md-ellipsis">
+      
+        Anaconda Python
+      
+    </span>
   </a>
   
 </li>
@@ -1252,532 +2166,1074 @@
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="flask-deel3.html" class="md-nav__link">
-        Flask – basale werking
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Flask – basale werking
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="flask-deel4.html" class="md-nav__link">
-        Flask – Templates
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Flask – Templates
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="flask-forms-deel1.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Flask forms deel1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="flask-forms-deel2.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Flask en Forms - Form Fields
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="flask-forms-deel3.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Flask en Forms - Flash-berichten
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
   
   
   
     
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_5" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_6_5" id="__nav_6_5_label" tabindex="0">
-          Oefeningen
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_5_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_6_5">
-          <span class="md-nav__icon md-icon"></span>
-          Oefeningen
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_8">
+        
           
+          <label class="md-nav__link" for="__nav_5_8" id="__nav_5_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Oefeningen
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Oefeningen
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="oefeningen/flask-oefening1.html" class="md-nav__link">
-        Flask – Oefening 1
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Flask – Oefening 1
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="oefeningen/flask-forms-oefening1.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Flask en forms - Oefening 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
     
       
       
-      
-
+  
   
   
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    
       
+        
       
+        
       
+        
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
       
+        
       
+        
       
-        <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
-          Week5
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_7">
-          <span class="md-nav__icon md-icon"></span>
-          Week5
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../week5/flask-forms-deel1.html" class="md-nav__link">
-        Flask forms deel1
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../week5/flask-forms-deel2.html" class="md-nav__link">
-        Flask en Forms - Form Fields
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../week5/flask-forms-deel3.html" class="md-nav__link">
-        Flask en Forms - Flash-berichten
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
+    
+    
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_4" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_7_4" id="__nav_7_4_label" tabindex="0">
-          Oefeningen
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_4_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_7_4">
-          <span class="md-nav__icon md-icon"></span>
-          Oefeningen
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6">
+        
           
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
             
-              
   
   
+  <span class="md-ellipsis">
+    
   
-    <li class="md-nav__item">
-      <a href="../week5/oefeningen/flask-forms-oefening1.html" class="md-nav__link">
-        Flask en forms - Oefening 1
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
+    Week 5 - Flask en databases (ORM)
   
 
     
-      
-      
-      
+  </span>
+  
+  
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Week 5 - Flask en databases (ORM)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../week5/flask-views-deel1.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Flask en SQL - Theorie
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../week5/flask-views-deel2.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Flask en SQL - het opzetten van een database
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../week5/flask-views-deel3.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Flask en SQL - CRUD
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../week5/flask-views-deel4.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Flask en SQL - Relaties
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../week5/flask-views-deel5.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Flask en SQL - Website
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
   
   
   
     
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
-          Week6
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_8">
-          <span class="md-nav__icon md-icon"></span>
-          Week6
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../week6/flask-views-deel1.html" class="md-nav__link">
-        Flask en SQL - Theorie
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../week6/flask-views-deel2.html" class="md-nav__link">
-        Flask en SQL - het opzetten van een database
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../week6/flask-views-deel3.html" class="md-nav__link">
-        Flask en SQL - CRUD
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../week6/flask-views-deel4.html" class="md-nav__link">
-        Flask en SQL - Relaties
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../week6/flask-views-deel5.html" class="md-nav__link">
-        Flask en SQL - Website
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_6" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_8_6" id="__nav_8_6_label" tabindex="0">
-          Oefeningen
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_6_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_8_6">
-          <span class="md-nav__icon md-icon"></span>
-          Oefeningen
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../week6/oefeningen/flask-views-oefening1.html" class="md-nav__link">
-        Flask en SQL - Oefening 1
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
     
       
+        
       
-      
-
-  
-  
-  
+    
+    
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
-          Week7
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_9">
-          <span class="md-nav__icon md-icon"></span>
-          Week7
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_6">
+        
           
+          <label class="md-nav__link" for="__nav_6_6" id="__nav_6_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Oefeningen
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Oefeningen
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
-      <a href="../week7/flask-applicaties-deel1.html" class="md-nav__link">
-        Flask-applicaties - Structuur
+      <a href="../week5/oefeningen/flask-views-oefening1.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Flask en SQL - Oefening 1
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-            
-          
-            
               
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../week7/flask-applicaties-deel2.html" class="md-nav__link">
-        Flask-applicaties - Refactored
-      </a>
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
-            
-          
-            
               
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../week7/flask-applicaties-deel3.html" class="md-nav__link">
-        Flask-applicaties - Blueprints
-      </a>
-    </li>
-  
-
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
     
       
       
+  
+  
+  
+  
+    
+    
       
-
-  
-  
-  
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
-          Week8
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_10">
-          <span class="md-nav__icon md-icon"></span>
-          Week8
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7">
+        
           
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Week 6 - User authentication
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Week 6 - User authentication
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
-      <a href="../week8/user-authentication-deel1.html" class="md-nav__link">
-        User authentication - Hashing
+      <a href="../week6/user-authentication-deel1.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    User authentication - Hashing
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
-      <a href="../week8/user-authentication-deel2.html" class="md-nav__link">
-        User authentication - Flask_login deel I
+      <a href="../week6/user-authentication-deel2.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    User authentication - Flask_login deel I
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
-      <a href="../week8/user-authentication-deel3.html" class="md-nav__link">
-        User authentication - Flask_login deel II
+      <a href="../week6/user-authentication-deel3.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    User authentication - Flask_login deel II
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
-      <a href="../week8/user-authentication-deel4.html" class="md-nav__link">
-        User authentication - Flask_login deel III
+      <a href="../week6/user-authentication-deel4.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    User authentication - Flask_login deel III
+  
+
+    
+  </span>
+  
+  
+
       </a>
     </li>
   
 
+              
             
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8">
+        
           
-        </ul>
-      </nav>
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Verdieping (optioneel)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Verdieping (optioneel)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../verdieping/flask-applicaties-deel1.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Flask-applicaties - Structuur
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../verdieping/flask-applicaties-deel2.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Flask-applicaties - Refactored
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../verdieping/flask-applicaties-deel3.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Flask-applicaties - Blueprints
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../projecten/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Projecten
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_9" id="__nav_9_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Projecten
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../projecten/bungalowpark.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bungalowpark
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../projecten/filmfan.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Filmfan
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../projecten/programmeerles.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Programmeerles
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../projecten/stage.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stage
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -1790,7 +3246,7 @@
             
             
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -1806,18 +3262,26 @@
       <span class="md-nav__icon md-icon"></span>
       Inhoudsopgave
     </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
   <a href="#wat-is-een-virtuele-omgeving" class="md-nav__link">
-    Wat is een virtuele omgeving?
+    <span class="md-ellipsis">
+      
+        Wat is een virtuele omgeving?
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#stappenplan-installatie" class="md-nav__link">
-    Stappenplan installatie:
+    <span class="md-ellipsis">
+      
+        Stappenplan installatie:
+      
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Stappenplan installatie:">
@@ -1825,35 +3289,55 @@
         
           <li class="md-nav__item">
   <a href="#stap-1-open-een-command-line" class="md-nav__link">
-    Stap 1: open een command line
+    <span class="md-ellipsis">
+      
+        Stap 1: open een command line
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#stap-2-een-directory-voor-virtuele-omgevingen" class="md-nav__link">
-    Stap 2: een directory voor virtuele omgevingen
+    <span class="md-ellipsis">
+      
+        Stap 2: een directory voor virtuele omgevingen
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#stap-3-het-aanmaken-van-een-virtuele-omgeving" class="md-nav__link">
-    Stap 3: het aanmaken van een virtuele omgeving
+    <span class="md-ellipsis">
+      
+        Stap 3: het aanmaken van een virtuele omgeving
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#stap-4-het-activeren-van-de-virtuele-omgeving" class="md-nav__link">
-    Stap 4: het activeren van de virtuele omgeving.
+    <span class="md-ellipsis">
+      
+        Stap 4: het activeren van de virtuele omgeving.
+      
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#stap-5-toevoegen-module-flask" class="md-nav__link">
-    Stap 5: toevoegen module Flask.
+    <span class="md-ellipsis">
+      
+        Stap 5: toevoegen module Flask.
+      
+    </span>
   </a>
   
 </li>
@@ -1865,14 +3349,22 @@
       
         <li class="md-nav__item">
   <a href="#afsluiten-van-de-virtuele-omgeving" class="md-nav__link">
-    Afsluiten van de virtuele omgeving
+    <span class="md-ellipsis">
+      
+        Afsluiten van de virtuele omgeving
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#anaconda-python" class="md-nav__link">
-    Anaconda Python
+    <span class="md-ellipsis">
+      
+        Anaconda Python
+      
+    </span>
   </a>
   
 </li>
@@ -1887,186 +3379,278 @@
           
           
             <div class="md-content" data-md-component="content">
+              
               <article class="md-content__inner md-typeset">
                 
                   
 
 
-<h1 id="flask-installatie">Flask – Installatie<a class="headerlink" href="#flask-installatie" title="Permanent link">&para;</a></h1>
+  
+    <a href="https://github.com/erikroos/webtech1/edit/main/docs/week4/flask-deel2.md" title="Wijzig deze pagina" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"></path></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/erikroos/webtech1/raw/main/docs/week4/flask-deel2.md" title="Bron van deze pagina bekijken" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"></path></svg>
+    </a>
+  
+
+
+<h1 id="flask-installatie">Flask – Installatie<a class="headerlink" href="#flask-installatie" title="Permanent link">¶</a></h1>
 <p>Er zijn meerdere manieren om Flask te installeren en er gelijk mee te kunnen werken. Hier wordt de meest gebruikelijke wijze getoond waarbij we gebruik maken van een Python <em>virtuele omgeving</em>.</p>
-<h2 id="wat-is-een-virtuele-omgeving">Wat is een virtuele omgeving?<a class="headerlink" href="#wat-is-een-virtuele-omgeving" title="Permanent link">&para;</a></h2>
+<h2 id="wat-is-een-virtuele-omgeving">Wat is een virtuele omgeving?<a class="headerlink" href="#wat-is-een-virtuele-omgeving" title="Permanent link">¶</a></h2>
 <p>In de kern is het belangrijkste doel van virtuele Python-omgevingen het creëren van een geïsoleerde omgeving voor Python-projecten. Dit betekent dat elk project zijn eigen afhankelijkheden kan hebben, ongeacht welke afhankelijkheden elk ander project heeft. Het mooie hiervan is dat er geen limieten zijn aan het aantal omgevingen, aangezien het slechts mappen (directories) zijn met een paar scripts en bovendien kunnen ze eenvoudig worden gemaakt met Python zelf.</p>
-<h2 id="stappenplan-installatie">Stappenplan installatie:<a class="headerlink" href="#stappenplan-installatie" title="Permanent link">&para;</a></h2>
-<h3 id="stap-1-open-een-command-line">Stap 1: open een command line<a class="headerlink" href="#stap-1-open-een-command-line" title="Permanent link">&para;</a></h3>
+<h2 id="stappenplan-installatie">Stappenplan installatie:<a class="headerlink" href="#stappenplan-installatie" title="Permanent link">¶</a></h2>
+<h3 id="stap-1-open-een-command-line">Stap 1: open een command line<a class="headerlink" href="#stap-1-open-een-command-line" title="Permanent link">¶</a></h3>
 <p>In thema 1.1 en 1.2 hebben we ook al gewerkt met een command line. Op macOS kun je eenvoudig het programma <em>Terminal</em> openen, op Windows kan je 'PowerShell' gebruiken of 'Cmd' gebruiken. We raden hier PowerShell aan omdat je alle commando's die we straks gaan noemen ook daar kan gebruiken (bijvoorbeeld <code>mkdir</code>, <code>cd</code> en <code>ls</code>). In alle gevallen kom je als je het programma opstart standaard in je <em>home directory</em> (<code>~/</code>) terecht.</p>
 <div class="admonition tip">
 <p class="admonition-title">Microsoft Windows Terminal</p>
-<p>De standaard Windows terminal waar een <em>shell</em> als bijvoorbeeld PowerShell in wordt geopend is software uit de vorige eeuw. Microsoft heeft een nieuwe terminal applicatie ontwikkeld die je kan installeren via <a href="https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701">Windows Store</a>.</p>
-<p><img alt="Voorbeeld van Windows Terminal" src="imgs/powershell.png" /></p>
-<p>Een voordeel van deze nieuwe terminal is dat je het naar eigen smaak kan aanpassen (configureren) maar ook dat het kleuren en bijvoorbeeld emoji beter ondersteunt (👍). Microsoft is van plan deze toepassing in de toekomst een standaard onderdeel van Windows te maken.</p>
+<p>Op Windows 11 is <a href="https://apps.microsoft.com/detail/9n0dx20hk701">Windows Terminal</a> de standaard terminal-applicatie; op oudere Windows-versies kun je deze via de Microsoft Store installeren.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="imgs/powershell.png" data-desc-position="bottom"><img alt="Voorbeeld van Windows Terminal" src="imgs/powershell.png"></a></p>
+<p>Een voordeel van deze terminal is dat je hem naar eigen smaak kan aanpassen (configureren) maar ook dat hij kleuren en bijvoorbeeld emoji goed ondersteunt (👍).</p>
 <p>Command line toepassingen lijken iets uit het verleden maar zijn nog steeds erg belangrijk, zo belangrijk zelfs dat Microsoft heel druk is deze omgeving opnieuw te ontwikkelen bijvoorbeeld met deze nieuwe terminal. Zie <a href="https://devblogs.microsoft.com/commandline/windows-command-line-backgrounder/">Windows Command-Line: Backgrounder</a> als je het interessant vindt om meer over de geschiedenis van de command line te weten en waarom Microsoft deze omgeving voor Windows moderniseert.</p>
 </div>
 <p>Editors als bijvoorbeeld <a href="https://code.visualstudio.com/">VSCode</a> of <a href="https://www.jetbrains.com/pycharm/">Pycharm</a> hebben veelal een ingebouwde terminal, voor alle stappen die we nu gaan doorlopen kan je daar natuurlijk ook gebruik van maken (maar voor Windows gebruikers, let op dat daar PowerShell in wordt geopend).</p>
-<h3 id="stap-2-een-directory-voor-virtuele-omgevingen">Stap 2: een directory voor virtuele omgevingen<a class="headerlink" href="#stap-2-een-directory-voor-virtuele-omgevingen" title="Permanent link">&para;</a></h3>
+<h3 id="stap-2-een-directory-voor-virtuele-omgevingen">Stap 2: een directory voor virtuele omgevingen<a class="headerlink" href="#stap-2-een-directory-voor-virtuele-omgevingen" title="Permanent link">¶</a></h3>
 <p>Maak met <code>mkdir</code> een directory aan waar je jouw Python virtuele omgeving(en) gaat beheren. Deze directory mag elke naam hebben, we kiezen in het voorbeeld hieronder voor de naam 'venvs'</p>
-<div class="highlight"><pre><span></span><code><span class="go">~ $&gt; mkdir venvs</span>
-<span class="go">~ $&gt;</span>
-</code></pre></div>
-<h3 id="stap-3-het-aanmaken-van-een-virtuele-omgeving">Stap 3: het aanmaken van een virtuele omgeving<a class="headerlink" href="#stap-3-het-aanmaken-van-een-virtuele-omgeving" title="Permanent link">&para;</a></h3>
+<div class="language-console highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="go">~ $&gt; mkdir venvs</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="go">~ $&gt;</span>
+</code></pre></div></td></tr></tbody></table></div>
+<h3 id="stap-3-het-aanmaken-van-een-virtuele-omgeving">Stap 3: het aanmaken van een virtuele omgeving<a class="headerlink" href="#stap-3-het-aanmaken-van-een-virtuele-omgeving" title="Permanent link">¶</a></h3>
 <p>Nu is het tijd om een virtuele omgeving aan te maken, in dit geval voor alles wat met de ontwikkeling van een webapplicate te maken heeft. Stap met <code>cd</code> (<em>change directory</em>) naar de directory die je net hebt aangemaakt voor het beheer van virtuele omgevingen:</p>
-<div class="highlight"><pre><span></span><code><span class="go">~ $&gt; cd venvs</span>
-<span class="go">~/venvs $&gt;</span>
-</code></pre></div>
+<div class="language-console highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="go">~ $&gt; cd venvs</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="go">~/venvs $&gt;</span>
+</code></pre></div></td></tr></tbody></table></div>
 <p>Een virtuele omgeving mag ook elke naam hebben die je maar wilt, we kiezen in dit voorbeeld voor <code>webtech</code> omdat de naam iets zegt over het doel van de virtuele omgeving, namelijk webtechnologie! Maak de virtuele omgeving met Python als volgt aan:</p>
-<div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">macOS / Linux</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code><span class="go">python3 -m venv webtech</span>
-</code></pre></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">macOS / Linux</label><label for="__tabbed_1_2">Windows</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-console highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="go">python3 -m venv webtech</span>
+</code></pre></div></td></tr></tbody></table></div>
 </div>
-<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">Windows</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code><span class="go">python.exe -m venv webtech</span>
-</code></pre></div>
+<div class="tabbed-block">
+<div class="language-console highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="go">python.exe -m venv webtech</span>
+</code></pre></div></td></tr></tbody></table></div>
 </div>
 </div>
-<p>Met de toevoeging <code>-m venv</code> zeg je tegen Python de <code>venv</code> module te gebruiken met als argument de directory waar de omgeving in moet worden aangemaakt (<code>webtech</code>). Nadat het commando is ingegeven en er op <code>&lt;ENTER&gt;</code> is gedrukt zal het enige tijd duren voor voordat het klaar is, er wordt in de tussentijd van alles geïnstalleerd.</p>
+</div>
+<p>Met de toevoeging <code>-m venv</code> zeg je tegen Python de <code>venv</code> module te gebruiken met als argument de directory waar de omgeving in moet worden aangemaakt (<code>webtech</code>). Nadat het commando is ingegeven en er op <code>&lt;ENTER&gt;</code> is gedrukt zal het enige tijd duren voordat het klaar is, er wordt in de tussentijd van alles geïnstalleerd.</p>
 <p>Controleer of deze stap is gelukt, typ <code>ls</code> (<em>list directory contents</em>) om de inhoud van de directory te bekijken. Als het goed is zal je nu een <em>subdirectory</em> <code>webtech</code> zien:</p>
-<div class="highlight"><pre><span></span><code><span class="go">~/venv $&gt; ls</span>
-<span class="go">webtech</span>
-<span class="go">~/venv $&gt;</span>
-</code></pre></div>
+<div class="language-console highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span>
+<span class="normal"><a href="#__codelineno-4-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="go">~/venvs $&gt; ls</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="go">webtech</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="go">~/venvs $&gt;</span>
+</code></pre></div></td></tr></tbody></table></div>
 <p>Er is een virtuele omgeving aangemaakt met de naam <code>webtech</code> en in die directory zijn een aantal subdirectories en bestanden neergezet. De subdirectory <code>Scripts</code> (Windows) of <code>bin</code> (macOS / Linux) laat het volgende zien:</p>
-<div class="tabbed-set" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">macOS / Linux</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code>webtech/bin/
-├── Activate.ps1
-├── activate
-├── activate.csh
-├── activate.fish
-├── easy_install
-├── easy_install-3.8
-├── pip
-├── pip3
-├── pip3.8
-├── python -&gt; python3
-└── python3 -&gt; /usr/bin/python3
-</code></pre></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">macOS / Linux</label><label for="__tabbed_2_2">Windows</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-text highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-5-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-5-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-5-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-5-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-5-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-5-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-5-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-5-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-5-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>webtech/bin/
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a>├── Activate.ps1
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a>├── activate
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a>├── activate.csh
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a>├── activate.fish
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a>├── pip
+<a id="__codelineno-5-7" name="__codelineno-5-7"></a>├── pip3
+<a id="__codelineno-5-8" name="__codelineno-5-8"></a>├── pip3.13
+<a id="__codelineno-5-9" name="__codelineno-5-9"></a>├── python -&gt; python3
+<a id="__codelineno-5-10" name="__codelineno-5-10"></a>└── python3 -&gt; /usr/bin/python3
+</code></pre></div></td></tr></tbody></table></div>
 </div>
-<input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><label for="__tabbed_2_2">Windows</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code>webtech/Scripts/
-├── Activate.ps1
-├── activate
-├── activate.bat
-├── deactivate.bat
-├── easy_install-3.8.exe
-├── easy_install.exe
-├── pip.exe
-├── pip3.8.exe
-├── pip3.exe
-├── python.exe
-└── pythonw.exe
-</code></pre></div>
+<div class="tabbed-block">
+<div class="language-text highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-6-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-6-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-6-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-6-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-6-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-6-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-6-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-6-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-6-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a>webtech/Scripts/
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a>├── Activate.ps1
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a>├── activate
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a>├── activate.bat
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a>├── deactivate.bat
+<a id="__codelineno-6-6" name="__codelineno-6-6"></a>├── pip.exe
+<a id="__codelineno-6-7" name="__codelineno-6-7"></a>├── pip3.13.exe
+<a id="__codelineno-6-8" name="__codelineno-6-8"></a>├── pip3.exe
+<a id="__codelineno-6-9" name="__codelineno-6-9"></a>├── python.exe
+<a id="__codelineno-6-10" name="__codelineno-6-10"></a>└── pythonw.exe
+</code></pre></div></td></tr></tbody></table></div>
 </div>
 </div>
-<p>Als je verder gaat rondkijken zal je zien dat een virtuele omgeving eigenlijk een mini-Python installatie is. Het is een flink rijtje bestanden, maar ongelukkigerwijze ontbreekt Flask nog. Om dat te kunnen installeren moeten we eerst onze nieuwe virtuele omgeving activeren en daar gaan we de scripts in de subirectory <code>Scripts</code> of <code>bin</code> voor gebruiken.</p>
-<h3 id="stap-4-het-activeren-van-de-virtuele-omgeving">Stap 4: het activeren van de virtuele omgeving.<a class="headerlink" href="#stap-4-het-activeren-van-de-virtuele-omgeving" title="Permanent link">&para;</a></h3>
-<div class="tabbed-set" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><label for="__tabbed_3_1">macOS / Linux</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code><span class="go">~/venv $&gt; source webtech/bin/activate</span>
-<span class="gp gp-VirtualEnv">(webtech)</span><span class="go">~/venv $&gt;</span>
-</code></pre></div>
 </div>
-<input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><label for="__tabbed_3_2">Windows</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code><span class="go">~/venv $&gt; .\webtech\Scripts\activate</span>
-<span class="gp gp-VirtualEnv">(webtech)</span><span class="go">~/venv $&gt;</span>
-</code></pre></div>
+<p>Als je verder gaat rondkijken zal je zien dat een virtuele omgeving eigenlijk een mini-Python installatie is. Het is een flink rijtje bestanden, maar ongelukkigerwijze ontbreekt Flask nog. Om dat te kunnen installeren moeten we eerst onze nieuwe virtuele omgeving activeren en daar gaan we de scripts in de subdirectory <code>Scripts</code> of <code>bin</code> voor gebruiken.</p>
+<h3 id="stap-4-het-activeren-van-de-virtuele-omgeving">Stap 4: het activeren van de virtuele omgeving.<a class="headerlink" href="#stap-4-het-activeren-van-de-virtuele-omgeving" title="Permanent link">¶</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">macOS / Linux</label><label for="__tabbed_3_2">Windows</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-console highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
+<span class="normal"><a href="#__codelineno-7-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="go">~/venvs $&gt; source webtech/bin/activate</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="gp gp-VirtualEnv">(webtech)</span><span class="go">~/venvs $&gt;</span>
+</code></pre></div></td></tr></tbody></table></div>
+</div>
+<div class="tabbed-block">
+<div class="language-console highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
+<span class="normal"><a href="#__codelineno-8-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="go">~/venvs $&gt; .\webtech\Scripts\activate</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="gp gp-VirtualEnv">(webtech)</span><span class="go">~/venvs $&gt;</span>
+</code></pre></div></td></tr></tbody></table></div>
+</div>
 </div>
 </div>
 <p>Je zal zien dat de command prompt nu wordt aangevuld met de naam van de virtuele omgeving tussen haakjes. Dit is het teken dat de virtuele omgeving is geactiveerd!</p>
-<p><img alt="Voorbeeld van een geactiveerde virtuele omgeving in Windows PowerShell" src="imgs/powershell_activate.png" /></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="imgs/powershell_activate.png" data-desc-position="bottom"><img alt="Voorbeeld van een geactiveerde virtuele omgeving in Windows PowerShell" src="imgs/powershell_activate.png"></a></p>
 <div class="admonition warning">
 <p class="admonition-title">Activeren</p>
 <p>De virtuele omgeving wordt alleen voor de huidige terminal sessie geactiveerd en <em>niet</em> voor het hele systeem. Je zult dit zien als je een nieuwe command line opent: daar zal je opnieuw de virtuele omgeving moeten activeren om er gebruik van te kunnen maken.</p>
 </div>
-<h3 id="stap-5-toevoegen-module-flask">Stap 5: toevoegen module Flask.<a class="headerlink" href="#stap-5-toevoegen-module-flask" title="Permanent link">&para;</a></h3>
+<h3 id="stap-5-toevoegen-module-flask">Stap 5: toevoegen module Flask.<a class="headerlink" href="#stap-5-toevoegen-module-flask" title="Permanent link">¶</a></h3>
 <p>Om de module Flask te installeren maken we gebruik van <code>Python Package Installer</code>, oftewel <a href="https://pypi.org/project/pip/"><code>pip</code></a>, als je goed hebt opgelet zag je deze al in de <code>Scripts</code> of <code>bin</code> directory staan.</p>
 <p>Nu de virtuele omgeving is geactiveerd zijn <code>pip</code> en de andere scripts overal aan te roepen. Bijvoorbeeld, <code>cd</code> terug naar de home directory:</p>
-<div class="highlight"><pre><span></span><code><span class="gp gp-VirtualEnv">(webtech)</span><span class="go">~/venv $&gt; cd ..</span>
-<span class="gp gp-VirtualEnv">(webtech)</span><span class="go">~ $&gt;</span>
-</code></pre></div>
+<div class="language-console highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
+<span class="normal"><a href="#__codelineno-9-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="gp gp-VirtualEnv">(webtech)</span><span class="go">~/venvs $&gt; cd ..</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="gp gp-VirtualEnv">(webtech)</span><span class="go">~ $&gt;</span>
+</code></pre></div></td></tr></tbody></table></div>
 <p>Roep vervolgens <code>pip</code> aan om Flask als volgt te installeren:</p>
-<div class="highlight"><pre><span></span><code><span class="gp gp-VirtualEnv">(webtech)</span><span class="go">~ $&gt; pip install flask</span>
-</code></pre></div>
-<p>Er wordt weer hard gewerkt achter de schermen en het eindresultaat mag er weer zijn. Controleer nu de inhoud van de directory <code>venvs/webtech/Scripts</code> (Windows) of <code>venv/webtech/bin</code> (macOS / Linux) en je zult zien dat een nieuw script is toegevoegd</p>
-<div class="tabbed-set" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><label for="__tabbed_4_1">macOS / Linux</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code>venvs/webtech/bin/
-├── Activate.ps1
-├── activate
-├── activate.csh
-├── activate.fish
-├── easy_install
-├── easy_install-3.8
-<span class="hll">├── flask
-</span>├── pip
-├── pip3
-├── pip3.8
-├── python -&gt; python3
-└── python3 -&gt; /usr/bin/python3
-</code></pre></div>
+<div class="language-console highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="gp gp-VirtualEnv">(webtech)</span><span class="go">~ $&gt; pip install flask</span>
+</code></pre></div></td></tr></tbody></table></div>
+<p>Er wordt weer hard gewerkt achter de schermen en het eindresultaat mag er weer zijn. Controleer nu de inhoud van de directory <code>venvs/webtech/Scripts</code> (Windows) of <code>venvs/webtech/bin</code> (macOS / Linux) en je zult zien dat een nieuw script is toegevoegd</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio"><input id="__tabbed_4_2" name="__tabbed_4" type="radio"><div class="tabbed-labels"><label for="__tabbed_4_1">macOS / Linux</label><label for="__tabbed_4_2">Windows</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-text highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-11-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-11-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-11-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-11-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-11-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-11-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-11-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-11-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-11-10">10</a></span>
+<span class="normal"><a href="#__codelineno-11-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a>venvs/webtech/bin/
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a>├── Activate.ps1
+<a id="__codelineno-11-3" name="__codelineno-11-3"></a>├── activate
+<a id="__codelineno-11-4" name="__codelineno-11-4"></a>├── activate.csh
+<a id="__codelineno-11-5" name="__codelineno-11-5"></a>├── activate.fish
+<a id="__codelineno-11-6" name="__codelineno-11-6"></a>├── flask
+<a id="__codelineno-11-7" name="__codelineno-11-7"></a>├── pip
+<a id="__codelineno-11-8" name="__codelineno-11-8"></a><span class="hll">├── pip3
+</span><a id="__codelineno-11-9" name="__codelineno-11-9"></a>├── pip3.13
+<a id="__codelineno-11-10" name="__codelineno-11-10"></a>├── python -&gt; python3
+<a id="__codelineno-11-11" name="__codelineno-11-11"></a>└── python3 -&gt; /usr/bin/python3
+</code></pre></div></td></tr></tbody></table></div>
 </div>
-<input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><label for="__tabbed_4_2">Windows</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code>venvs/webtech/Scripts/
-├── Activate.ps1
-├── activate
-├── activate.bat
-├── deactivate.bat
-├── easy_install-3.8.exe
-├── easy_install.exe
-<span class="hll">├── flask.exe
-</span>├── pip.exe
-├── pip3.8.exe
-├── pip3.exe
-├── python.exe
-└── pythonw.exe
-</code></pre></div>
+<div class="tabbed-block">
+<div class="language-text highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-12-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-12-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-12-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-12-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-12-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-12-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-12-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-12-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-12-10">10</a></span>
+<span class="normal"><a href="#__codelineno-12-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a>venvs/webtech/Scripts/
+<a id="__codelineno-12-2" name="__codelineno-12-2"></a>├── Activate.ps1
+<a id="__codelineno-12-3" name="__codelineno-12-3"></a>├── activate
+<a id="__codelineno-12-4" name="__codelineno-12-4"></a>├── activate.bat
+<a id="__codelineno-12-5" name="__codelineno-12-5"></a>├── deactivate.bat
+<a id="__codelineno-12-6" name="__codelineno-12-6"></a>├── flask.exe
+<a id="__codelineno-12-7" name="__codelineno-12-7"></a>├── pip.exe
+<a id="__codelineno-12-8" name="__codelineno-12-8"></a><span class="hll">├── pip3.13.exe
+</span><a id="__codelineno-12-9" name="__codelineno-12-9"></a>├── pip3.exe
+<a id="__codelineno-12-10" name="__codelineno-12-10"></a>├── python.exe
+<a id="__codelineno-12-11" name="__codelineno-12-11"></a>└── pythonw.exe
+</code></pre></div></td></tr></tbody></table></div>
+</div>
 </div>
 </div>
 <p>Dit script gaan we straks gebruiken om het opstarten van onze applicatie tijdens het ontwikkelen te vergemakkelijken. Je kan het direct al aanroepen om bijvoorbeeld de geïnstalleerde versie op te vragen:</p>
-<div class="highlight"><pre><span></span><code><span class="gp gp-VirtualEnv">(webtech)</span><span class="go">~ $&gt; flask --version</span>
-<span class="go">Python 3.8.6</span>
-<span class="go">Flask 1.1.2</span>
-<span class="go">Werkzeug 1.0.1</span>
-</code></pre></div>
+<div class="language-console highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span>
+<span class="normal"><a href="#__codelineno-13-2">2</a></span>
+<span class="normal"><a href="#__codelineno-13-3">3</a></span>
+<span class="normal"><a href="#__codelineno-13-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="gp gp-VirtualEnv">(webtech)</span><span class="go">~ $&gt; flask --version</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2"></a><span class="go">Python 3.13.1</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3"></a><span class="go">Flask 3.1.0</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4"></a><span class="go">Werkzeug 3.1.3</span>
+</code></pre></div></td></tr></tbody></table></div>
 <p>Als laatste test proberen we de Flask <em>module</em> te importeren in de interactieve python-shell:</p>
-<div class="tabbed-set" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><label for="__tabbed_5_1">macOS / Linux</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code><span class="gp gp-VirtualEnv">(webtech)</span><span class="go">~ $&gt; python3</span>
-<span class="go">Python 3.8.6 (default, Sep 25 2020, 09:36:53)</span>
-<span class="go">[GCC 10.2.0] on linux</span>
-<span class="go">Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.</span>
-<span class="hll"><span class="go">&gt;&gt;&gt; import flask</span>
-</span><span class="go">&gt;&gt;&gt; flask.__version__</span>
-<span class="go">&#39;1.1.2&#39;</span>
-<span class="go">&gt;&gt;&gt;</span>
-</code></pre></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio"><input id="__tabbed_5_2" name="__tabbed_5" type="radio"><div class="tabbed-labels"><label for="__tabbed_5_1">macOS / Linux</label><label for="__tabbed_5_2">Windows</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-console highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span>
+<span class="normal"><a href="#__codelineno-14-2">2</a></span>
+<span class="normal"><a href="#__codelineno-14-3">3</a></span>
+<span class="normal"><a href="#__codelineno-14-4">4</a></span>
+<span class="normal"><a href="#__codelineno-14-5">5</a></span>
+<span class="normal"><a href="#__codelineno-14-6">6</a></span>
+<span class="normal"><a href="#__codelineno-14-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="gp gp-VirtualEnv">(webtech)</span><span class="go">~ $&gt; python3</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2"></a><span class="go">Python 3.13.1 (main, Dec  3 2024, 17:59:52)</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3"></a><span class="go">Type "help", "copyright", "credits" or "license" for more information.</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4"></a><span class="go">&gt;&gt;&gt; import flask</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5"></a><span class="hll"><span class="go">&gt;&gt;&gt; flask.__version__</span>
+</span><a id="__codelineno-14-6" name="__codelineno-14-6"></a><span class="go">'3.1.0'</span>
+<a id="__codelineno-14-7" name="__codelineno-14-7"></a><span class="go">&gt;&gt;&gt;</span>
+</code></pre></div></td></tr></tbody></table></div>
 </div>
-<input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><label for="__tabbed_5_2">Windows</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code><span class="gp gp-VirtualEnv">(webtech)</span><span class="go">~ $&gt; python.exe</span>
-<span class="go">Python 3.8.8 (tags/v3.8.8:024d805, Feb 19 2021, 13:18:16) [MSC v.1928 64 bit (AMD64)] on win32</span>
-<span class="go">Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.</span>
-<span class="hll"><span class="go">&gt;&gt;&gt; import flask</span>
-</span><span class="go">&gt;&gt;&gt; flask.__version__</span>
-<span class="go">&#39;1.1.2&#39;</span>
-<span class="go">&gt;&gt;&gt;</span>
-</code></pre></div>
+<div class="tabbed-block">
+<div class="language-console highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1">1</a></span>
+<span class="normal"><a href="#__codelineno-15-2">2</a></span>
+<span class="normal"><a href="#__codelineno-15-3">3</a></span>
+<span class="normal"><a href="#__codelineno-15-4">4</a></span>
+<span class="normal"><a href="#__codelineno-15-5">5</a></span>
+<span class="normal"><a href="#__codelineno-15-6">6</a></span>
+<span class="normal"><a href="#__codelineno-15-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="gp gp-VirtualEnv">(webtech)</span><span class="go">~ $&gt; python.exe</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2"></a><span class="go">Python 3.13.1 (tags/v3.13.1:0671451, Dec  3 2024, 19:06:28) [MSC v.1942 64 bit (AMD64)] on win32</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3"></a><span class="go">Type "help", "copyright", "credits" or "license" for more information.</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4"></a><span class="hll"><span class="go">&gt;&gt;&gt; import flask</span>
+</span><a id="__codelineno-15-5" name="__codelineno-15-5"></a><span class="go">&gt;&gt;&gt; flask.__version__</span>
+<a id="__codelineno-15-6" name="__codelineno-15-6"></a><span class="go">'3.1.0'</span>
+<a id="__codelineno-15-7" name="__codelineno-15-7"></a><span class="go">&gt;&gt;&gt;</span>
+</code></pre></div></td></tr></tbody></table></div>
+</div>
 </div>
 </div>
 <div class="admonition notice">
 <p class="admonition-title">Werkomgeving</p>
-<p>Je ziet dat zodra een virtuele omgeving is geactiveerd alle commando's (<code>pyton</code>, <code>pip</code>, <code>flask</code> etc.) verwijzen naar de <code>Scripts</code> (of <code>bin</code>) directory in de virtuele omgeving. Dit betekent ook dat het niet uitmaakt waar je jouw werkomgeving hebt voor Python-bestanden, en het is zelfs een goed gebruik om deze gescheiden te houden.</p>
+<p>Je ziet dat zodra een virtuele omgeving is geactiveerd alle commando's (<code>python</code>, <code>pip</code>, <code>flask</code> etc.) verwijzen naar de <code>Scripts</code> (of <code>bin</code>) directory in de virtuele omgeving. Dit betekent ook dat het niet uitmaakt waar je jouw werkomgeving hebt voor Python-bestanden, en het is zelfs een goed gebruik om deze gescheiden te houden.</p>
 </div>
-<h2 id="afsluiten-van-de-virtuele-omgeving">Afsluiten van de virtuele omgeving<a class="headerlink" href="#afsluiten-van-de-virtuele-omgeving" title="Permanent link">&para;</a></h2>
+<h2 id="afsluiten-van-de-virtuele-omgeving">Afsluiten van de virtuele omgeving<a class="headerlink" href="#afsluiten-van-de-virtuele-omgeving" title="Permanent link">¶</a></h2>
 <p>Een gebruikelijke manier om de virtuele omgeving af te sluiten is met:</p>
-<div class="highlight"><pre><span></span><code><span class="gp gp-VirtualEnv">(webtech)</span><span class="go">~ $&gt; deactivate</span>
-<span class="go">~ $&gt;</span>
-</code></pre></div>
-<h2 id="anaconda-python">Anaconda Python<a class="headerlink" href="#anaconda-python" title="Permanent link">&para;</a></h2>
+<div class="language-console highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1">1</a></span>
+<span class="normal"><a href="#__codelineno-16-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1"></a><span class="gp gp-VirtualEnv">(webtech)</span><span class="go">~ $&gt; deactivate</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2"></a><span class="go">~ $&gt;</span>
+</code></pre></div></td></tr></tbody></table></div>
+<h2 id="anaconda-python">Anaconda Python<a class="headerlink" href="#anaconda-python" title="Permanent link">¶</a></h2>
 <p>Het kan zijn dat je de <a href="https://www.anaconda.com/">Anaconda</a> Python distributie hebt geïnstalleerd. Alles wat hier beschreven is geldt ook voor deze omgeving, hoewel je met de geïnstalleerde command line tool <code>conda</code> ook virtuele omgevingen kan aanmaken en beheren. Zie <a href="https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html">de documentatie</a> voor meer informatie.</p>
+
+
+
+
+
+
+
 
 
 
@@ -2077,7 +3661,14 @@
             </div>
           
           
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden="">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Terug naar boven
+</button>
         
       </main>
       
@@ -2086,6 +3677,12 @@
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © Hanzehogeschool Groningen -
+<a href="https://github.com/erikroos/webtech1/issues/new" target="_blank">Meld een probleem of onduidelijkheid</a>
+
+    </div>
   
   
     Made with
@@ -2104,13 +3701,17 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Gekopieerd naar klembord", "clipboard.copy": "Kopi\u00ebren naar klembord", "search.result.more.one": "1 extra overeenkomst op deze pagina", "search.result.more.other": "# extra overeenkomsten op deze pagina", "search.result.none": "Geen overeenkomende documenten", "search.result.one": "1 overeenkomende document", "search.result.other": "# overeenkomende documenten", "search.result.placeholder": "Typ om te beginnen met zoeken", "search.result.term.missing": "Ontbreekt", "select.version": "Selecteer versie"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.b78d2936.min.js"></script>
       
-        <script src="../js/imgs.js"></script>
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.top", "navigation.indexes", "search.suggest", "search.highlight", "content.code.copy", "content.action.edit", "content.action.view"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Gekopieerd naar klembord", "clipboard.copy": "Kopi\u00ebren naar klembord", "search.result.more.one": "1 extra overeenkomst op deze pagina", "search.result.more.other": "# extra overeenkomsten op deze pagina", "search.result.none": "Geen overeenkomende documenten", "search.result.one": "1 overeenkomende document", "search.result.other": "# overeenkomende documenten", "search.result.placeholder": "Typ om te beginnen met zoeken", "search.result.term.missing": "Ontbreekt", "select.version": "Selecteer versie"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
-  </body>
-</html>
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>
