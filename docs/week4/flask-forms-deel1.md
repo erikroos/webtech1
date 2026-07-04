@@ -1,6 +1,6 @@
 !!! Warning "Begin met je project"
 
-    Vanaf deze week moet je als duo aan een project (een eigen of [één van de vier voorgestelde projecten](../projecten/)) gaan werken. Tijdens de practica heb je gelegenheid om hierover vragen te stellen aan je practicumdocent, maar houd er rekening mee dat het practicum daar niet per se voor bedoeld is. In principe zou je in staat moeten zijn op basis van de oefeningen, de filmpjes en de lessen het project zelfstandig uit te voeren.
+    Vanaf deze week moet je als duo aan een project (een eigen of [één van de vier voorgestelde projecten](../projecten/index.md)) gaan werken. Tijdens de practica heb je gelegenheid om hierover vragen te stellen aan je practicumdocent, maar houd er rekening mee dat het practicum daar niet per se voor bedoeld is. In principe zou je in staat moeten zijn op basis van de oefeningen, de filmpjes en de lessen het project zelfstandig uit te voeren.
 
     Bekijk [de omschrijving van de beoordeling](../index.md#toetsing) om je een goed beeld te vormen van het hoe of wat van deze projecten en de daarbij horende beoordeling.
 

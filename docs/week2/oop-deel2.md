@@ -2,7 +2,7 @@
 
 Inkapseling (Engels: *encapsulation*) is één van de fundamenten van object-georiënteerd programmeren. Het wordt gebruikt om onbevoegden niet de gelegenheid te bieden de kenmerken van een object zomaar aan te passen. Als dat mogelijk moet zijn dan dienen zij toegang te krijgen tot de zogenaamde `getters` en `setters`, waarover zo dadelijk meer.
 
-Aan het eind van deze tekst maken we [oefening nummer 1](oefeningen/oop-oefening1.html).
+Aan het eind van deze tekst maken we [oefening nummer 1](oefeningen/oop-oefening1.md).
 
 !!! Info "zichtbaarheid"
     Python wijkt nadrukkelijk af van het idee van inkapseling zoals het bijvoorbeeld gedaan wordt bij Java. Python gebruikt niet de sleutel-woorden `private` of `protected` om de zichtbaarheid van een methode aan te geven.
@@ -233,4 +233,4 @@ In dit deel hebben we geleerd over:
 
 In het volgende deel gaan we kijken naar meerdere klassen die met elkaar samenwerken.
 
-Maak nu [oefening nummer 1](oefeningen/oop-oefening1.html).
+Maak nu [oefening nummer 1](oefeningen/oop-oefening1.md).
