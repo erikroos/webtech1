@@ -7,7 +7,7 @@
 
 # Flask en Forms - een basis Flask formulier
 
-Flask biedt ook de mogelijkheid om eenvoudig HTML-formulieren te genereren. In dit deel ligt de focus op de modules [Flask-WTF](https://flask-wtf.readthedocs.io/en/1.2.x/) en [WTForms](https://wtforms.readthedocs.io/en/2.3.x/) en op welke wijze waarop deze gebruikt kunnen worden om snel formulieren te maken op basis van de Flask-Python-scripts.
+Flask biedt ook de mogelijkheid om eenvoudig HTML-formulieren te genereren. In dit deel ligt de focus op de modules [Flask-WTF](https://flask-wtf.readthedocs.io/en/stable/) en [WTForms](https://wtforms.readthedocs.io/en/stable/) en de wijze waarop deze gebruikt kunnen worden om snel formulieren te maken op basis van de Flask-Python-scripts.
 
 ## Componenten
 Maar als eerste een bespreking van de belangrijkste componenten voor het maken van een formulier.
@@ -35,7 +35,7 @@ from wtforms import StringField, SubmitField
 app = Flask(__name__)
 ```
 
-Even een korte uitleg. `FlaskForm` is een klasse waarvan overerft wordt om onze eigen formulieren te kunnen maken. De daaropvolgende regel geeft aan welke velden er gebruikt worden op de formulieren. Voor het basisformulier wordt hier aangegeven dat er Stringfields en SubmitFields gebruik gaan worden. De laatste regel zorgt er weer voor dat de applicatie gecreëerd wordt.
+Even een korte uitleg. `FlaskForm` is een klasse waarvan overerft wordt om onze eigen formulieren te kunnen maken. De daaropvolgende regel geeft aan welke velden er gebruikt worden op de formulieren. Voor het basisformulier wordt hier aangegeven dat er Stringfields en SubmitFields gebruikt gaan worden. De laatste regel zorgt er weer voor dat de applicatie gecreëerd wordt.
 
 ### Installatie van Flask-WTF en WTForms
 

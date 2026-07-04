@@ -154,7 +154,7 @@ Weer meer van hetzelfde. Als het de bedoeling is een cursist te verwijderen dan 
 De volgende (voorlaatste) regel betreft het daadwerkelijk aanmaken van de database. We zien hier de regel `db.create_all()`; dit houdt in dat we de database (het SQLAlchemy-object dat we hebben aangemaakt op regel 19) de opdracht geven alle model-klassen langs te lopen en de corresponderende (*gemapte*) database-tabellen aan te maken (op basis van de informatie die is ingegeven in die modelklassen).
 
 !!! Info "Verschillende versies van SQLAlchemy"
-    In nieuwere versies van SQLAlchemy is het creëren van de database zelf behoorlijk aangepast. In [de documentatie staat](https://flask-sqlalchemy.palletsprojects.com/en/3.0.x/api/#flask_sqlalchemy.SQLAlchemy.create_all) *This requires that a Flask application context is active*. Dit betekent dat je het statement binnen een *flask-context* moet uitvoeren:
+    In nieuwere versies van SQLAlchemy is het creëren van de database zelf behoorlijk aangepast. In [de documentatie staat](https://flask-sqlalchemy.palletsprojects.com/en/stable/api/#flask_sqlalchemy.SQLAlchemy.create_all) *This requires that a Flask application context is active*. Dit betekent dat je het statement binnen een *flask-context* moet uitvoeren:
 
     ```python
     with app.app_context():

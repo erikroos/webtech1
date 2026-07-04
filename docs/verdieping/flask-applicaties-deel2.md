@@ -4,7 +4,7 @@ Aan het einde van de vorige paragraaf is de algemene structuur voor de applicati
 
 Omdat al veel van de code geschreven en besproken is in voorgaande delen, wordt hier grotendeels het principe copy en paste gehanteerd.
 
-`Flask` heeft een ingebouwde mogelijkheid waarmee de modulaire componenten voor de Flask-app geregistreerd kunnen worden: [*blueprints*](https://flask.palletsprojects.com/en/1.1.x/blueprints/). Hiermee kan op een eenvoudige wijze een *view* geraadpleegd worden voor ieder aspect van de applicatie.
+`Flask` heeft een ingebouwde mogelijkheid waarmee de modulaire componenten voor de Flask-app geregistreerd kunnen worden: [*blueprints*](https://flask.palletsprojects.com/en/stable/blueprints/). Hiermee kan op een eenvoudige wijze een *view* geraadpleegd worden voor ieder aspect van de applicatie.
 
 Zo zijn er bijvoorbeeld een tweetal `view.py`-bestanden: één voor docenten en één voor studenten. En elk van deze *views* heeft zijn eigen `add`-view. Om ervoor te zorgen dat de Flask-applicatie niet in de war raakt door een `/add`-route, maken we gebruik van blueprints. De blueprints registreren een `url_prefix` voor elk `views.py`-bestand:
 

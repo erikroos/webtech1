@@ -14,11 +14,11 @@ In thema 1.1 en 1.2 hebben we ook al gewerkt met een command line. Op macOS kun 
 
 !!! tip "Microsoft Windows Terminal"
 
-    De standaard Windows terminal waar een *shell* als bijvoorbeeld PowerShell in wordt geopend is software uit de vorige eeuw. Microsoft heeft een nieuwe terminal applicatie ontwikkeld die je kan installeren via [Windows Store](https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701).
+    Op Windows 11 is [Windows Terminal](https://apps.microsoft.com/detail/9n0dx20hk701) de standaard terminal-applicatie; op oudere Windows-versies kun je deze via de Microsoft Store installeren.
 
     ![Voorbeeld van Windows Terminal](imgs/powershell.png)
 
-    Een voordeel van deze nieuwe terminal is dat je het naar eigen smaak kan aanpassen (configureren) maar ook dat het kleuren en bijvoorbeeld emoji beter ondersteunt (👍). Microsoft is van plan deze toepassing in de toekomst een standaard onderdeel van Windows te maken.
+    Een voordeel van deze terminal is dat je hem naar eigen smaak kan aanpassen (configureren) maar ook dat hij kleuren en bijvoorbeeld emoji goed ondersteunt (👍).
 
     Command line toepassingen lijken iets uit het verleden maar zijn nog steeds erg belangrijk, zo belangrijk zelfs dat Microsoft heel druk is deze omgeving opnieuw te ontwikkelen bijvoorbeeld met deze nieuwe terminal. Zie [Windows Command-Line: Backgrounder](https://devblogs.microsoft.com/commandline/windows-command-line-backgrounder/) als je het interessant vindt om meer over de geschiedenis van de command line te weten en waarom Microsoft deze omgeving voor Windows moderniseert.
 
@@ -56,14 +56,14 @@ Een virtuele omgeving mag ook elke naam hebben die je maar wilt, we kiezen in di
     python.exe -m venv webtech
     ```
 
-Met de toevoeging `-m venv` zeg je tegen Python de `venv` module te gebruiken met als argument de directory waar de omgeving in moet worden aangemaakt (`webtech`). Nadat het commando is ingegeven en er op `<ENTER>` is gedrukt zal het enige tijd duren voor voordat het klaar is, er wordt in de tussentijd van alles geïnstalleerd.
+Met de toevoeging `-m venv` zeg je tegen Python de `venv` module te gebruiken met als argument de directory waar de omgeving in moet worden aangemaakt (`webtech`). Nadat het commando is ingegeven en er op `<ENTER>` is gedrukt zal het enige tijd duren voordat het klaar is, er wordt in de tussentijd van alles geïnstalleerd.
 
 Controleer of deze stap is gelukt, typ `ls` (*list directory contents*) om de inhoud van de directory te bekijken. Als het goed is zal je nu een *subdirectory* `webtech` zien:
 
 ```console
-~/venv $> ls
+~/venvs $> ls
 webtech
-~/venv $>
+~/venvs $>
 ```
 
 Er is een virtuele omgeving aangemaakt met de naam `webtech` en in die directory zijn een aantal subdirectories en bestanden neergezet. De subdirectory `Scripts` (Windows) of `bin` (macOS / Linux) laat het volgende zien:
@@ -77,11 +77,9 @@ Er is een virtuele omgeving aangemaakt met de naam `webtech` en in die directory
     ├── activate
     ├── activate.csh
     ├── activate.fish
-    ├── easy_install
-    ├── easy_install-3.8
     ├── pip
     ├── pip3
-    ├── pip3.8
+    ├── pip3.13
     ├── python -> python3
     └── python3 -> /usr/bin/python3
     ```
@@ -94,31 +92,29 @@ Er is een virtuele omgeving aangemaakt met de naam `webtech` en in die directory
     ├── activate
     ├── activate.bat
     ├── deactivate.bat
-    ├── easy_install-3.8.exe
-    ├── easy_install.exe
     ├── pip.exe
-    ├── pip3.8.exe
+    ├── pip3.13.exe
     ├── pip3.exe
     ├── python.exe
     └── pythonw.exe
     ```
 
-Als je verder gaat rondkijken zal je zien dat een virtuele omgeving eigenlijk een mini-Python installatie is. Het is een flink rijtje bestanden, maar ongelukkigerwijze ontbreekt Flask nog. Om dat te kunnen installeren moeten we eerst onze nieuwe virtuele omgeving activeren en daar gaan we de scripts in de subirectory `Scripts` of `bin` voor gebruiken.
+Als je verder gaat rondkijken zal je zien dat een virtuele omgeving eigenlijk een mini-Python installatie is. Het is een flink rijtje bestanden, maar ongelukkigerwijze ontbreekt Flask nog. Om dat te kunnen installeren moeten we eerst onze nieuwe virtuele omgeving activeren en daar gaan we de scripts in de subdirectory `Scripts` of `bin` voor gebruiken.
 
 ### Stap 4: het activeren van de virtuele omgeving.
 
 === "macOS / Linux"
 
     ```console
-    ~/venv $> source webtech/bin/activate
-    (webtech)~/venv $>
+    ~/venvs $> source webtech/bin/activate
+    (webtech)~/venvs $>
     ```
 
 === "Windows"
 
     ```console
-    ~/venv $> .\webtech\Scripts\activate
-    (webtech)~/venv $>
+    ~/venvs $> .\webtech\Scripts\activate
+    (webtech)~/venvs $>
     ```
 
 Je zal zien dat de command prompt nu wordt aangevuld met de naam van de virtuele omgeving tussen haakjes. Dit is het teken dat de virtuele omgeving is geactiveerd!
@@ -135,7 +131,7 @@ Om de module Flask te installeren maken we gebruik van `Python Package Installer
 Nu de virtuele omgeving is geactiveerd zijn `pip` en de andere scripts overal aan te roepen. Bijvoorbeeld, `cd` terug naar de home directory:
 
 ```console
-(webtech)~/venv $> cd ..
+(webtech)~/venvs $> cd ..
 (webtech)~ $>
 ```
 
@@ -145,7 +141,7 @@ Roep vervolgens `pip` aan om Flask als volgt te installeren:
 (webtech)~ $> pip install flask
 ```
 
-Er wordt weer hard gewerkt achter de schermen en het eindresultaat mag er weer zijn. Controleer nu de inhoud van de directory `venvs/webtech/Scripts` (Windows) of `venv/webtech/bin` (macOS / Linux) en je zult zien dat een nieuw script is toegevoegd
+Er wordt weer hard gewerkt achter de schermen en het eindresultaat mag er weer zijn. Controleer nu de inhoud van de directory `venvs/webtech/Scripts` (Windows) of `venvs/webtech/bin` (macOS / Linux) en je zult zien dat een nieuw script is toegevoegd
 
 === "macOS / Linux"
 
@@ -155,12 +151,10 @@ Er wordt weer hard gewerkt achter de schermen en het eindresultaat mag er weer z
     ├── activate
     ├── activate.csh
     ├── activate.fish
-    ├── easy_install
-    ├── easy_install-3.8
     ├── flask
     ├── pip
     ├── pip3
-    ├── pip3.8
+    ├── pip3.13
     ├── python -> python3
     └── python3 -> /usr/bin/python3
     ```
@@ -173,11 +167,9 @@ Er wordt weer hard gewerkt achter de schermen en het eindresultaat mag er weer z
     ├── activate
     ├── activate.bat
     ├── deactivate.bat
-    ├── easy_install-3.8.exe
-    ├── easy_install.exe
     ├── flask.exe
     ├── pip.exe
-    ├── pip3.8.exe
+    ├── pip3.13.exe
     ├── pip3.exe
     ├── python.exe
     └── pythonw.exe
@@ -187,9 +179,9 @@ Dit script gaan we straks gebruiken om het opstarten van onze applicatie tijdens
 
 ```console
 (webtech)~ $> flask --version
-Python 3.8.6
-Flask 1.1.2
-Werkzeug 1.0.1
+Python 3.13.1
+Flask 3.1.0
+Werkzeug 3.1.3
 ```
 
 Als laatste test proberen we de Flask *module* te importeren in de interactieve python-shell:
@@ -198,12 +190,11 @@ Als laatste test proberen we de Flask *module* te importeren in de interactieve 
 
     ```console hl_lines="5"
     (webtech)~ $> python3
-    Python 3.8.6 (default, Sep 25 2020, 09:36:53)
-    [GCC 10.2.0] on linux
+    Python 3.13.1 (main, Dec  3 2024, 17:59:52)
     Type "help", "copyright", "credits" or "license" for more information.
     >>> import flask
     >>> flask.__version__
-    '1.1.2'
+    '3.1.0'
     >>>
     ```
 
@@ -211,16 +202,16 @@ Als laatste test proberen we de Flask *module* te importeren in de interactieve 
 
     ```console hl_lines="4"
     (webtech)~ $> python.exe
-    Python 3.8.8 (tags/v3.8.8:024d805, Feb 19 2021, 13:18:16) [MSC v.1928 64 bit (AMD64)] on win32
+    Python 3.13.1 (tags/v3.13.1:0671451, Dec  3 2024, 19:06:28) [MSC v.1942 64 bit (AMD64)] on win32
     Type "help", "copyright", "credits" or "license" for more information.
     >>> import flask
     >>> flask.__version__
-    '1.1.2'
+    '3.1.0'
     >>>
     ```
 
 !!! notice "Werkomgeving"
-    Je ziet dat zodra een virtuele omgeving is geactiveerd alle commando's (`pyton`, `pip`, `flask` etc.) verwijzen naar de `Scripts` (of `bin`) directory in de virtuele omgeving. Dit betekent ook dat het niet uitmaakt waar je jouw werkomgeving hebt voor Python-bestanden, en het is zelfs een goed gebruik om deze gescheiden te houden.
+    Je ziet dat zodra een virtuele omgeving is geactiveerd alle commando's (`python`, `pip`, `flask` etc.) verwijzen naar de `Scripts` (of `bin`) directory in de virtuele omgeving. Dit betekent ook dat het niet uitmaakt waar je jouw werkomgeving hebt voor Python-bestanden, en het is zelfs een goed gebruik om deze gescheiden te houden.
 
 ## Afsluiten van de virtuele omgeving
 

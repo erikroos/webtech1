@@ -114,7 +114,7 @@ def cursist(naam):
     return f"<h1>Dit is de pagina van {naam}<h1>"
 ```
 
-Uiteraard weer een testje. De applicatie wordt gerund en URL van de pagina van een cursist wordt ingegeven. We gaan hiervoor naar de url `http://localhost:5000/cursist/Henk`: let op dat de de string *na* `cursist` (`Henk` in dit geval) wordt opgevangen door de parameter `naam` in de functie `cursist`.
+Uiteraard weer een testje. De applicatie wordt gerund en URL van de pagina van een cursist wordt ingegeven. We gaan hiervoor naar de url `http://localhost:5000/cursist/Henk`: let op dat de string *na* `cursist` (`Henk` in dit geval) wordt opgevangen door de parameter `naam` in de functie `cursist`.
 
 ![De pagina van Henk](imgs/cursist_Henk.png)
 

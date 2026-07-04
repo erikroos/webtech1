@@ -214,3 +214,5 @@ Wat het volgende resultaat oplevert:
 
 
 
+
+Hiermee hebben we de basis van Flask en Jinja-templates te pakken. In het volgende deel bouwen we hierop voort en gaan we gebruikersinvoer verwerken met formulieren.

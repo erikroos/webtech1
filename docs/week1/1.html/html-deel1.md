@@ -28,14 +28,14 @@ We zullen beginnen met een overzicht van de werking van een webpagina. Hoe is he
 
 ## Hoe werkt een web-pagina?
 
-Het web is eigenlijk niks anders dan een hele grote verzameling van allerlei soorten bestanden die door middel van *webservers* beschikbaar worden gesteld. Een webserver is een stuk software dat 'luistert' naar aanvragen van andere computers en op basis van zo'n aanvraag een bestand terugstuurt. Bekende webservers zijn [Apache](http://httpd.apache.org/), [ngnix](https://www.nginx.com/) of [Microsoft IIS](https://www.iis.net/).
+Het web is eigenlijk niks anders dan een hele grote verzameling van allerlei soorten bestanden die door middel van *webservers* beschikbaar worden gesteld. Een webserver is een stuk software dat 'luistert' naar aanvragen van andere computers en op basis van zo'n aanvraag een bestand terugstuurt. Bekende webservers zijn [Apache](https://httpd.apache.org/), [nginx](https://www.nginx.com/) of [Microsoft IIS](https://www.iis.net/).
 
 Wanneer je een url in de locatiebalk van je browser intypt en op `Enter` drukt, wordt er een dergelijke aanvraag naar de server gestuurd die staat op die specifieke URL. Die server verwerkt de aanvraag en stuurt het bestand terug. Of, als het bestand niet gevonden kan worden, wordt er de code `404 Not Found` teruggestuurd.
 
-!!! info "Reponse Codes"
+!!! info "Response Codes"
     Die code is een zogenaamde [`HTTP Response Status Code`](https://developer.mozilla.org/nl/docs/Web/HTTP/Status). Later in deze module komen we hier nog uitgebreid op terug.
 
-Dat wat je in je browser ziet en dat wat de server terugstuurt verschilt nogal van elkaar.De server stuurt in de regel platte tekst terug (bijvoorbeeld html, css of javascript, maar dat kan van alles zijn) en je browser zet deze platte tekst om in een totaal van fraai vormgegeven tekst, met plaatjes en interactiviteit (een proces dat bekend staat als [renderen](https://nl.wikipedia.org/wiki/Renderen)).
+Dat wat je in je browser ziet en dat wat de server terugstuurt verschilt nogal van elkaar. De server stuurt in de regel platte tekst terug (bijvoorbeeld html, css of javascript, maar dat kan van alles zijn) en je browser zet deze platte tekst om in een totaal van fraai vormgegeven tekst, met plaatjes en interactiviteit (een proces dat bekend staat als [renderen](https://nl.wikipedia.org/wiki/Renderen)).
 
 ## Statische en dynamische webpagina's
 

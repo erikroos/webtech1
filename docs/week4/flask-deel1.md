@@ -8,7 +8,7 @@ Flask is een webframework, het is een Python-module waarmee op eenvoudige wijze 
 
 Een Web Application Framework of gewoon een Web Framework vertegenwoordigt een verzameling bibliotheken en modules waarmee ontwikkelaars webtoepassingen kunnen schrijven zonder zich zorgen te hoeven maken over details op laag niveau, zoals protocol en threadbeheer.
 
-Flask is een framework voor webtoepassingen geschreven in Python. Het is ontwikkeld door [Armin Ronacher](https://lucumr.pocoo.org/about/), die leiding gaf aan een team van internationale Python-enthousiastelingen genaamd Poocoo. Flask is gebaseerd op de [Werkzeug WSGI](https://palletsprojects.com/p/werkzeug/) toolkit en de [Jinja2 template engine](https://jinja.palletsprojects.com/en/2.11.x/).
+Flask is een framework voor webtoepassingen geschreven in Python. Het is ontwikkeld door [Armin Ronacher](https://lucumr.pocoo.org/about/), die leiding gaf aan een team van internationale Python-enthousiastelingen genaamd Pocoo. Flask is gebaseerd op de [Werkzeug WSGI](https://palletsprojects.com/p/werkzeug/) toolkit en de [Jinja2 template engine](https://jinja.palletsprojects.com/en/stable/).
 
 De Web Server Gateway Interface (WSGI) wordt gebruikt als standaard voor de ontwikkeling van Python-webapplicaties. WSGI is de specificatie van een gemeenschappelijke interface tussen webservers en webapplicaties.
 
