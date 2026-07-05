@@ -1,35 +1,47 @@
-from models import db, Cursist, Instrument, Docent
+"""Database populatie script voor relaties voorbeeld.
 
-db.create_all()
+Dit script vult de database met voorbeelddata om relaties te demonstreren:
+- Een-op-een relatie: Cursist heeft één Docent
+- Een-op-veel relatie: Cursist heeft meerdere Instrumenten
+"""
+from models import app, db, Cursist, Instrument, Docent
 
-# Maak 2 cursisten aan
-joyce = Cursist("Joyce")
-bram = Cursist("Bram")
+# Maak tabellen aan
+with app.app_context():
+    db.create_all()
 
-# Voeg de cursisten toe aan de database
-db.session.add_all([joyce, bram])
-db.session.commit()
+    # Maak 2 cursisten aan
+    joyce = Cursist("Joyce")
+    bram = Cursist("Bram")
 
-# Maak een docent aan voor Joyce
-david = Docent("David", joyce.id)
+    # Voeg cursisten toe aan database
+    db.session.add_all([joyce, bram])
+    db.session.commit()
 
-# Laat een query uitvoeren om alle gegevens van de cursisten te laten zien!
-print(Cursist.query.all())
+    print("=== Cursisten aangemaakt ===")
+    print(db.session.execute(db.select(Cursist)).scalars().all())
+    print()
 
-# Zoek alle cursisten met de naam Joyce op uit de database
-joyce = Cursist.query.filter_by(naam='Joyce').all()[0]
+    # Maak een docent aan voor Joyce (een-op-een relatie)
+    david = Docent("David", joyce.id)
 
-# Geef aan welke instrumenten Joyce wil leren bespelen.
-instr1 = Instrument('Drums', joyce.id)
-instr2 = Instrument("Piano", joyce.id)
+    # Zoek Joyce op uit de database
+    joyce = db.session.execute(db.select(Cursist).filter_by(naam='Joyce')).scalar_one_or_none()
 
-# Voeg toe en leg vast in de database
-db.session.add_all([david, instr1, instr2])
-db.session.commit()
+    # Geef aan welke instrumenten Joyce wil leren bespelen (een-op-veel relatie)
+    instr1 = Instrument('Drums', joyce.id)
+    instr2 = Instrument("Piano", joyce.id)
 
-# Nu nogmaals de gegevens van Joyce ophalen (de eerste en enige)
-joyce = Cursist.query.filter_by(naam='Joyce').first()
-print(joyce)
+    # Voeg toe en leg vast
+    db.session.add_all([david, instr1, instr2])
+    db.session.commit()
 
-# Toon de instrummenten
-(joyce.overzicht_instrumenten())
+    # Haal Joyce opnieuw op om relaties te tonen
+    joyce = db.session.execute(db.select(Cursist).filter_by(naam='Joyce')).scalar_one_or_none()
+    print("=== Joyce met relaties ===")
+    print(joyce)
+    print()
+
+    # Toon instrumenten via relatie
+    print("=== Instrumenten van Joyce ===")
+    print(joyce.overzicht_instrumenten())

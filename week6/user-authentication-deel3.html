@@ -2263,7 +2263,7 @@
   <span class="md-ellipsis">
     
   
-    Flask en SQL - Theorie
+    Flask en SQLAlchemy - Theorie
   
 
     
@@ -2291,7 +2291,7 @@
   <span class="md-ellipsis">
     
   
-    Flask en SQL - het opzetten van een database
+    Flask en SQLAlchemy - Database Setup
   
 
     
@@ -2319,7 +2319,7 @@
   <span class="md-ellipsis">
     
   
-    Flask en SQL - CRUD
+    Flask en SQLAlchemy - CRUD operaties
   
 
     
@@ -2347,7 +2347,7 @@
   <span class="md-ellipsis">
     
   
-    Flask en SQL - Relaties
+    Flask en SQLAlchemy - Relaties tussen tabellen
   
 
     
@@ -2375,7 +2375,7 @@
   <span class="md-ellipsis">
     
   
-    Flask en SQL - Website
+    Flask en SQLAlchemy - Complete Website
   
 
     
@@ -2454,7 +2454,7 @@
   <span class="md-ellipsis">
     
   
-    Flask en SQL - Oefening 1
+    Flask en SQLAlchemy - Oefening 1: Mentor Platform
   
 
     
@@ -2710,6 +2710,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#samenvatting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Samenvatting
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2733,7 +2744,7 @@
   <span class="md-ellipsis">
     
   
-    User authentication - Flask_login deel III
+    User authentication - Flask_login deel IV
   
 
     
@@ -3246,6 +3257,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#samenvatting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Samenvatting
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3295,77 +3317,139 @@
 <a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="kn">from</span><span class="w"> </span><span class="nn">mijnproject.forms</span><span class="w"> </span><span class="kn">import</span> <span class="n">LoginForm</span><span class="p">,</span> <span class="n">RegistrationForm</span>
 </code></pre></div></td></tr></tbody></table></div>
 <p>De eerste regel laat de app en de database ophalen. Daarna worden van flask een aantal oude bekenden geïmporteerd.</p>
-<p>Vanaf de derde coderegel wordt het interessant. Deze regel zorgt ervoor dat de afwikkeling van het inloggen en uitloggen verzorgd worden zonder dat deze handelingen door de programmeur zelf geprogrammeerd hoeven te worden. </p>
+<p>Vanaf de derde coderegel wordt het interessant. Deze regel zorgt ervoor dat de afwikkeling van het inloggen en uitloggen verzorgd worden zonder dat deze handelingen door de programmeur zelf geprogrammeerd hoeven te worden.</p>
 <p>Het tweede item wat wordt ingeladen is <code>login_required</code>. Hiermee kan de status van een gebruiker (<em>user</em>) achterhaald worden en op basis van die status de gepaste bijbehorende inhoud getoond worden. Is een gebruiker nog niet ingelogd dan zal hem de mogelijkheid geboden worden dit te doen. Is een gebruiker ingelogd en is het zijn wens de sessie te beëindigen moet deze mogelijkheid hem worden aangeboden. Hoe dat geregeld wordt, komt zo aan bod.</p>
 <p>Verder zijn hier de tabel <code>User</code> en de beide formulieren die in de vorige paragraaf ontworpen zijn nodig. Om er weer in te komen eerst de simpelste van de views, de <code>home-view</code>:</p>
 <div class="language-python highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#__codelineno-1-2">2</a></span>
-<span class="normal"><a href="#__codelineno-1-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">'/'</span><span class="p">)</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="k">def</span><span class="w"> </span><span class="nf">home</span><span class="p">():</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3"></a>    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">'home.html'</span><span class="p">)</span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span>
+<span class="normal"><a href="#__codelineno-1-4">4</a></span>
+<span class="normal"><a href="#__codelineno-1-5">5</a></span>
+<span class="normal"><a href="#__codelineno-1-6">6</a></span>
+<span class="normal"><a href="#__codelineno-1-7">7</a></span>
+<span class="normal"><a href="#__codelineno-1-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">'/'</span><span class="p">)</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="k">def</span><span class="w"> </span><span class="nf">home</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">    </span><span class="sd">"""Toon de homepagina.</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="sd">    Returns:</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="sd">        De gerenderde home.html template</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="sd">    """</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a>    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">'home.html'</span><span class="p">)</span>
 </code></pre></div></td></tr></tbody></table></div>
 <p>Als eerste een decorator die verwijst naar de homepagina. Deze functie (<em>view</em>) krijgt de naam <code>home</code> zodat er straks met <code>url_for()</code> gemakkelijk naar verwezen kan worden. De laatste regel vertelt dat in dat geval de pagina <code>home.html</code> getoond wordt, die pas in de volgende paragraaf zijn inhoud zal krijgen.</p>
 <p>De tweede view betreft een view die verschijnt op het moment dat de gebruiker succesvol is ingelogd. Deze view laat een welkomst-bericht tevoorschijn getoverd worden:</p>
-<div class="language-python highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
-<span class="normal"><a href="#__codelineno-2-2">2</a></span>
-<span class="normal"><a href="#__codelineno-2-3">3</a></span>
-<span class="normal"><a href="#__codelineno-2-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">'/welkom'</span><span class="p">)</span>
+<div class="language-python highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-2-10">10</a></span>
+<span class="normal"><a href="#__codelineno-2-11">11</a></span>
+<span class="normal"><a href="#__codelineno-2-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">'/welkom'</span><span class="p">)</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="nd">@login_required</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="k">def</span><span class="w"> </span><span class="nf">welkom</span><span class="p">():</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4"></a>    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">'welkom.html'</span><span class="p">)</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="k">def</span><span class="w"> </span><span class="nf">welkom</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">    </span><span class="sd">"""Toon de welkomstpagina voor ingelogde gebruikers.</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a>
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="sd">    Deze view is alleen toegankelijk voor geauthenticeerde gebruikers</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="sd">    dankzij de @login_required decorator.</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8"></a>
+<a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="sd">    Returns:</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="sd">        De gerenderde welkom.html template</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="sd">    """</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12"></a>    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">'welkom.html'</span><span class="p">)</span>
 </code></pre></div></td></tr></tbody></table></div>
-<p>Wat gelijk opvalt is dat er een tweetal decorators aan het begin van dit codeblok zijn opgenomen. De eerste geeft aan met welke route met het bestand <code>welkom.html</code> correspondeert. De tweede decorator controleert of de gebruiker van deze pagina daadwerkelijk is ingelogd. Is dat zo, wordt het welkomstbericht vrijgegeven. In het andere geval wordt er doorgeschakeld naar het loginformulier. </p>
+<p>Wat gelijk opvalt is dat er een tweetal decorators aan het begin van dit codeblok zijn opgenomen. De eerste decorator koppelt de route <code>/welkom</code> aan het template bestand <code>welkom.html</code>. De tweede decorator controleert of de gebruiker van deze pagina daadwerkelijk is ingelogd. Is dat zo, wordt het welkomstbericht vrijgegeven. In het andere geval wordt er doorgeschakeld naar het loginformulier.</p>
 <p>Door deze acties te importeren van <code>Flask_login</code> wordt het de ontwikkelaar weer een stuk eenvoudiger gemaakt.</p>
 <h2 id="logout-view">Logout-view<a class="headerlink" href="#logout-view" title="Permanent link">¶</a></h2>
 <p>Nog een redelijk eenvoudige view voordat er met het betere codeerwerk begonnen kan worden. Het wordt een view met de naam <code>logout</code>. Wat daar de bedoeling van is moge duidelijk zijn.</p>
-<div class="language-python highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
-<span class="normal"><a href="#__codelineno-3-2">2</a></span>
-<span class="normal"><a href="#__codelineno-3-3">3</a></span>
-<span class="normal"><a href="#__codelineno-3-4">4</a></span>
-<span class="normal"><a href="#__codelineno-3-5">5</a></span>
-<span class="normal"><a href="#__codelineno-3-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">'/logout'</span><span class="p">)</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="nd">@login_required</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="k">def</span><span class="w"> </span><span class="nf">logout</span><span class="p">():</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4"></a>    <span class="n">logout_user</span><span class="p">()</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5"></a>    <span class="n">flash</span><span class="p">(</span><span class="s1">'Je bent nu uitgelogd!'</span><span class="p">)</span>
-<a id="__codelineno-3-6" name="__codelineno-3-6"></a>    <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="n">url_for</span><span class="p">(</span><span class="s1">'home'</span><span class="p">))</span>
+<div class="language-python highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-3-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-3-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-3-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-3-10">10</a></span>
+<span class="normal"><a href="#__codelineno-3-11">11</a></span>
+<span class="normal"><a href="#__codelineno-3-12">12</a></span>
+<span class="normal"><a href="#__codelineno-3-13">13</a></span>
+<span class="normal"><a href="#__codelineno-3-14">14</a></span>
+<span class="normal"><a href="#__codelineno-3-15">15</a></span>
+<span class="normal"><a href="#__codelineno-3-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">flask</span><span class="w"> </span><span class="kn">import</span> <span class="n">Response</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">'/logout'</span><span class="p">)</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="nd">@login_required</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="k">def</span><span class="w"> </span><span class="nf">logout</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">Response</span><span class="p">:</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="w">    </span><span class="sd">"""Log de huidige gebruiker uit.</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a>
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="sd">    Deze view is alleen toegankelijk voor ingelogde gebruikers.</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="sd">    Na het uitloggen wordt de gebruiker doorgestuurd naar de homepagina.</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10"></a>
+<a id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="sd">    Returns:</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12"></a><span class="sd">        Redirect naar de home view</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13"></a><span class="sd">    """</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14"></a>    <span class="n">logout_user</span><span class="p">()</span>
+<a id="__codelineno-3-15" name="__codelineno-3-15"></a>    <span class="n">flash</span><span class="p">(</span><span class="s1">'Je bent nu uitgelogd!'</span><span class="p">)</span>
+<a id="__codelineno-3-16" name="__codelineno-3-16"></a>    <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="n">url_for</span><span class="p">(</span><span class="s1">'home'</span><span class="p">))</span>
 </code></pre></div></td></tr></tbody></table></div>
-<p>De <code>logout</code> view bevindt zich op de route <code>/logout</code>. Deze mogelijkheid wordt alleen geboden indien de gebruiker daadwerkelijk is ingelogd. Daar zorgt de decorator <code>login_required</code> voor. Het zou raar zijn uit te kunnen loggen zonder ingelogd te zijn. </p>
+<p>De <code>logout</code> view bevindt zich op de route <code>/logout</code>. Deze mogelijkheid wordt alleen geboden indien de gebruiker daadwerkelijk is ingelogd. Daar zorgt de decorator <code>login_required</code> voor. Het zou raar zijn uit te kunnen loggen zonder ingelogd te zijn.</p>
 <p>Binnen de functie <code>logout()</code> zorgt de functie <code>logout_user()</code> voor de afwikkeling van het uitloggen. Ook deze functie is geïmporteerd om het leven zo aangenaam mogelijk te maken. Als er succesvol uitgelogd is verschijnt er een flitsbericht en wordt de gebruiker doorgestuurd naar de homepagina.</p>
 <h2 id="login-proces">Login-proces<a class="headerlink" href="#login-proces" title="Permanent link">¶</a></h2>
 <p>Nu het moeilijkere gedeelte, te beginnen met <code>login</code>. De uitleg wordt in kleine stapjes gedaan om de denkwijze en uitvoer op een handiger manier duidelijk te maken.</p>
 <div class="language-python highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">'/login'</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">'GET'</span><span class="p">,</span> <span class="s1">'POST'</span><span class="p">])</span>
 </code></pre></div></td></tr></tbody></table></div>
 <p>Er wordt begonnen met een decorator. En omdat er bij het inloggen een formulier nodig is, kan het niet achterwege gelaten worden de methoden <code>GET</code> en <code>POST</code> in deze coderegel op te nemen.</p>
-<div class="language-python highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
-<span class="normal"><a href="#__codelineno-5-2">2</a></span>
-<span class="normal"><a href="#__codelineno-5-3">3</a></span>
-<span class="normal"><a href="#__codelineno-5-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">login</span><span class="p">():</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2"></a>    <span class="n">form</span> <span class="o">=</span> <span class="n">LoginForm</span><span class="p">()</span>
-<a id="__codelineno-5-3" name="__codelineno-5-3"></a>    <span class="k">if</span> <span class="n">form</span><span class="o">.</span><span class="n">validate_on_submit</span><span class="p">():</span>
-<a id="__codelineno-5-4" name="__codelineno-5-4"></a>        <span class="n">user</span> <span class="o">=</span> <span class="n">User</span><span class="o">.</span><span class="n">query</span><span class="o">.</span><span class="n">filter_by</span><span class="p">(</span><span class="n">email</span><span class="o">=</span><span class="n">form</span><span class="o">.</span><span class="n">email</span><span class="o">.</span><span class="n">data</span><span class="p">)</span><span class="o">.</span><span class="n">first</span><span class="p">()</span>
+<div class="language-python highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-5-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-5-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-5-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-5-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-5-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-5-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-5-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-5-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-5-10">10</a></span>
+<span class="normal"><a href="#__codelineno-5-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">login</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">Response</span><span class="p">:</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="w">    </span><span class="sd">"""Handel het login-proces af.</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a>
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="sd">    Returns:</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="sd">        Bij GET: gerenderde login.html template met formulier</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="sd">        Bij POST (success): redirect naar welkom of next pagina</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="sd">        Bij POST (invalid): gerenderde login.html met foutmeldingen</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8"></a><span class="sd">    """</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9"></a>    <span class="n">form</span> <span class="o">=</span> <span class="n">LoginForm</span><span class="p">()</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10"></a>    <span class="k">if</span> <span class="n">form</span><span class="o">.</span><span class="n">validate_on_submit</span><span class="p">():</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11"></a>        <span class="n">user</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">User</span><span class="p">)</span><span class="o">.</span><span class="n">filter_by</span><span class="p">(</span><span class="n">email</span><span class="o">=</span><span class="n">form</span><span class="o">.</span><span class="n">email</span><span class="o">.</span><span class="n">data</span><span class="p">))</span><span class="o">.</span><span class="n">scalar_one_or_none</span><span class="p">()</span>
 </code></pre></div></td></tr></tbody></table></div>
 <p>De view krijgt de naam <code>login</code> mee. Als eerste wordt er een instantie aangemaakt van het <code>LoginForm()</code> dat ook meegeleverd is in het importblok.</p>
 <p>Als er in het formulier op de Submit-knop gedrukt is, wordt nagegaan of de gebruiker bekend is in de database. Uit het formulier wordt het e-mailadres opgehaald en vergeleken met de opgeslagen e-mailadressen. Omdat er gecontroleerd is dat er geen dubbele e-mailadressen zijn ingevoerd is het voldoende het eerste gevonden record te benutten. Dit wordt ondergebracht in de variabele <code>user</code>.</p>
 <div class="language-python highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
 <span class="normal"><a href="#__codelineno-6-2">2</a></span>
-<span class="normal"><a href="#__codelineno-6-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a>    <span class="k">if</span> <span class="n">user</span><span class="o">.</span><span class="n">check_password</span><span class="p">(</span><span class="n">form</span><span class="o">.</span><span class="n">password</span><span class="o">.</span><span class="n">data</span><span class="p">)</span> <span class="ow">and</span> <span class="n">user</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<span class="normal"><a href="#__codelineno-6-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a>    <span class="k">if</span> <span class="n">user</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">user</span><span class="o">.</span><span class="n">check_password</span><span class="p">(</span><span class="n">form</span><span class="o">.</span><span class="n">password</span><span class="o">.</span><span class="n">data</span><span class="p">):</span>
 <a id="__codelineno-6-2" name="__codelineno-6-2"></a>        <span class="n">login_user</span><span class="p">(</span><span class="n">user</span><span class="p">)</span>
 <a id="__codelineno-6-3" name="__codelineno-6-3"></a>        <span class="n">flash</span><span class="p">(</span><span class="s1">'Succesvol ingelogd.'</span><span class="p">)</span>
 </code></pre></div></td></tr></tbody></table></div>
-<p>Om succesvol te kunnen inloggen moet er aan twee condities voldaan worden. Het ingevulde wachtwoord van het formulier moet matchen met het corresponderende wachtwoord in de database. Dat regelt de functie <code>check_password()</code>. Bovendien wordt er gecontroleerd of de query wel een waarde heeft toegekend aan de variabele <code>user</code>. Is aan beide voorwaarden voldaan wordt de user automatisch ingelogd door de functie <code>login_user()</code> en verschijnt er een flitsbericht aan de bovenkant van het scherm. De functie <code>check_functie</code> komt mee met <code>User</code>.</p>
+<p>Om succesvol te kunnen inloggen moet er aan twee condities voldaan worden. De gebruiker moet gevonden zijn in de database (daarom controleren we eerst of <code>user is not None</code>), en daarna moet het ingevulde wachtwoord van het formulier matchen met het corresponderende wachtwoord in de database. Dat regelt de functie <code>check_password()</code>. Is aan beide voorwaarden voldaan wordt de user automatisch ingelogd door de functie <code>login_user()</code> en verschijnt er een flitsbericht aan de bovenkant van het scherm. De functie <code>check_password()</code> komt mee met <code>User</code>.</p>
 <p>Nu nog wat bijzonders:</p>
 <div class="language-python highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
 <span class="normal"><a href="#__codelineno-7-2">2</a></span>
 <span class="normal"><a href="#__codelineno-7-3">3</a></span>
 <span class="normal"><a href="#__codelineno-7-4">4</a></span>
-<span class="normal"><a href="#__codelineno-7-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a>    <span class="nb">next</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">args</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'next'</span><span class="p">)</span>
+<span class="normal"><a href="#__codelineno-7-5">5</a></span>
+<span class="normal"><a href="#__codelineno-7-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a>    <span class="nb">next</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">args</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'next'</span><span class="p">)</span>
 <a id="__codelineno-7-2" name="__codelineno-7-2"></a>
-<a id="__codelineno-7-3" name="__codelineno-7-3"></a>    <span class="k">if</span> <span class="nb">next</span> <span class="o">==</span> <span class="kc">None</span> <span class="ow">or</span> <span class="ow">not</span> <span class="nb">next</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">==</span><span class="s1">'/'</span><span class="p">:</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a>    <span class="k">if</span> <span class="nb">next</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="ow">not</span> <span class="nb">next</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s1">'/'</span><span class="p">:</span>
 <a id="__codelineno-7-4" name="__codelineno-7-4"></a>        <span class="nb">next</span> <span class="o">=</span> <span class="n">url_for</span><span class="p">(</span><span class="s1">'welkom'</span><span class="p">)</span>
-<a id="__codelineno-7-5" name="__codelineno-7-5"></a>        <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="nb">next</span><span class="p">)</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a>
+<a id="__codelineno-7-6" name="__codelineno-7-6"></a>    <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="nb">next</span><span class="p">)</span>
 </code></pre></div></td></tr></tbody></table></div>
-<p>Stel een gebruiker probeert een pagina te bezoeken waarvoor inloggen vereist is (zoals <code>welkom.html</code>). Dan slaat <code>Flask</code> die URL op in de variabele <code>next</code>. Vervolgens wordt de gebruiker doorgelinkt naar het inlogformulier. </p>
+<p>Stel een gebruiker probeert een pagina te bezoeken waarvoor inloggen vereist is (zoals <code>welkom.html</code>). Dan slaat <code>Flask</code> die URL op in de variabele <code>next</code>. Vervolgens wordt de gebruiker doorgelinkt naar het inlogformulier.</p>
 <p>Indien er succesvol is ingelogd wordt er nagegaan of de variabele <code>next</code> een waarde heeft. Is dat niet het geval wordt het welkomstbericht getoond, anders verschijnt de pagina waar nu wel toestemming voor gegeven is.</p>
 <p>Tot slot moet van de inlogview worden bepaald wat in beeld verschijnt als de view wordt aangeroepen:</p>
 <div class="language-python highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a>    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">'login.html'</span><span class="p">,</span> <span class="n">form</span><span class="o">=</span><span class="n">form</span><span class="p">)</span>
@@ -3377,10 +3461,24 @@
 </code></pre></div></td></tr></tbody></table></div>
 <p>Ook bij deze view wordt als eerste de route vastgesteld en zijn de methoden <code>GET</code> en <code>POST</code> noodzakelijk omdat gebruikers zich kunnen aanmelden door een formulier in te vullen.</p>
 <div class="language-python highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span>
-<span class="normal"><a href="#__codelineno-10-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">register</span><span class="p">():</span>
-<a id="__codelineno-10-2" name="__codelineno-10-2"></a>    <span class="n">form</span> <span class="o">=</span> <span class="n">RegistrationForm</span><span class="p">()</span>
+<span class="normal"><a href="#__codelineno-10-2">2</a></span>
+<span class="normal"><a href="#__codelineno-10-3">3</a></span>
+<span class="normal"><a href="#__codelineno-10-4">4</a></span>
+<span class="normal"><a href="#__codelineno-10-5">5</a></span>
+<span class="normal"><a href="#__codelineno-10-6">6</a></span>
+<span class="normal"><a href="#__codelineno-10-7">7</a></span>
+<span class="normal"><a href="#__codelineno-10-8">8</a></span>
+<span class="normal"><a href="#__codelineno-10-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">register</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">Response</span><span class="p">:</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="w">    </span><span class="sd">"""Handel het registratieproces af voor nieuwe gebruikers.</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3"></a>
+<a id="__codelineno-10-4" name="__codelineno-10-4"></a><span class="sd">    Returns:</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5"></a><span class="sd">        Bij GET: gerenderde register.html template met formulier</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6"></a><span class="sd">        Bij POST (success): redirect naar login view</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7"></a><span class="sd">        Bij POST (invalid): gerenderde register.html met foutmeldingen</span>
+<a id="__codelineno-10-8" name="__codelineno-10-8"></a><span class="sd">    """</span>
+<a id="__codelineno-10-9" name="__codelineno-10-9"></a>    <span class="n">form</span> <span class="o">=</span> <span class="n">RegistrationForm</span><span class="p">()</span>
 </code></pre></div></td></tr></tbody></table></div>
-<p>Bij het aanroepen van de view wordt een object van de klasse <code>RegistrationForm</code> aangemaakt. </p>
+<p>Bij het aanroepen van de view wordt een object van de klasse <code>RegistrationForm</code> aangemaakt.</p>
 <div class="language-python highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span>
 <span class="normal"><a href="#__codelineno-11-2">2</a></span>
 <span class="normal"><a href="#__codelineno-11-3">3</a></span>
@@ -3410,6 +3508,17 @@
 <a id="__codelineno-13-2" name="__codelineno-13-2"></a>    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </code></pre></div></td></tr></tbody></table></div>
 <p>Omdat er straks weer getest wordt, heeft debug de waarde <code>True</code> meegekregen zodat bij ieder foutje onmiddellijk in beeld verschijnt waar de fout gevonden kan worden. Werkt de applicatie feilloos en kan deze in productie genomen worden, mag debug zeker niet meer de status <code>True</code> hebben.</p>
+<h2 id="samenvatting">Samenvatting<a class="headerlink" href="#samenvatting" title="Permanent link">¶</a></h2>
+<p>In deze les heb je geleerd:</p>
+<ul>
+<li><strong><code>login_required</code>-decorator</strong>: beveiligt een view zodat alleen ingelogde gebruikers er toegang toe hebben; niet-ingelogde gebruikers worden automatisch doorgestuurd naar de loginpagina</li>
+<li><strong><code>login_user()</code></strong>: Flask-Login-functie die de gebruiker officieel inlogt en de sessiegegevens bijhoudt</li>
+<li><strong><code>logout_user()</code></strong>: Flask-Login-functie die de sessie beëindigt en de gebruiker uitlogt; de view is zelf ook beveiligd met <code>@login_required</code></li>
+<li><strong><code>next</code>-parameter</strong>: slaat de oorspronkelijk gevraagde URL op zodat de gebruiker na een succesvolle aanmelding automatisch teruggestuurd wordt naar de gewenste pagina</li>
+<li><strong>Login-view</strong>: verwerkt een POST-verzoek door het e-mailadres op te zoeken in de database en het wachtwoord te controleren via <code>check_password()</code></li>
+<li><strong>Registratie-view</strong>: maakt na succesvolle formuliervalidatie een nieuw <code>User</code>-object aan en slaat dit op in de database, waarna de gebruiker wordt doorgestuurd naar de loginpagina</li>
+<li><strong><code>flash()</code>-berichten</strong>: tonen een korte melding na acties zoals inloggen, uitloggen en registreren om de gebruiker te informeren over het resultaat</li>
+</ul>
 
 
 

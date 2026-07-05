@@ -2263,7 +2263,7 @@
   <span class="md-ellipsis">
     
   
-    Flask en SQL - Theorie
+    Flask en SQLAlchemy - Theorie
   
 
     
@@ -2291,7 +2291,7 @@
   <span class="md-ellipsis">
     
   
-    Flask en SQL - het opzetten van een database
+    Flask en SQLAlchemy - Database Setup
   
 
     
@@ -2319,7 +2319,7 @@
   <span class="md-ellipsis">
     
   
-    Flask en SQL - CRUD
+    Flask en SQLAlchemy - CRUD operaties
   
 
     
@@ -2347,7 +2347,7 @@
   <span class="md-ellipsis">
     
   
-    Flask en SQL - Relaties
+    Flask en SQLAlchemy - Relaties tussen tabellen
   
 
     
@@ -2375,7 +2375,7 @@
   <span class="md-ellipsis">
     
   
-    Flask en SQL - Website
+    Flask en SQLAlchemy - Complete Website
   
 
     
@@ -2454,7 +2454,7 @@
   <span class="md-ellipsis">
     
   
-    Flask en SQL - Oefening 1
+    Flask en SQLAlchemy - Oefening 1: Mentor Platform
   
 
     
@@ -2640,7 +2640,7 @@
   <span class="md-ellipsis">
     
   
-    User authentication - Flask_login deel III
+    User authentication - Flask_login deel IV
   
 
     
@@ -2982,6 +2982,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#samenvatting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Samenvatting
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3268,6 +3279,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#samenvatting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Samenvatting
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3302,19 +3324,19 @@
 
 
 <h1 id="flask-applicaties-blueprints">Flask-applicaties - Blueprints<a class="headerlink" href="#flask-applicaties-blueprints" title="Permanent link">¶</a></h1>
-<p>Tot dusver hebben is de inhoud van de bestanden niet gewijzigd. We hebben ze uit elkaar gehaald en opgenomen in afzonderlijke folders, maar verder niet aangepast. Voor de <code>views.py</code>-bestanden moeten deze bestanden als blueprints toegevoegd worden om daarna geregistreerd te kunnen worden in het bestand  <code>__init__.py</code>.</p>
+<p>Tot dusver hebben is de inhoud van de bestanden niet gewijzigd. We hebben ze uit elkaar gehaald en opgenomen in afzonderlijke folders, maar verder niet aangepast. Voor de <code>views.py</code>-bestanden moeten deze bestanden als <code>blueprints</code> toegevoegd worden om daarna geregistreerd te kunnen worden in het bestand  <code>__init__.py</code>.</p>
 <p>Er zijn nog een aantal aandachtspunten van de vorige paragraaf blijven hangen waar ook nog een passende oplossing voor gecreëerd dient te worden:</p>
 <ul>
 <li>Het toevoegen van code aan de <code>views.py</code>-bestanden.</li>
-<li>Het toevoegen van de blueprints.</li>
-<li>Het registreren van de blueprints.</li>
+<li>Het toevoegen van de <code>blueprints</code>.</li>
+<li>Het registreren van de <code>blueprints</code>.</li>
 <li>Het coderen van de file <code>app.py</code>.</li>
 <li>Aanpassen van de <code>url_for ()</code>-links in de navigatiebalk.</li>
 <li>Het aanmaken van de database.</li>
 <li>Als laatste weer het testen of de applicatie minstens zo goed werkt als de vorige versie.</li>
 </ul>
 <h2 id="de-studenten-view">De studenten-view<a class="headerlink" href="#de-studenten-view" title="Permanent link">¶</a></h2>
-<p>De belangrijkste reden om blueprints te gebruiken is dat we hiermee onnze applicatie kunnen organiseren door logica in submappen te groeperen.</p>
+<p>De belangrijkste reden om <code>blueprints</code> te gebruiken is dat we hiermee onnze applicatie kunnen organiseren door logica in submappen te groeperen.</p>
 <p><code>views.py</code> (uit de folder <code>mijnproject/studenten/views.py</code>):</p>
 <div class="language-python highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
@@ -3338,32 +3360,44 @@
 <span class="normal"><a href="#__codelineno-0-20">20</a></span>
 <span class="normal"><a href="#__codelineno-0-21">21</a></span>
 <span class="normal"><a href="#__codelineno-0-22">22</a></span>
-<span class="normal"><a href="#__codelineno-0-23">23</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="hll"><span class="kn">from</span><span class="w"> </span><span class="nn">flask</span><span class="w"> </span><span class="kn">import</span> <span class="n">Blueprint</span><span class="p">,</span><span class="n">render_template</span><span class="p">,</span><span class="n">redirect</span><span class="p">,</span><span class="n">url_for</span>
+<span class="normal"><a href="#__codelineno-0-23">23</a></span>
+<span class="normal"><a href="#__codelineno-0-24">24</a></span>
+<span class="normal"><a href="#__codelineno-0-25">25</a></span>
+<span class="normal"><a href="#__codelineno-0-26">26</a></span>
+<span class="normal"><a href="#__codelineno-0-27">27</a></span>
+<span class="normal"><a href="#__codelineno-0-28">28</a></span>
+<span class="normal"><a href="#__codelineno-0-29">29</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="hll"><span class="kn">from</span><span class="w"> </span><span class="nn">flask</span><span class="w"> </span><span class="kn">import</span> <span class="n">Blueprint</span><span class="p">,</span> <span class="n">Response</span><span class="p">,</span> <span class="n">render_template</span><span class="p">,</span> <span class="n">redirect</span><span class="p">,</span> <span class="n">url_for</span>
 </span><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">mijnproject</span><span class="w"> </span><span class="kn">import</span> <span class="n">db</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="kn">from</span><span class="w"> </span><span class="nn">mijnproject.models</span><span class="w"> </span><span class="kn">import</span> <span class="n">Student</span>
 <a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="kn">from</span><span class="w"> </span><span class="nn">mijnproject.studenten.forms</span><span class="w"> </span><span class="kn">import</span> <span class="n">AddForm</span>
 <a id="__codelineno-0-5" name="__codelineno-0-5"></a>
 <a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="hll"><span class="n">studenten_blueprint</span> <span class="o">=</span> <span class="n">Blueprint</span><span class="p">(</span><span class="s1">'studenten'</span><span class="p">,</span>
-</span><a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="hll">                             <span class="vm">__name__</span><span class="p">,</span>
-</span><a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="hll">                             <span class="n">template_folder</span><span class="o">=</span><span class="s1">'templates'</span><span class="p">)</span>
+</span><a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="hll">                                <span class="vm">__name__</span><span class="p">,</span>
+</span><a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="hll">                                <span class="n">template_folder</span><span class="o">=</span><span class="s1">'templates'</span><span class="p">)</span>
 </span><a id="__codelineno-0-9" name="__codelineno-0-9"></a>
-<a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="nd">@studenten_blueprint</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">'/add'</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">'GET'</span><span class="p">,</span> <span class="s1">'POST'</span><span class="p">])</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="k">def</span><span class="w"> </span><span class="nf">add</span><span class="p">():</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12"></a>
-<a id="__codelineno-0-13" name="__codelineno-0-13"></a>    <span class="n">form</span> <span class="o">=</span> <span class="n">AddForm</span><span class="p">()</span>
-<a id="__codelineno-0-14" name="__codelineno-0-14"></a>
-<a id="__codelineno-0-15" name="__codelineno-0-15"></a>    <span class="k">if</span> <span class="n">form</span><span class="o">.</span><span class="n">validate_on_submit</span><span class="p">():</span>
-<a id="__codelineno-0-16" name="__codelineno-0-16"></a>        <span class="n">naam</span> <span class="o">=</span> <span class="n">form</span><span class="o">.</span><span class="n">naam</span><span class="o">.</span><span class="n">data</span>
-<a id="__codelineno-0-17" name="__codelineno-0-17"></a>        <span class="n">doc_id</span> <span class="o">=</span> <span class="n">form</span><span class="o">.</span><span class="n">doc_id</span><span class="o">.</span><span class="n">data</span>
-<a id="__codelineno-0-18" name="__codelineno-0-18"></a>        <span class="n">new_student</span> <span class="o">=</span> <span class="n">Student</span><span class="p">(</span><span class="n">naam</span><span class="p">,</span><span class="n">doc_id</span><span class="p">)</span>
-<a id="__codelineno-0-19" name="__codelineno-0-19"></a>        <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">new_student</span><span class="p">)</span>
-<a id="__codelineno-0-20" name="__codelineno-0-20"></a>        <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
-<a id="__codelineno-0-21" name="__codelineno-0-21"></a>
-<a id="__codelineno-0-22" name="__codelineno-0-22"></a>        <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="n">url_for</span><span class="p">(</span><span class="s1">'docenten.list'</span><span class="p">))</span>
-<a id="__codelineno-0-23" name="__codelineno-0-23"></a>    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">'studenten/add.html'</span><span class="p">,</span><span class="n">form</span><span class="o">=</span><span class="n">form</span><span class="p">)</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a>
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="nd">@studenten_blueprint</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">'/add'</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">'GET'</span><span class="p">,</span> <span class="s1">'POST'</span><span class="p">])</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="k">def</span><span class="w"> </span><span class="nf">add</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">Response</span><span class="p">:</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="w">    </span><span class="sd">"""</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="sd">    Voeg een nieuwe student toe aan de database.</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15"></a>
+<a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="sd">    Returns:</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="sd">        Gerenderde template of redirect naar docenten lijst</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="sd">    """</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19"></a>    <span class="n">form</span> <span class="o">=</span> <span class="n">AddForm</span><span class="p">()</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20"></a>
+<a id="__codelineno-0-21" name="__codelineno-0-21"></a>    <span class="k">if</span> <span class="n">form</span><span class="o">.</span><span class="n">validate_on_submit</span><span class="p">():</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22"></a>        <span class="n">naam</span> <span class="o">=</span> <span class="n">form</span><span class="o">.</span><span class="n">naam</span><span class="o">.</span><span class="n">data</span>
+<a id="__codelineno-0-23" name="__codelineno-0-23"></a>        <span class="n">doc_id</span> <span class="o">=</span> <span class="n">form</span><span class="o">.</span><span class="n">doc_id</span><span class="o">.</span><span class="n">data</span>
+<a id="__codelineno-0-24" name="__codelineno-0-24"></a>        <span class="n">new_student</span> <span class="o">=</span> <span class="n">Student</span><span class="p">(</span><span class="n">naam</span><span class="p">,</span> <span class="n">doc_id</span><span class="p">)</span>
+<a id="__codelineno-0-25" name="__codelineno-0-25"></a>        <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">new_student</span><span class="p">)</span>
+<a id="__codelineno-0-26" name="__codelineno-0-26"></a>        <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+<a id="__codelineno-0-27" name="__codelineno-0-27"></a>
+<a id="__codelineno-0-28" name="__codelineno-0-28"></a>        <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="n">url_for</span><span class="p">(</span><span class="s1">'docenten.list'</span><span class="p">))</span>
+<a id="__codelineno-0-29" name="__codelineno-0-29"></a>    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">'studenten/add.html'</span><span class="p">,</span> <span class="n">form</span><span class="o">=</span><span class="n">form</span><span class="p">)</span>
 </code></pre></div></td></tr></tbody></table></div>
-<p>Als eerste wordt hier weer het nodige geïmporteerd. Belangrijk hierbij is dat ook <code>Blueprint</code> wordt meegenomen uit het pakket <code>flask</code>. Verder zijn nodig de database (db) uit <code>mijnproject</code>, de tabel <code>Student</code> en het formulier waarmee een nieuwe student ingevoerd kan worden. </p>
-<p>Vervolgens wordt er een variabele aangemaakt <code>studenten_blueprint</code>. Deze variabele is een instantie van de klasse <code>Blueprint</code>. Er moeten een drietal kenmerken worden vastgelegd: een naam (hier <code>studenten</code>), de naam van de applicatie, en de folder die verantwoordelijk is voor alle logica voor de studenten. </p>
+<p>Als eerste wordt hier weer het nodige geïmporteerd. Belangrijk hierbij is dat ook <code>Blueprint</code> wordt meegenomen uit het pakket <code>flask</code>. Verder zijn nodig de database (db) uit <code>mijnproject</code>, de tabel <code>Student</code> en het formulier waarmee een nieuwe student ingevoerd kan worden.</p>
+<p>Vervolgens wordt er een variabele aangemaakt <code>studenten_blueprint</code>. Deze variabele is een instantie van de klasse <code>Blueprint</code>. Er moeten een drietal kenmerken worden vastgelegd: een naam (hier <code>studenten</code>), de naam van de applicatie, en de folder die verantwoordelijk is voor alle logica voor de studenten.</p>
 <p>Daarna kan de decorator aangemaakt worden. Dit moet weer bekend voorkomen. Aangezien alle gegevens van studenten zijn samengebracht in de map <code>studenten</code> valt af te lezen dat het pad om de gegevens terug te kunnen vinden binnen <code>templates/</code> heel logisch wordt. Dat pad wordt ook vastgelegd in <code>studenten_blueprint</code>. Voor het pad binnen render-templates voegen we dan nog de directory toe waar het te gebruiken template staat <code>studenten/add.html</code>.</p>
 <p>Vervolgens wordt de view gecodeerd (gekopieerd). Daarbij wordt als eerste het formulier gedefinieerd en vervolgens bepaalt wat er moet gebeuren als er nog niet op <em>Submit</em> geklikt is en wat wanneer het formulier al wel is ingevuld.</p>
 <h2 id="de-docenten-view">De docenten-view<a class="headerlink" href="#de-docenten-view" title="Permanent link">¶</a></h2>
@@ -3409,53 +3443,93 @@
 <span class="normal"><a href="#__codelineno-1-39">39</a></span>
 <span class="normal"><a href="#__codelineno-1-40">40</a></span>
 <span class="normal"><a href="#__codelineno-1-41">41</a></span>
-<span class="normal"><a href="#__codelineno-1-42">42</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">flask</span><span class="w"> </span><span class="kn">import</span> <span class="n">Blueprint</span><span class="p">,</span><span class="n">render_template</span><span class="p">,</span><span class="n">redirect</span><span class="p">,</span><span class="n">url_for</span>
+<span class="normal"><a href="#__codelineno-1-42">42</a></span>
+<span class="normal"><a href="#__codelineno-1-43">43</a></span>
+<span class="normal"><a href="#__codelineno-1-44">44</a></span>
+<span class="normal"><a href="#__codelineno-1-45">45</a></span>
+<span class="normal"><a href="#__codelineno-1-46">46</a></span>
+<span class="normal"><a href="#__codelineno-1-47">47</a></span>
+<span class="normal"><a href="#__codelineno-1-48">48</a></span>
+<span class="normal"><a href="#__codelineno-1-49">49</a></span>
+<span class="normal"><a href="#__codelineno-1-50">50</a></span>
+<span class="normal"><a href="#__codelineno-1-51">51</a></span>
+<span class="normal"><a href="#__codelineno-1-52">52</a></span>
+<span class="normal"><a href="#__codelineno-1-53">53</a></span>
+<span class="normal"><a href="#__codelineno-1-54">54</a></span>
+<span class="normal"><a href="#__codelineno-1-55">55</a></span>
+<span class="normal"><a href="#__codelineno-1-56">56</a></span>
+<span class="normal"><a href="#__codelineno-1-57">57</a></span>
+<span class="normal"><a href="#__codelineno-1-58">58</a></span>
+<span class="normal"><a href="#__codelineno-1-59">59</a></span>
+<span class="normal"><a href="#__codelineno-1-60">60</a></span>
+<span class="normal"><a href="#__codelineno-1-61">61</a></span>
+<span class="normal"><a href="#__codelineno-1-62">62</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">flask</span><span class="w"> </span><span class="kn">import</span> <span class="n">Blueprint</span><span class="p">,</span> <span class="n">Response</span><span class="p">,</span> <span class="n">render_template</span><span class="p">,</span> <span class="n">redirect</span><span class="p">,</span> <span class="n">url_for</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">mijnproject</span><span class="w"> </span><span class="kn">import</span> <span class="n">db</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="kn">from</span><span class="w"> </span><span class="nn">mijnproject.docenten.forms</span><span class="w"> </span><span class="kn">import</span> <span class="n">AddForm</span><span class="p">,</span><span class="n">DelForm</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="kn">from</span><span class="w"> </span><span class="nn">mijnproject.docenten.forms</span><span class="w"> </span><span class="kn">import</span> <span class="n">AddForm</span><span class="p">,</span> <span class="n">DelForm</span>
 <a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="kn">from</span><span class="w"> </span><span class="nn">mijnproject.models</span><span class="w"> </span><span class="kn">import</span> <span class="n">Docent</span>
 <a id="__codelineno-1-5" name="__codelineno-1-5"></a>
 <a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="n">docenten_blueprint</span> <span class="o">=</span> <span class="n">Blueprint</span><span class="p">(</span><span class="s1">'docenten'</span><span class="p">,</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7"></a>                              <span class="vm">__name__</span><span class="p">,</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8"></a>                              <span class="n">template_folder</span><span class="o">=</span><span class="s1">'templates'</span><span class="p">)</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a>                               <span class="vm">__name__</span><span class="p">,</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a>                               <span class="n">template_folder</span><span class="o">=</span><span class="s1">'templates'</span><span class="p">)</span>
 <a id="__codelineno-1-9" name="__codelineno-1-9"></a>
-<a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="nd">@docenten_blueprint</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">'/add'</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">'GET'</span><span class="p">,</span> <span class="s1">'POST'</span><span class="p">])</span>
-<a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="k">def</span><span class="w"> </span><span class="nf">add</span><span class="p">():</span>
-<a id="__codelineno-1-12" name="__codelineno-1-12"></a>    <span class="n">form</span> <span class="o">=</span> <span class="n">AddForm</span><span class="p">()</span>
-<a id="__codelineno-1-13" name="__codelineno-1-13"></a>
-<a id="__codelineno-1-14" name="__codelineno-1-14"></a>    <span class="k">if</span> <span class="n">form</span><span class="o">.</span><span class="n">validate_on_submit</span><span class="p">():</span>
-<a id="__codelineno-1-15" name="__codelineno-1-15"></a>        <span class="n">naam</span> <span class="o">=</span> <span class="n">form</span><span class="o">.</span><span class="n">naam</span><span class="o">.</span><span class="n">data</span>
-<a id="__codelineno-1-16" name="__codelineno-1-16"></a>
-<a id="__codelineno-1-17" name="__codelineno-1-17"></a>        <span class="n">new_doc</span> <span class="o">=</span> <span class="n">Docent</span><span class="p">(</span><span class="n">naam</span><span class="p">)</span>
-<a id="__codelineno-1-18" name="__codelineno-1-18"></a>        <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">new_doc</span><span class="p">)</span>
-<a id="__codelineno-1-19" name="__codelineno-1-19"></a>        <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10"></a>
+<a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="nd">@docenten_blueprint</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">'/add'</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">'GET'</span><span class="p">,</span> <span class="s1">'POST'</span><span class="p">])</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="k">def</span><span class="w"> </span><span class="nf">add</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">Response</span><span class="p">:</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="w">    </span><span class="sd">"""</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14"></a><span class="sd">    Voeg een nieuwe docent toe aan de database.</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15"></a>
+<a id="__codelineno-1-16" name="__codelineno-1-16"></a><span class="sd">    Returns:</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17"></a><span class="sd">        Gerenderde template of redirect naar docenten lijst</span>
+<a id="__codelineno-1-18" name="__codelineno-1-18"></a><span class="sd">    """</span>
+<a id="__codelineno-1-19" name="__codelineno-1-19"></a>    <span class="n">form</span> <span class="o">=</span> <span class="n">AddForm</span><span class="p">()</span>
 <a id="__codelineno-1-20" name="__codelineno-1-20"></a>
-<a id="__codelineno-1-21" name="__codelineno-1-21"></a>        <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="n">url_for</span><span class="p">(</span><span class="s1">'docenten.list'</span><span class="p">))</span>
-<a id="__codelineno-1-22" name="__codelineno-1-22"></a>
-<a id="__codelineno-1-23" name="__codelineno-1-23"></a>    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">'docenten/add.html'</span><span class="p">,</span><span class="n">form</span><span class="o">=</span><span class="n">form</span><span class="p">)</span>
-<a id="__codelineno-1-24" name="__codelineno-1-24"></a>
-<a id="__codelineno-1-25" name="__codelineno-1-25"></a><span class="nd">@docenten_blueprint</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">'/list'</span><span class="p">)</span>
-<a id="__codelineno-1-26" name="__codelineno-1-26"></a><span class="k">def</span><span class="w"> </span><span class="nf">list</span><span class="p">():</span>
-<a id="__codelineno-1-27" name="__codelineno-1-27"></a>    <span class="n">docenten</span> <span class="o">=</span> <span class="n">Docent</span><span class="o">.</span><span class="n">query</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
-<a id="__codelineno-1-28" name="__codelineno-1-28"></a>    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">'docenten/list.html'</span><span class="p">,</span> <span class="n">docenten</span><span class="o">=</span><span class="n">docenten</span><span class="p">)</span>
+<a id="__codelineno-1-21" name="__codelineno-1-21"></a>    <span class="k">if</span> <span class="n">form</span><span class="o">.</span><span class="n">validate_on_submit</span><span class="p">():</span>
+<a id="__codelineno-1-22" name="__codelineno-1-22"></a>        <span class="n">naam</span> <span class="o">=</span> <span class="n">form</span><span class="o">.</span><span class="n">naam</span><span class="o">.</span><span class="n">data</span>
+<a id="__codelineno-1-23" name="__codelineno-1-23"></a>
+<a id="__codelineno-1-24" name="__codelineno-1-24"></a>        <span class="n">new_doc</span> <span class="o">=</span> <span class="n">Docent</span><span class="p">(</span><span class="n">naam</span><span class="p">)</span>
+<a id="__codelineno-1-25" name="__codelineno-1-25"></a>        <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">new_doc</span><span class="p">)</span>
+<a id="__codelineno-1-26" name="__codelineno-1-26"></a>        <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+<a id="__codelineno-1-27" name="__codelineno-1-27"></a>
+<a id="__codelineno-1-28" name="__codelineno-1-28"></a>        <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="n">url_for</span><span class="p">(</span><span class="s1">'docenten.list'</span><span class="p">))</span>
 <a id="__codelineno-1-29" name="__codelineno-1-29"></a>
-<a id="__codelineno-1-30" name="__codelineno-1-30"></a><span class="nd">@docenten_blueprint</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">'/delete'</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">'GET'</span><span class="p">,</span> <span class="s1">'POST'</span><span class="p">])</span>
-<a id="__codelineno-1-31" name="__codelineno-1-31"></a><span class="k">def</span><span class="w"> </span><span class="nf">delete</span><span class="p">():</span>
+<a id="__codelineno-1-30" name="__codelineno-1-30"></a>    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">'docenten/add.html'</span><span class="p">,</span> <span class="n">form</span><span class="o">=</span><span class="n">form</span><span class="p">)</span>
+<a id="__codelineno-1-31" name="__codelineno-1-31"></a>
 <a id="__codelineno-1-32" name="__codelineno-1-32"></a>
-<a id="__codelineno-1-33" name="__codelineno-1-33"></a>    <span class="n">form</span> <span class="o">=</span> <span class="n">DelForm</span><span class="p">()</span>
-<a id="__codelineno-1-34" name="__codelineno-1-34"></a>
-<a id="__codelineno-1-35" name="__codelineno-1-35"></a>    <span class="k">if</span> <span class="n">form</span><span class="o">.</span><span class="n">validate_on_submit</span><span class="p">():</span>
-<a id="__codelineno-1-36" name="__codelineno-1-36"></a>        <span class="nb">id</span> <span class="o">=</span> <span class="n">form</span><span class="o">.</span><span class="n">id</span><span class="o">.</span><span class="n">data</span>
-<a id="__codelineno-1-37" name="__codelineno-1-37"></a>        <span class="n">doc</span> <span class="o">=</span> <span class="n">Docent</span><span class="o">.</span><span class="n">query</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">id</span><span class="p">)</span>
-<a id="__codelineno-1-38" name="__codelineno-1-38"></a>        <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="n">doc</span><span class="p">)</span>
-<a id="__codelineno-1-39" name="__codelineno-1-39"></a>        <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
-<a id="__codelineno-1-40" name="__codelineno-1-40"></a>
-<a id="__codelineno-1-41" name="__codelineno-1-41"></a>        <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="n">url_for</span><span class="p">(</span><span class="s1">'docenten.list'</span><span class="p">))</span>
-<a id="__codelineno-1-42" name="__codelineno-1-42"></a>    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">'docenten/delete.html'</span><span class="p">,</span><span class="n">form</span><span class="o">=</span><span class="n">form</span><span class="p">)</span>
+<a id="__codelineno-1-33" name="__codelineno-1-33"></a><span class="nd">@docenten_blueprint</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">'/list'</span><span class="p">)</span>
+<a id="__codelineno-1-34" name="__codelineno-1-34"></a><span class="k">def</span><span class="w"> </span><span class="nf">list</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<a id="__codelineno-1-35" name="__codelineno-1-35"></a><span class="w">    </span><span class="sd">"""</span>
+<a id="__codelineno-1-36" name="__codelineno-1-36"></a><span class="sd">    Toon een lijst van alle docenten en hun studenten.</span>
+<a id="__codelineno-1-37" name="__codelineno-1-37"></a>
+<a id="__codelineno-1-38" name="__codelineno-1-38"></a><span class="sd">    Returns:</span>
+<a id="__codelineno-1-39" name="__codelineno-1-39"></a><span class="sd">        Gerenderde template met docenten lijst</span>
+<a id="__codelineno-1-40" name="__codelineno-1-40"></a><span class="sd">    """</span>
+<a id="__codelineno-1-41" name="__codelineno-1-41"></a>    <span class="n">docenten</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">Docent</span><span class="p">))</span><span class="o">.</span><span class="n">scalars</span><span class="p">()</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+<a id="__codelineno-1-42" name="__codelineno-1-42"></a>    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">'docenten/list.html'</span><span class="p">,</span> <span class="n">docenten</span><span class="o">=</span><span class="n">docenten</span><span class="p">)</span>
+<a id="__codelineno-1-43" name="__codelineno-1-43"></a>
+<a id="__codelineno-1-44" name="__codelineno-1-44"></a>
+<a id="__codelineno-1-45" name="__codelineno-1-45"></a><span class="nd">@docenten_blueprint</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">'/delete'</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">'GET'</span><span class="p">,</span> <span class="s1">'POST'</span><span class="p">])</span>
+<a id="__codelineno-1-46" name="__codelineno-1-46"></a><span class="k">def</span><span class="w"> </span><span class="nf">delete</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">Response</span><span class="p">:</span>
+<a id="__codelineno-1-47" name="__codelineno-1-47"></a><span class="w">    </span><span class="sd">"""</span>
+<a id="__codelineno-1-48" name="__codelineno-1-48"></a><span class="sd">    Verwijder een docent uit de database.</span>
+<a id="__codelineno-1-49" name="__codelineno-1-49"></a>
+<a id="__codelineno-1-50" name="__codelineno-1-50"></a><span class="sd">    Returns:</span>
+<a id="__codelineno-1-51" name="__codelineno-1-51"></a><span class="sd">        Gerenderde template of redirect naar docenten lijst</span>
+<a id="__codelineno-1-52" name="__codelineno-1-52"></a><span class="sd">    """</span>
+<a id="__codelineno-1-53" name="__codelineno-1-53"></a>    <span class="n">form</span> <span class="o">=</span> <span class="n">DelForm</span><span class="p">()</span>
+<a id="__codelineno-1-54" name="__codelineno-1-54"></a>
+<a id="__codelineno-1-55" name="__codelineno-1-55"></a>    <span class="k">if</span> <span class="n">form</span><span class="o">.</span><span class="n">validate_on_submit</span><span class="p">():</span>
+<a id="__codelineno-1-56" name="__codelineno-1-56"></a>        <span class="nb">id</span> <span class="o">=</span> <span class="n">form</span><span class="o">.</span><span class="n">id</span><span class="o">.</span><span class="n">data</span>
+<a id="__codelineno-1-57" name="__codelineno-1-57"></a>        <span class="n">doc</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">Docent</span><span class="p">,</span> <span class="nb">id</span><span class="p">)</span>
+<a id="__codelineno-1-58" name="__codelineno-1-58"></a>        <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="n">doc</span><span class="p">)</span>
+<a id="__codelineno-1-59" name="__codelineno-1-59"></a>        <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+<a id="__codelineno-1-60" name="__codelineno-1-60"></a>
+<a id="__codelineno-1-61" name="__codelineno-1-61"></a>        <span class="k">return</span> <span class="n">redirect</span><span class="p">(</span><span class="n">url_for</span><span class="p">(</span><span class="s1">'docenten.list'</span><span class="p">))</span>
+<a id="__codelineno-1-62" name="__codelineno-1-62"></a>    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">'docenten/delete.html'</span><span class="p">,</span> <span class="n">form</span><span class="o">=</span><span class="n">form</span><span class="p">)</span>
 </code></pre></div></td></tr></tbody></table></div>
 <p>Meer van hetzelfde. Nu zijn er twee views die gemaakt moeten worden. De <code>blueprint</code> verwijst nu naar de folder waar de applicatie-onderdelen voor docenten gevonden kunnen worden.</p>
 <h2 id="registratie-van-de-blueprints">Registratie van de blueprints<a class="headerlink" href="#registratie-van-de-blueprints" title="Permanent link">¶</a></h2>
-<p>De blueprints moeten nu nog geregistreerd worden in de file <code>__init__.py</code>. De blueprints moeten worden opgenomen in de code <em>nadat</em> de db gedefinieerd is.</p>
-<p>Dat vastleggen gaat in een tweetal stappen. Als eerste moeten de blueprints opgehaald worden uit de folders waar ze zijn aangemaakt. Eenmaal geïmporteerd kunnen ze geregistreerd worden:</p>
+<p>De <code>blueprints</code> moeten nu nog geregistreerd worden in de file <code>__init__.py</code>. De <code>blueprints</code> moeten worden opgenomen in de code <em>nadat</em> de db gedefinieerd is.</p>
+<p>Dat vastleggen gaat in een tweetal stappen. Als eerste moeten de <code>blueprints</code> opgehaald worden uit de folders waar ze zijn aangemaakt. Eenmaal geïmporteerd kunnen ze geregistreerd worden:</p>
 <div class="language-python highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
 <span class="normal"><a href="#__codelineno-2-2">2</a></span>
 <span class="normal"><a href="#__codelineno-2-3">3</a></span>
@@ -3467,25 +3541,46 @@
 <a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="n">app</span><span class="o">.</span><span class="n">register_blueprint</span><span class="p">(</span><span class="n">docenten_blueprint</span><span class="p">,</span><span class="n">url_prefix</span><span class="o">=</span><span class="s1">'/docenten'</span><span class="p">)</span>
 </code></pre></div></td></tr></tbody></table></div>
 <p>De laatste file die nog geen inhoud heeft is <code>app.py</code>. Daarin wordt de volgende code ondergebracht:</p>
-<div class="language-python highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
-<span class="normal"><a href="#__codelineno-3-2">2</a></span>
-<span class="normal"><a href="#__codelineno-3-3">3</a></span>
-<span class="normal"><a href="#__codelineno-3-4">4</a></span>
-<span class="normal"><a href="#__codelineno-3-5">5</a></span>
-<span class="normal"><a href="#__codelineno-3-6">6</a></span>
-<span class="normal"><a href="#__codelineno-3-7">7</a></span>
-<span class="normal"><a href="#__codelineno-3-8">8</a></span>
-<span class="normal"><a href="#__codelineno-3-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">mijnproject</span><span class="w"> </span><span class="kn">import</span> <span class="n">app</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">flask</span><span class="w"> </span><span class="kn">import</span> <span class="n">render_template</span>
+<div class="language-python highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-3-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-3-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-3-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-3-10">10</a></span>
+<span class="normal"><a href="#__codelineno-3-11">11</a></span>
+<span class="normal"><a href="#__codelineno-3-12">12</a></span>
+<span class="normal"><a href="#__codelineno-3-13">13</a></span>
+<span class="normal"><a href="#__codelineno-3-14">14</a></span>
+<span class="normal"><a href="#__codelineno-3-15">15</a></span>
+<span class="normal"><a href="#__codelineno-3-16">16</a></span>
+<span class="normal"><a href="#__codelineno-3-17">17</a></span>
+<span class="normal"><a href="#__codelineno-3-18">18</a></span>
+<span class="normal"><a href="#__codelineno-3-19">19</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">mijnproject</span><span class="w"> </span><span class="kn">import</span> <span class="n">app</span><span class="p">,</span> <span class="n">db</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">flask</span><span class="w"> </span><span class="kn">import</span> <span class="n">Response</span><span class="p">,</span> <span class="n">render_template</span>
 <a id="__codelineno-3-3" name="__codelineno-3-3"></a>
-<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">'/'</span><span class="p">)</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="k">def</span><span class="w"> </span><span class="nf">index</span><span class="p">():</span>
-<a id="__codelineno-3-6" name="__codelineno-3-6"></a>    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">'home.html'</span><span class="p">)</span>
-<a id="__codelineno-3-7" name="__codelineno-3-7"></a>
-<a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">'__main__'</span><span class="p">:</span>
-<a id="__codelineno-3-9" name="__codelineno-3-9"></a>    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">'/'</span><span class="p">)</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="k">def</span><span class="w"> </span><span class="nf">index</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="w">    </span><span class="sd">"""</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="sd">    Toon de homepagina van de applicatie.</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9"></a>
+<a id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="sd">    Returns:</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="sd">        Gerenderde home template</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12"></a><span class="sd">    """</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13"></a>    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">'home.html'</span><span class="p">)</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14"></a>
+<a id="__codelineno-3-15" name="__codelineno-3-15"></a>
+<a id="__codelineno-3-16" name="__codelineno-3-16"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">'__main__'</span><span class="p">:</span>
+<a id="__codelineno-3-17" name="__codelineno-3-17"></a>    <span class="k">with</span> <span class="n">app</span><span class="o">.</span><span class="n">app_context</span><span class="p">():</span>
+<a id="__codelineno-3-18" name="__codelineno-3-18"></a>        <span class="n">db</span><span class="o">.</span><span class="n">create_all</span><span class="p">()</span>
+<a id="__codelineno-3-19" name="__codelineno-3-19"></a>    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </code></pre></div></td></tr></tbody></table></div>
-<p>Om te beginnen worden er weer een tweetal items ingeladen. Op het eerste gezicht ziet <code>import app</code> er wat raar uit, maar er wordt gevraagd om de volgende regel: <code>app = Flask(__name__)</code> op te halen uit <code>__init__.py</code>. Belangrijk is dat vervolgens de homepagina geladen kan worden als aan de <code>if</code>-voorwaarde voldaan wordt.</p>
+<p>Om te beginnen worden er items ingeladen. De <code>app</code> variabele komt uit <code>__init__.py</code> (waar <code>app = Flask(__name__)</code> staat), evenals de <code>db</code> variabele voor de database. Vervolgens wordt de homepagina geladen als aan de <code>if</code>-voorwaarde voldaan wordt.</p>
+<p>De database wordt aangemaakt binnen een <em>application context</em> met <code>with app.app_context()</code>. Dit is het moderne patroon voor het aanmaken van database tabellen bij het opstarten van de applicatie.</p>
 <h2 id="laatste-loodjes">Laatste loodjes<a class="headerlink" href="#laatste-loodjes" title="Permanent link">¶</a></h2>
 <p>Er staan nog drie punten op het lijstje die nog gedaan moeten worden:</p>
 <ul>
@@ -3522,24 +3617,52 @@
 <a id="__codelineno-4-10" name="__codelineno-4-10"></a>
 <a id="__codelineno-4-11" name="__codelineno-4-11"></a><span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></tbody></table></div>
-<p>Voordat er getest kan worden dient de database aangemaakt te worden. Daarvoor zijn de vier inmiddels bekende stappen nodig:</p>
+<p>Voordat er getest kan worden dient de database aangemaakt te worden. Daarvoor zijn de vier inmiddels bekende stappen uit week 5 nodig:</p>
 <ol>
-<li>Stel de omgevingsvariabele FLASK_APP in<ul>
-<li>Voor een MacOS / Linux-machine is dat <code>export FLASK_APP = app.py</code></li>
-<li>Voor een Windows-machine <code>set FLASK_APP = app.py</code></li>
+<li>Stel de omgevingsvariabele <code>FLASK_APP</code> in<ul>
+<li>Voor een macOS / Linux-machine is dat <code>export FLASK_APP=app.py</code></li>
+<li>Voor een Windows-machine <code>set FLASK_APP=app.py</code> (cmd) of <code>$Env:FLASK_APP = "app.py"</code> (PowerShell)</li>
 </ul>
 </li>
-<li><code>flask db init</code> </li>
+<li><code>uv run flask db init</code></li>
+<li><code>uv run flask db migrate -m "Initial migration"</code></li>
+<li><code>uv run flask db upgrade</code></li>
 </ol>
 <h2 id="resultaat">Resultaat<a class="headerlink" href="#resultaat" title="Permanent link">¶</a></h2>
-<p>Als alles naar behoren is gegaan kan er nu weer getest worden. </p>
+<p>Als alles naar behoren is gegaan kan er nu weer getest worden.</p>
 <p>Homepagina:</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="imgs/homepagina.png" data-desc-position="bottom"><img alt="de homepagina van de website" src="imgs/homepagina.png"></a></p>
+<blockquote>
+<p><strong>Verwacht resultaat:</strong> De homepagina van de gerefactorde applicatie met een navigatiebalk met links naar de docenten- en studentenpagina's.</p>
+</blockquote>
 <p>Na het toevoegen van docent Bart:</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="imgs/docent-bart.png" data-desc-position="bottom"><img alt="Docent bart in het overzicht van de mentoren en studenten" src="imgs/docent-bart.png"></a></p>
+<blockquote>
+<p><strong>Verwacht resultaat:</strong> Het overzicht van mentoren en studenten met de nieuw toegevoegde docent "Bart" in de lijst.</p>
+</blockquote>
 <p>Docent Bart wordt mentor van Roos:</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="imgs/student-roos.png" data-desc-position="bottom"><img alt="Docent Bart (met Id 1) wordt toegevoegd als mentor van student Roos" src="imgs/student-roos.png"></a></p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="imgs/bart-mentor-roos.png" data-desc-position="bottom"><img alt="In het overzicht staat nu ook dat Docent Bart de mentor is van Roos" src="imgs/bart-mentor-roos.png"></a></p>
+<blockquote>
+<p><strong>Verwacht resultaat:</strong> Het formulier om een student toe te voegen, met het ID van Docent Bart (1) ingevuld als mentor voor student Roos.</p>
+</blockquote>
+<p>Na het klikken op "Voeg toe":</p>
+<blockquote>
+<p><strong>Verwacht resultaat:</strong> Het overzicht toont student Roos met "Docent Bart" als haar mentor.</p>
+</blockquote>
+<h2 id="samenvatting">Samenvatting<a class="headerlink" href="#samenvatting" title="Permanent link">¶</a></h2>
+<p>Je hebt nu geleerd hoe je een Flask applicatie kunt structureren met <code>blueprints</code>. De belangrijkste voordelen zijn:</p>
+<ul>
+<li><strong>Modulariteit</strong>: Elke functionaliteit (docenten, studenten) heeft zijn eigen folder met views, forms en templates</li>
+<li><strong>Onderhoudbaarheid</strong>: Code is logisch georganiseerd en makkelijker te vinden</li>
+<li><strong>Schaalbaarheid</strong>: Nieuwe features kunnen eenvoudig worden toegevoegd als nieuwe <code>blueprints</code></li>
+<li><strong>Samenwerking</strong>: Teams kunnen parallel aan verschillende <code>blueprints</code> werken</li>
+</ul>
+<p>Deze structuur is professioneel en wordt gebruikt in productie-applicaties. In de volgende weken kun je deze kennis gebruiken om grotere webapplicaties te bouwen.</p>
+<div class="admonition tip">
+<p class="admonition-title">Volgende stappen</p>
+<p>Nu je <code>blueprints</code> beheerst, kun je experimenteren met:
+- Het toevoegen van meer <code>blueprints</code> voor andere onderdelen
+- Het gebruik van blueprint-specifieke static files
+- Het implementeren van API endpoints (URLs die data teruggeven in plaats van HTML) in aparte <code>blueprints</code>
+- Het toevoegen van authentication met de <code>Flask-Login</code> bibliotheek</p>
+</div>
 
 
 

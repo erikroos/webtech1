@@ -2263,7 +2263,7 @@
   <span class="md-ellipsis">
     
   
-    Flask en SQL - Theorie
+    Flask en SQLAlchemy - Theorie
   
 
     
@@ -2291,7 +2291,7 @@
   <span class="md-ellipsis">
     
   
-    Flask en SQL - het opzetten van een database
+    Flask en SQLAlchemy - Database Setup
   
 
     
@@ -2319,7 +2319,7 @@
   <span class="md-ellipsis">
     
   
-    Flask en SQL - CRUD
+    Flask en SQLAlchemy - CRUD operaties
   
 
     
@@ -2347,7 +2347,7 @@
   <span class="md-ellipsis">
     
   
-    Flask en SQL - Relaties
+    Flask en SQLAlchemy - Relaties tussen tabellen
   
 
     
@@ -2375,7 +2375,7 @@
   <span class="md-ellipsis">
     
   
-    Flask en SQL - Website
+    Flask en SQLAlchemy - Complete Website
   
 
     
@@ -2454,7 +2454,7 @@
   <span class="md-ellipsis">
     
   
-    Flask en SQL - Oefening 1
+    Flask en SQLAlchemy - Oefening 1: Mentor Platform
   
 
     
@@ -2682,6 +2682,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#samenvatting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Samenvatting
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2733,7 +2744,7 @@
   <span class="md-ellipsis">
     
   
-    User authentication - Flask_login deel III
+    User authentication - Flask_login deel IV
   
 
     
@@ -3246,6 +3257,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#samenvatting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Samenvatting
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3372,45 +3394,113 @@
 </ul>
 <p>Nu kan de gebruikersklasse aangemaakt worden. De naam van de klasse wordt <code>User</code>, dat is hier een gangbaardere term dan <code>Gebruiker</code>. Voor iedere gebruiker wordt het ID, de gebruikersnaam, een wachtwoord en het e-mailadres vastgelegd.</p>
 <p>De klasse <code>User()</code> erft eigenschappen van <code>dbModel</code> en <code>UserMixin</code>:</p>
-<div class="language-python highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
-<span class="normal"><a href="#__codelineno-4-2">2</a></span>
-<span class="normal"><a href="#__codelineno-4-3">3</a></span>
-<span class="normal"><a href="#__codelineno-4-4">4</a></span>
-<span class="normal"><a href="#__codelineno-4-5">5</a></span>
-<span class="normal"><a href="#__codelineno-4-6">6</a></span>
-<span class="normal"><a href="#__codelineno-4-7">7</a></span>
-<span class="normal"><a href="#__codelineno-4-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">User</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">Model</span><span class="p">,</span> <span class="n">UserMixin</span><span class="p">):</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2"></a>
-<a id="__codelineno-4-3" name="__codelineno-4-3"></a>     <span class="n">__tablename__</span> <span class="o">=</span> <span class="s1">'users'</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4"></a>
-<a id="__codelineno-4-5" name="__codelineno-4-5"></a>    <span class="nb">id</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">Column</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">Integer</span><span class="p">,</span> <span class="n">primary_key</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
-<a id="__codelineno-4-6" name="__codelineno-4-6"></a>    <span class="n">email</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">Column</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="mi">64</span><span class="p">),</span> <span class="n">unique</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<a id="__codelineno-4-7" name="__codelineno-4-7"></a>    <span class="n">username</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">Column</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="mi">64</span><span class="p">),</span> <span class="n">unique</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<a id="__codelineno-4-8" name="__codelineno-4-8"></a>    <span class="n">password_hash</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">Column</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="mi">128</span><span class="p">))</span>
+<div class="language-python highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-4-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-4-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-4-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-4-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-4-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-4-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-4-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-4-10">10</a></span>
+<span class="normal"><a href="#__codelineno-4-11">11</a></span>
+<span class="normal"><a href="#__codelineno-4-12">12</a></span>
+<span class="normal"><a href="#__codelineno-4-13">13</a></span>
+<span class="normal"><a href="#__codelineno-4-14">14</a></span>
+<span class="normal"><a href="#__codelineno-4-15">15</a></span>
+<span class="normal"><a href="#__codelineno-4-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">sqlalchemy.orm</span><span class="w"> </span><span class="kn">import</span> <span class="n">Mapped</span><span class="p">,</span> <span class="n">mapped_column</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">sqlalchemy</span><span class="w"> </span><span class="kn">import</span> <span class="n">String</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="k">class</span><span class="w"> </span><span class="nc">User</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">Model</span><span class="p">,</span> <span class="n">UserMixin</span><span class="p">):</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="w">    </span><span class="sd">"""User model voor authenticatie.</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a>
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="sd">    Erft van db.Model voor database functionaliteit en UserMixin voor</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="sd">    ingebouwde Flask-Login methoden zoals is_authenticated(), is_active(),</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="sd">    is_anonymous(), en get_id().</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="sd">    """</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11"></a>    <span class="n">__tablename__</span> <span class="o">=</span> <span class="s1">'users'</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12"></a>
+<a id="__codelineno-4-13" name="__codelineno-4-13"></a>    <span class="nb">id</span><span class="p">:</span> <span class="n">Mapped</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="n">mapped_column</span><span class="p">(</span><span class="n">primary_key</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<a id="__codelineno-4-14" name="__codelineno-4-14"></a>    <span class="n">email</span><span class="p">:</span> <span class="n">Mapped</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="n">mapped_column</span><span class="p">(</span><span class="n">String</span><span class="p">(</span><span class="mi">64</span><span class="p">),</span> <span class="n">unique</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<a id="__codelineno-4-15" name="__codelineno-4-15"></a>    <span class="n">username</span><span class="p">:</span> <span class="n">Mapped</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="n">mapped_column</span><span class="p">(</span><span class="n">String</span><span class="p">(</span><span class="mi">64</span><span class="p">),</span> <span class="n">unique</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<a id="__codelineno-4-16" name="__codelineno-4-16"></a>    <span class="n">password_hash</span><span class="p">:</span> <span class="n">Mapped</span><span class="p">[</span><span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span><span class="p">]</span> <span class="o">=</span> <span class="n">mapped_column</span><span class="p">(</span><span class="n">String</span><span class="p">(</span><span class="mi">128</span><span class="p">))</span>
 </code></pre></div></td></tr></tbody></table></div>
 <p>Achter de variabelen <code>email</code>, <code>username</code> en <code>password_hash</code> staat een getal genoteerd (64 of 128). Dat betreft het aantal posities dat voor die variabele beschikbaar is. Verder hebben <code>email</code> en <code>username</code> het kenmerk <code>unique</code> meegekregen. Op de primary key wordt automatisch gecontroleerd dat er geen dubbele waarden van voorkomen, maar het e-mailadres en de gebruikersnaam mogen natuurlijk ook maar één keer voorkomen in de database met inloggegevens.</p>
 <p>Nu is het weer de beurt aan <code>__init__()</code>. De volgorde waarin de coderegels worden opgenomen in de diverse bestanden heeft steeds eenzelfde stramien.</p>
-<div class="language-python highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
-<span class="normal"><a href="#__codelineno-5-2">2</a></span>
-<span class="normal"><a href="#__codelineno-5-3">3</a></span>
-<span class="normal"><a href="#__codelineno-5-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">email</span><span class="p">,</span> <span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="p">):</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">email</span> <span class="o">=</span> <span class="n">email</span>
-<a id="__codelineno-5-3" name="__codelineno-5-3"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">username</span> <span class="o">=</span> <span class="n">username</span>
-<a id="__codelineno-5-4" name="__codelineno-5-4"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">password_hash</span> <span class="o">=</span> <span class="n">generate_password_hash</span><span class="p">(</span><span class="n">password</span><span class="p">)</span>
+<div class="language-python highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-5-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-5-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-5-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-5-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-5-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-5-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-5-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-5-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-5-10">10</a></span>
+<span class="normal"><a href="#__codelineno-5-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">email</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">username</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">password</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="w">    </span><span class="sd">"""Initialiseer een nieuwe gebruiker.</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a>
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="sd">    Args:</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="sd">        email: Het e-mailadres van de gebruiker</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="sd">        username: De unieke gebruikersnaam</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="sd">        password: Het wachtwoord in plain text (wordt automatisch gehashed)</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8"></a><span class="sd">    """</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">email</span> <span class="o">=</span> <span class="n">email</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">username</span> <span class="o">=</span> <span class="n">username</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">password_hash</span> <span class="o">=</span> <span class="n">generate_password_hash</span><span class="p">(</span><span class="n">password</span><span class="p">)</span>
 </code></pre></div></td></tr></tbody></table></div>
 <p>Voor iedere nieuwe gebruiker wordt gevraagd om een gebruikersnaam, een e-mailadres en een wachtwoord. Van het opgegeven wachtwoord wordt onmiddellijk een hash-versie geproduceerd.</p>
 <p>Verder is er nog een methode nodig die gaat controleren of het ingevoerde wachtwoord het juiste is. In de vorige paragraaf is deze methode uitgebreid besproken:</p>
-<div class="language-python highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
-<span class="normal"><a href="#__codelineno-6-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">check_password</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">password</span><span class="p">):</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2"></a>    <span class="k">return</span> <span class="n">check_password_hash</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">password_hash</span><span class="p">,</span> <span class="n">password</span><span class="p">)</span>
+<div class="language-python highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-6-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-6-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-6-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-6-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-6-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-6-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-6-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-6-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-6-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">check_password</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">password</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="w">    </span><span class="sd">"""Controleer of het opgegeven wachtwoord correct is.</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a>
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="sd">    Args:</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="sd">        password: Het te verifiëren wachtwoord in plain text</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6"></a>
+<a id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="sd">    Returns:</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8"></a><span class="sd">        True als het wachtwoord overeenkomt, anders False</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9"></a><span class="sd">    """</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10"></a>    <span class="k">return</span> <span class="n">check_password_hash</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">password_hash</span><span class="p">,</span> <span class="n">password</span><span class="p">)</span>
 </code></pre></div></td></tr></tbody></table></div>
 <p>Er wordt gecontroleerd of het opgegeven password voldoet aan de hash-versie. Er wordt <code>True</code> of <code>False</code> als uitkomst geretourneerd.</p>
 <p>Als laatste nog een nieuwe vereiste methode. Deze nieuwe functie <code>load_user()</code> wordt in de code opgenomen net voor het definiëren van de klasse <code>User()</code>:</p>
-<div class="language-python highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
-<span class="normal"><a href="#__codelineno-7-2">2</a></span>
-<span class="normal"><a href="#__codelineno-7-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="nd">@login_manager</span><span class="o">.</span><span class="n">user_loader</span>
-<a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="k">def</span><span class="w"> </span><span class="nf">load_user</span><span class="p">(</span><span class="n">user_id</span><span class="p">):</span>
-<a id="__codelineno-7-3" name="__codelineno-7-3"></a>    <span class="k">return</span> <span class="n">User</span><span class="o">.</span><span class="n">query</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">user_id</span><span class="p">)</span>
+<div class="language-python highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-7-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-7-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-7-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-7-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-7-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-7-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-7-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-7-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-7-10">10</a></span>
+<span class="normal"><a href="#__codelineno-7-11">11</a></span>
+<span class="normal"><a href="#__codelineno-7-12">12</a></span>
+<span class="normal"><a href="#__codelineno-7-13">13</a></span>
+<span class="normal"><a href="#__codelineno-7-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="nd">@login_manager</span><span class="o">.</span><span class="n">user_loader</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="k">def</span><span class="w"> </span><span class="nf">load_user</span><span class="p">(</span><span class="n">user_id</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">User</span> <span class="o">|</span> <span class="kc">None</span><span class="p">:</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="w">    </span><span class="sd">"""Laad een gebruiker op basis van het user ID.</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a>
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="sd">    Deze functie wordt gebruikt door Flask-Login om de huidige gebruiker</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="sd">    te laden uit de sessie.</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7"></a>
+<a id="__codelineno-7-8" name="__codelineno-7-8"></a><span class="sd">    Args:</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9"></a><span class="sd">        user_id: Het ID van de gebruiker om te laden</span>
+<a id="__codelineno-7-10" name="__codelineno-7-10"></a>
+<a id="__codelineno-7-11" name="__codelineno-7-11"></a><span class="sd">    Returns:</span>
+<a id="__codelineno-7-12" name="__codelineno-7-12"></a><span class="sd">        De User instantie als gevonden, anders None</span>
+<a id="__codelineno-7-13" name="__codelineno-7-13"></a><span class="sd">    """</span>
+<a id="__codelineno-7-14" name="__codelineno-7-14"></a>    <span class="k">return</span> <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">User</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="n">user_id</span><span class="p">))</span>
 </code></pre></div></td></tr></tbody></table></div>
 <p>De <code>user_loader</code> decorator geeft <code>Flask-login</code> toestemming om de gegevens van de huidige gebruiker te laden en het bijbehorende ID te gebruiken. Daarmee kan de gebruiker pagina’s bekijken die bij zijn profiel horen, zoals onder andere het beheren van de eigen gegevens en eigen blogberichten. En na een succesvolle aanmelding kan de naam van de gebruiker aan een welkomstwoord gekoppeld worden.</p>
 <h2 id="formspy"><code>forms.py</code><a class="headerlink" href="#formspy" title="Permanent link">¶</a></h2>
@@ -3425,51 +3515,109 @@
 <a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="kn">from</span><span class="w"> </span><span class="nn">wtforms</span><span class="w"> </span><span class="kn">import</span> <span class="n">ValidationError</span>
 <a id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="kn">from</span><span class="w"> </span><span class="nn">mijnproject.models</span><span class="w"> </span><span class="kn">import</span> <span class="n">User</span>
 </code></pre></div></td></tr></tbody></table></div>
-<p>Er moet gecontroleerd worden of velden op een formulier voldoen aan de verplichting een waarde te krijgen. Verder vindt er toezicht plaats of het opgegeven e-mailadres aan de eisen voldoet – is er bijvoorbeeld een apenstaartje (<code>@</code>) meegestuurd en dergelijke. De validator <code>EqualTo</code> is uitgerust om twee waardes met elkaar te vergelijken. Mocht er iets niet in orde dan kan er met behulp van de <code>ValidationError</code> een passende melding getoond wordt.</p>
+<p>Er moet gecontroleerd worden of velden op een formulier voldoen aan de verplichting een waarde te krijgen. Verder vindt er toezicht plaats of het opgegeven e-mailadres aan de eisen voldoet: is er bijvoorbeeld een apenstaartje (<code>@</code>) meegestuurd en dergelijke. De validator <code>EqualTo</code> is uitgerust om twee waardes met elkaar te vergelijken. Mocht er iets niet in orde dan kan er met behulp van de <code>ValidationError</code> een passende melding getoond wordt.</p>
 <p>Nu kunnen de formulieren opgebouwd worden, te beginnen met het registratieformulier. Omdat er als veel vaker Engelse termen in de code zijn opgetekend, worden hier ook Engelse benamingen gehanteerd.</p>
-<div class="language-python highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
-<span class="normal"><a href="#__codelineno-9-2">2</a></span>
-<span class="normal"><a href="#__codelineno-9-3">3</a></span>
-<span class="normal"><a href="#__codelineno-9-4">4</a></span>
-<span class="normal"><a href="#__codelineno-9-5">5</a></span>
-<span class="normal"><a href="#__codelineno-9-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">RegistrationForm</span><span class="p">(</span><span class="n">FlaskForm</span><span class="p">):</span>
-<a id="__codelineno-9-2" name="__codelineno-9-2"></a>    <span class="n">email</span> <span class="o">=</span> <span class="n">StringField</span><span class="p">(</span><span class="s1">'Email'</span><span class="p">,</span> <span class="n">validators</span><span class="o">=</span><span class="p">[</span><span class="n">DataRequired</span><span class="p">(),</span><span class="n">Email</span><span class="p">()])</span>
-<a id="__codelineno-9-3" name="__codelineno-9-3"></a>    <span class="n">username</span> <span class="o">=</span> <span class="n">StringField</span><span class="p">(</span><span class="s1">'Username'</span><span class="p">,</span> <span class="n">validators</span><span class="o">=</span><span class="p">[</span><span class="n">DataRequired</span><span class="p">()])</span>
-<a id="__codelineno-9-4" name="__codelineno-9-4"></a>    <span class="n">password</span> <span class="o">=</span> <span class="n">PasswordField</span><span class="p">(</span><span class="s1">'Password'</span><span class="p">,</span> <span class="n">validators</span><span class="o">=</span><span class="p">[</span><span class="n">DataRequired</span><span class="p">(),</span> <span class="n">EqualTo</span><span class="p">(</span><span class="s1">'pass_confirm'</span><span class="p">,</span>    <span class="n">message</span><span class="o">=</span><span class="s1">'Passwords Must Match!'</span><span class="p">)])</span>
-<a id="__codelineno-9-5" name="__codelineno-9-5"></a>    <span class="n">pass_confirm</span> <span class="o">=</span> <span class="n">PasswordField</span><span class="p">(</span><span class="s1">'Confirm password'</span><span class="p">,</span> <span class="n">validators</span><span class="o">=</span><span class="p">[</span><span class="n">DataRequired</span><span class="p">()])</span>
-<a id="__codelineno-9-6" name="__codelineno-9-6"></a>    <span class="n">submit</span> <span class="o">=</span> <span class="n">SubmitField</span><span class="p">(</span><span class="s1">'Leg vast!'</span><span class="p">)</span>
+<div class="language-python highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-9-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-9-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-9-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-9-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-9-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-9-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-9-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-9-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-9-10">10</a></span>
+<span class="normal"><a href="#__codelineno-9-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">RegistrationForm</span><span class="p">(</span><span class="n">FlaskForm</span><span class="p">):</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="w">    </span><span class="sd">"""Formulier voor het registreren van nieuwe gebruikers."""</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a>
+<a id="__codelineno-9-4" name="__codelineno-9-4"></a>    <span class="n">email</span> <span class="o">=</span> <span class="n">StringField</span><span class="p">(</span><span class="s1">'Email'</span><span class="p">,</span> <span class="n">validators</span><span class="o">=</span><span class="p">[</span><span class="n">DataRequired</span><span class="p">(),</span> <span class="n">Email</span><span class="p">()])</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5"></a>    <span class="n">username</span> <span class="o">=</span> <span class="n">StringField</span><span class="p">(</span><span class="s1">'Username'</span><span class="p">,</span> <span class="n">validators</span><span class="o">=</span><span class="p">[</span><span class="n">DataRequired</span><span class="p">()])</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6"></a>    <span class="n">password</span> <span class="o">=</span> <span class="n">PasswordField</span><span class="p">(</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7"></a>        <span class="s1">'Password'</span><span class="p">,</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8"></a>        <span class="n">validators</span><span class="o">=</span><span class="p">[</span><span class="n">DataRequired</span><span class="p">(),</span> <span class="n">EqualTo</span><span class="p">(</span><span class="s1">'pass_confirm'</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="s1">'Passwords Must Match!'</span><span class="p">)]</span>
+<a id="__codelineno-9-9" name="__codelineno-9-9"></a>    <span class="p">)</span>
+<a id="__codelineno-9-10" name="__codelineno-9-10"></a>    <span class="n">pass_confirm</span> <span class="o">=</span> <span class="n">PasswordField</span><span class="p">(</span><span class="s1">'Confirm password'</span><span class="p">,</span> <span class="n">validators</span><span class="o">=</span><span class="p">[</span><span class="n">DataRequired</span><span class="p">()])</span>
+<a id="__codelineno-9-11" name="__codelineno-9-11"></a>    <span class="n">submit</span> <span class="o">=</span> <span class="n">SubmitField</span><span class="p">(</span><span class="s1">'Leg vast!'</span><span class="p">)</span>
 </code></pre></div></td></tr></tbody></table></div>
 <p>Voor de variabele <code>email</code> zijn twee (2) validators opgenomen: <code>DataRequired</code> en <code>Email</code>: dit betekent dat het tekstveld een verplichte invulling heeft er en er tevens een controle op de inhoud zal worden toegepast.</p>
 <p>De variabele <code>password</code> verdient ook de nodige aandacht te krijgen. Deze is van het type <code>PasswordField</code>, wat wil zeggen dat de inhoud op het scherm niet door anderen kan worden afgelezen. Het is in ieder geval een verplicht veld op het formulier. Op de tweede validator-optie komen we zo terug.</p>
 <p>Bij een registratie is het heel gebruikelijk te vragen om het wachtwoord nog een keer op te voeren om na te kunnen gaan of de gebruiker geen typo heeft gemaakt. Zo ook hier. De user voert een tweede keer het wachtwoord in dat wordt opgeslagen in de variabele <code>pass_confirm</code>.</p>
 <p>Nu weer terug naar het veld waar voor de eerste keer het wachtwoord wordt ingevuld. De tweede validator hier is <code>EqualTo</code>. Hierbij wordt nu vergeleken of de beide opgegeven wachtwoorden aan elkaar gelijk zijn.</p>
 <p>Aan dit formulier worden nog een tweetal methoden verbonden:</p>
-<p></p><div class="language-python highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span>
-<span class="normal"><a href="#__codelineno-10-2">2</a></span>
-<span class="normal"><a href="#__codelineno-10-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">validate_email</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">field</span><span class="p">):</span>
-<a id="__codelineno-10-2" name="__codelineno-10-2"></a>    <span class="k">if</span> <span class="n">User</span><span class="o">.</span><span class="n">query</span><span class="o">.</span><span class="n">filter_by</span><span class="p">(</span><span class="n">email</span><span class="o">=</span><span class="n">field</span><span class="o">.</span><span class="n">data</span><span class="p">)</span><span class="o">.</span><span class="n">first</span><span class="p">():</span>
-<a id="__codelineno-10-3" name="__codelineno-10-3"></a>        <span class="k">raise</span> <span class="n">ValidationError</span><span class="p">(</span><span class="s1">'Dit e-mailadres staat al geregistreerd!'</span><span class="p">)</span>
+<div class="language-python highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-10-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-10-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-10-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-10-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-10-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-10-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-10-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-10-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-10-10">10</a></span>
+<span class="normal"><a href="#__codelineno-10-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">validate_email</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">field</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="w">    </span><span class="sd">"""Valideer dat het e-mailadres nog niet in gebruik is.</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3"></a>
+<a id="__codelineno-10-4" name="__codelineno-10-4"></a><span class="sd">    Args:</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5"></a><span class="sd">        field: Het email veld uit het formulier</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6"></a>
+<a id="__codelineno-10-7" name="__codelineno-10-7"></a><span class="sd">    Raises:</span>
+<a id="__codelineno-10-8" name="__codelineno-10-8"></a><span class="sd">        ValidationError: Als het e-mailadres al geregistreerd is</span>
+<a id="__codelineno-10-9" name="__codelineno-10-9"></a><span class="sd">    """</span>
+<a id="__codelineno-10-10" name="__codelineno-10-10"></a>    <span class="k">if</span> <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">User</span><span class="p">)</span><span class="o">.</span><span class="n">filter_by</span><span class="p">(</span><span class="n">email</span><span class="o">=</span><span class="n">field</span><span class="o">.</span><span class="n">data</span><span class="p">))</span><span class="o">.</span><span class="n">scalar_one_or_none</span><span class="p">():</span>
+<a id="__codelineno-10-11" name="__codelineno-10-11"></a>        <span class="k">raise</span> <span class="n">ValidationError</span><span class="p">(</span><span class="s1">'Dit e-mailadres staat al geregistreerd!'</span><span class="p">)</span>
 </code></pre></div></td></tr></tbody></table></div>
-De melding is al duidelijk genoeg, maar toch nog wat extra uitleg. Er wordt gecontroleerd of het opgegeven e-mailadres gevonden kan worden door de waarde ervan op te geven in de <code>query.filter.by(waarde).first()</code>. Geeft dit resultaat <code>True</code>, dan is er al een e-mailadres met een gelijke inhoud in de database te vinden – en dat mag niet. Er moet dan een melding getoond worden, hetgeen hier dus via de <code>ValidationError</code> geregeld is.<p></p>
+<p>De melding is al duidelijk genoeg, maar toch nog wat extra uitleg. Er wordt gecontroleerd of het opgegeven e-mailadres gevonden kan worden door de waarde ervan op te geven in <code>db.session.execute(db.select(User).filter_by(email=field.data)).scalar_one_or_none()</code>. Geeft dit resultaat niet <code>None</code>, dan is er al een e-mailadres met een gelijke inhoud in de database te vinden, en dat mag niet. Er moet dan een melding getoond worden, hetgeen hier dus via de <code>ValidationError</code> geregeld is.</p>
 <p>De tweede methode is nagenoeg gelijk aan de eerste. Alleen moet er nu nagegaan worden of de gebruikersnaam al in de database voorkomt.</p>
-<div class="language-python highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span>
-<span class="normal"><a href="#__codelineno-11-2">2</a></span>
-<span class="normal"><a href="#__codelineno-11-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">validate_username</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">field</span><span class="p">):</span>
-<a id="__codelineno-11-2" name="__codelineno-11-2"></a>    <span class="k">if</span> <span class="n">User</span><span class="o">.</span><span class="n">query</span><span class="o">.</span><span class="n">filter_by</span><span class="p">(</span><span class="n">username</span><span class="o">=</span><span class="n">field</span><span class="o">.</span><span class="n">data</span><span class="p">)</span><span class="o">.</span><span class="n">first</span><span class="p">():</span>
-<a id="__codelineno-11-3" name="__codelineno-11-3"></a>        <span class="k">raise</span> <span class="n">ValidationError</span><span class="p">(</span><span class="s1">'Deze gebruikersnaam is al vergeven, probeer een ander naam!'</span><span class="p">)</span>
+<div class="language-python highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-11-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-11-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-11-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-11-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-11-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-11-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-11-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-11-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-11-10">10</a></span>
+<span class="normal"><a href="#__codelineno-11-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">validate_username</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">field</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="w">    </span><span class="sd">"""Valideer dat de gebruikersnaam nog niet in gebruik is.</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3"></a>
+<a id="__codelineno-11-4" name="__codelineno-11-4"></a><span class="sd">    Args:</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5"></a><span class="sd">        field: Het username veld uit het formulier</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6"></a>
+<a id="__codelineno-11-7" name="__codelineno-11-7"></a><span class="sd">    Raises:</span>
+<a id="__codelineno-11-8" name="__codelineno-11-8"></a><span class="sd">        ValidationError: Als de gebruikersnaam al bestaat</span>
+<a id="__codelineno-11-9" name="__codelineno-11-9"></a><span class="sd">    """</span>
+<a id="__codelineno-11-10" name="__codelineno-11-10"></a>    <span class="k">if</span> <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">User</span><span class="p">)</span><span class="o">.</span><span class="n">filter_by</span><span class="p">(</span><span class="n">username</span><span class="o">=</span><span class="n">field</span><span class="o">.</span><span class="n">data</span><span class="p">))</span><span class="o">.</span><span class="n">scalar_one_or_none</span><span class="p">():</span>
+<a id="__codelineno-11-11" name="__codelineno-11-11"></a>        <span class="k">raise</span> <span class="n">ValidationError</span><span class="p">(</span><span class="s1">'Deze gebruikersnaam is al vergeven, probeer een ander naam!'</span><span class="p">)</span>
 </code></pre></div></td></tr></tbody></table></div>
 <h2 id="het-inlogformulier">Het inlogformulier<a class="headerlink" href="#het-inlogformulier" title="Permanent link">¶</a></h2>
 <p>Nu het registratieformulier ontwikkeld is, is de volgende logische stap het aanmaken van een inlogformulier:</p>
 <div class="language-python highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span>
 <span class="normal"><a href="#__codelineno-12-2">2</a></span>
 <span class="normal"><a href="#__codelineno-12-3">3</a></span>
-<span class="normal"><a href="#__codelineno-12-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">LoginForm</span><span class="p">(</span><span class="n">FlaskForm</span><span class="p">):</span>
-<a id="__codelineno-12-2" name="__codelineno-12-2"></a>    <span class="n">email</span> <span class="o">=</span> <span class="n">StringField</span><span class="p">(</span><span class="s1">'Email'</span><span class="p">,</span> <span class="n">validators</span><span class="o">=</span><span class="p">[</span><span class="n">DataRequired</span><span class="p">(),</span> <span class="n">Email</span><span class="p">()])</span>
-<a id="__codelineno-12-3" name="__codelineno-12-3"></a>    <span class="n">password</span> <span class="o">=</span> <span class="n">PasswordField</span><span class="p">(</span><span class="s1">'Password'</span><span class="p">,</span> <span class="n">validators</span><span class="o">=</span><span class="p">[</span><span class="n">DataRequired</span><span class="p">()])</span>
-<a id="__codelineno-12-4" name="__codelineno-12-4"></a>    <span class="n">submit</span> <span class="o">=</span> <span class="n">SubmitField</span><span class="p">(</span><span class="s1">'Inloggen'</span><span class="p">)</span>
+<span class="normal"><a href="#__codelineno-12-4">4</a></span>
+<span class="normal"><a href="#__codelineno-12-5">5</a></span>
+<span class="normal"><a href="#__codelineno-12-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">LoginForm</span><span class="p">(</span><span class="n">FlaskForm</span><span class="p">):</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2"></a><span class="w">    </span><span class="sd">"""Formulier voor het inloggen van bestaande gebruikers."""</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3"></a>
+<a id="__codelineno-12-4" name="__codelineno-12-4"></a>    <span class="n">email</span> <span class="o">=</span> <span class="n">StringField</span><span class="p">(</span><span class="s1">'Email'</span><span class="p">,</span> <span class="n">validators</span><span class="o">=</span><span class="p">[</span><span class="n">DataRequired</span><span class="p">(),</span> <span class="n">Email</span><span class="p">()])</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5"></a>    <span class="n">password</span> <span class="o">=</span> <span class="n">PasswordField</span><span class="p">(</span><span class="s1">'Password'</span><span class="p">,</span> <span class="n">validators</span><span class="o">=</span><span class="p">[</span><span class="n">DataRequired</span><span class="p">()])</span>
+<a id="__codelineno-12-6" name="__codelineno-12-6"></a>    <span class="n">submit</span> <span class="o">=</span> <span class="n">SubmitField</span><span class="p">(</span><span class="s1">'Inloggen'</span><span class="p">)</span>
 </code></pre></div></td></tr></tbody></table></div>
 <p>Ook hier geldt dat het inlogformulier eigenschappen overneemt van <code>FlaskForm</code>. Verder is er niet zo veel bijzonders bij dit formulier te vermelden. Zoals al wel vaker gezegd, meer van hetzelfde.</p>
-<p>Het formulier kent twee velden, eentje om de gebruikersnaam in te geven en het tweede veld is beschikbaar voor het wachtwoord. Tenslotte kan het inloggen worden afgesloten door op de knop met het opschrift ‘Inloggen’ te klikken.</p>
+<p>Het formulier kent twee velden, eentje om de gebruikersnaam in te geven en het tweede veld is beschikbaar voor het wachtwoord. Tenslotte kan het inloggen worden afgesloten door op de knop met het opschrift 'Inloggen' te klikken.</p>
+<h2 id="samenvatting">Samenvatting<a class="headerlink" href="#samenvatting" title="Permanent link">¶</a></h2>
+<p>In deze les heb je geleerd:</p>
+<ul>
+<li><strong>Flask-Login</strong>: een bibliotheek die sessie- en gebruikersbeheer verzorgt, waaronder inloggen, uitloggen en het onthouden van gebruikerssessies</li>
+<li><strong>LoginManager</strong>: het centrale object uit Flask-Login dat via <code>init_app()</code> aan de app gekoppeld wordt en via <code>login_view</code> aangeeft waar gebruikers kunnen inloggen</li>
+<li><strong>UserMixin</strong>: een superklasse die de <code>User</code>-klasse standaardmethoden geeft zoals <code>is_authenticated()</code>, <code>is_active()</code>, <code>is_anonymous()</code> en <code>get_id()</code></li>
+<li><strong>Wachtwoord hashing in het model</strong>: het wachtwoord wordt bij het aanmaken van een gebruiker direct gehashed opgeslagen; de plain-text variant wordt nergens bewaard</li>
+<li><strong><code>check_password()</code>-methode</strong>: controleert bij het inloggen of het ingevoerde wachtwoord overeenkomt met de opgeslagen hash</li>
+<li><strong><code>user_loader</code>-decorator</strong>: laadt de huidige gebruiker op basis van het sessie-ID, zodat Flask-Login de ingelogde gebruiker bij elke aanvraag automatisch kan opzoeken</li>
+<li><strong><code>RegistrationForm</code></strong>: een WTForms-formulier met validaties voor uniek e-mailadres, unieke gebruikersnaam en wachtwoordbevestiging via <code>EqualTo</code></li>
+<li><strong><code>LoginForm</code></strong>: een eenvoudig formulier met een e-mailadres- en wachtwoordveld voor bestaande gebruikers</li>
+</ul>
 
 
 
