@@ -48,17 +48,13 @@ Tijd om de definitieve structuur aan te brengen voor deze applicatie. Let op, di
 
 
 !!! info "requirements.txt"
-    In Python projecten zal je vaak een `requirements.txt` bestand zien. Dit is een bestand waar de afhankelijkheden (de gebruikte modules) van de applicatie zijn beschreven. Je kan met `pip` de geïnstalleerde modules als volgt naar dit bestand laten schrijven:
+    In Python-projecten zal je vaak een `requirements.txt`-bestand zien. Dit is een bestand waarin de afhankelijkheden (de gebruikte modules) van de applicatie zijn beschreven. Werk je met `uv`, dan staat deze informatie al in `pyproject.toml`, maar je kan zo'n bestand als volgt genereren:
 
     ```console
-    pip freeze > requirements.txt
+    uv export --format requirements.txt > requirements.txt
     ```
 
-    Als je vervolgens de inhoud van `requirements.txt` bekijkt zal je zien dat het modules bevat inclusief versienummer, bijvoorbeeld `Flask==1.1.2`. Dit bestand wordt ook gebruikt om in bijvoorbeeld een nieuwe virtuele omgeving de vereiste modules te installeren, bijvoorbeeld:
-
-    ```console
-    pip install -r requirements.txt
-    ```
+    Als je vervolgens de inhoud van `requirements.txt` bekijkt zal je zien dat het modules bevat inclusief versienummer, bijvoorbeeld `Flask==3.1.0`. Dit bestand wordt ook gebruikt om in een nieuwe omgeving de vereiste modules te installeren, bijvoorbeeld met `uv add -r requirements.txt` (of, klassiek met pip: `pip install -r requirements.txt`).
 
     Het vastzetten van modules en bijbehorende versienummers is een manier om een repliceerbare omgeving voor een applicatie te garanderen, bijvoorbeeld als het live op een server moet draaien of wanneer je met andere mensen aan een project gaat samenwerken.
 

@@ -39,48 +39,46 @@ Even een korte uitleg. `FlaskForm` is een klasse waarvan overerft wordt om onze 
 
 ### Installatie van Flask-WTF en WTForms
 
-Het kan zijn dat de modules `flask_wtf` (Flask-WTF) en `wtforms` (WTForms) nog niet geïnstalleerd zijn. Let natuurlijk op dat de Python virtuele omgeving is geactiveerd en controleer met `pip` welke modules al geïnstalleerd zijn:
+Het kan zijn dat de modules `flask_wtf` (Flask-WTF) en `wtforms` (WTForms) nog niet geïnstalleerd zijn. Controleer met `uv` welke pakketten er al in het project zitten:
 
 ```console
-(webtech)~ $> pip list
+~/webtech $> uv pip list
 Package      Version
 ------------ -------
-click        7.1.2
-Flask        1.1.2
-itsdangerous 1.1.0
-Jinja2       2.11.3
-MarkupSafe   1.1.1
-pip          21.0.1
-setuptools   47.1.0
-Werkzeug     1.0.1
+blinker      1.9.0
+click        8.1.8
+Flask        3.1.0
+itsdangerous 2.2.0
+Jinja2       3.1.5
+MarkupSafe   3.0.2
+Werkzeug     3.1.3
 ```
 
-Helaas, geen Flask-WTF of WTForms... Dat kan snel worden verholpen, op dezelfde manier zoals je eerder Flask hebt geïnstalleerd:
+Helaas, geen Flask-WTF of WTForms... Dat kan snel worden verholpen, op dezelfde manier zoals je eerder Flask hebt toegevoegd:
 
 ```console
-(webtech)~ $> pip install Flask-WTF
+~/webtech $> uv add flask-wtf
 ```
 
-Als je nu nogmaals `pip` een overzicht van modules vraagt zal je zien dat ze nu geïnstalleerd zijn:
+Als je nu nogmaals een overzicht van pakketten opvraagt zal je zien dat ze nu geïnstalleerd zijn:
 
-```console hl_lines="6 13"
-(webtech)~ $> pip list
+```console hl_lines="5 10"
+~/webtech $> uv pip list
 Package      Version
 ------------ -------
-click        7.1.2
-Flask        1.1.2
-Flask-WTF    0.14.3
-itsdangerous 1.1.0
-Jinja2       2.11.3
-MarkupSafe   1.1.1
-pip          21.0.1
-setuptools   47.1.0
-Werkzeug     1.0.1
-WTForms      2.3.3
+blinker      1.9.0
+click        8.1.8
+Flask        3.1.0
+Flask-WTF    1.2.2
+itsdangerous 2.2.0
+Jinja2       3.1.5
+MarkupSafe   3.0.2
+Werkzeug     3.1.3
+WTForms      3.2.1
 ```
 
 !!! notice "Afhankelijkheden"
-    Met `pip install Flask-WTF` is tegelijkertijd ook WTForms geïnstalleerd zonder dat je dit hebt opgegeven! Dit komt omdat Flask-WTF aangeeft dat het afhankelijk is van WTForms en `pip` slim genoeg is om vervolgens ook deze module direct op te halen en te installeren.
+    Met `uv add flask-wtf` is tegelijkertijd ook WTForms geïnstalleerd zonder dat je dit hebt opgegeven! Dit komt omdat Flask-WTF aangeeft dat het afhankelijk is van WTForms en `uv` slim genoeg is om vervolgens ook deze module direct op te halen en te installeren.
 
 #### De geheime sleutel
 Nadat de installatie van de applicatie is afgerond is de volgende stap het configureren van een geheime `SECRET_KEY`. Hier is het ter demonstratie, maar later wordt er echt veel meer aandacht aan besteed en zullen er betere manieren aangeleerd worden om dit te doen.
