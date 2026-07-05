@@ -1,5 +1,8 @@
 # User authentication - Hashing
 
+!!! info "Waar zijn we?"
+    De site van muziekschool Sessions heeft inmiddels vormgeving (week 1), een datamodel (week 2), formulieren (week 3) en een databasekoppeling (week 4 en 5). Eén ding ontbreekt nog: niet iedereen mag zomaar bij alle gegevens kunnen. Deze laatste week voegen we daarom gebruikersauthenticatie toe — meteen ook het laatste onderdeel dat voor het project vereist is.
+
 ## Inleiding
 
 De titel van dit deel is *User Authentication*. Gelijk weer een omschrijving in het Engels... Vertaald naar normaal Nederlands levert dat het begrip gebruikersauthenticatie op. Hiermee wordt bedoeld dat voordat een gebruiker toegang wordt verleend op een aanvraag er een procedure wordt opgestart om te bepalen of het een rechtmatige aanvraag betreft.

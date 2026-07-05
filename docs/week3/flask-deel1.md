@@ -1,5 +1,8 @@
 # Flask – Inleiding
 
+!!! info "Waar zijn we?"
+    In week 1 heb je statische pagina's voor muziekschool Sessions gebouwd en in week 2 heb je de wereld erachter gemodelleerd met klassen. Deze week brengen we de twee samen: met Flask zetten we een echte webserver op, waarmee de pagina's dynamisch worden — en met formulieren kan de bezoeker straks ook iets *terugsturen*.
+
 Bestudeer ook [de presentatie over Flask en Jinja via deze link](https://video.hanze.nl/media/HC+webtech1%2C+deel+4A+Flask+en+Jinja/0_hl2ub9s2) (let op: je moet hiervoor wel inloggen in het Hanze-systeem)
 
 ## Wat is Flask?

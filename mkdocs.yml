@@ -163,6 +163,8 @@ nav:
     - week6/user-authentication-deel2.md
     - week6/user-authentication-deel3.md
     - week6/user-authentication-deel4.md
+    - Oefeningen:
+      - week6/oefeningen/user-authentication-oefening1.md
   - Verdieping (optioneel):
     - verdieping/flask-applicaties-deel1.md
     - verdieping/flask-applicaties-deel2.md
