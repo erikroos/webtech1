@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
@@ -3339,52 +3339,52 @@
 <p>Het is niet zo dat beide stijlen onafhankelijk van elkaar functioneren. Binnen OOP wordt gebruikt gemaakt van de imperatieve coderingswijze en bij het imperatieve paradigma komen objecten regelmatig voor, zonder dat een gebruiker er vaak weet van heeft.</p>
 <h2 id="klasse-definitie">Klasse-definitie<a class="headerlink" href="#klasse-definitie" title="Permanent link">¶</a></h2>
 <p>Om te beginnen een simpel voorbeeld om het principe van klassen en methoden uit te leggen. Muziekschool Sessions verhuurt instrumenten aan cursisten, en die verhuur willen we kunnen beheren. Bekijk het bestand <a href="bestanden/muziekschool/instrument.py"><code>instrument.py</code></a>.</p>
-<div class="language-ipython highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
-<span class="normal"><a href="#__codelineno-0-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="k">class</span><span class="w"> </span><span class="nc">Instrument</span><span class="p">:</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2"></a>   <span class="o">...</span><span class="p">:</span>
+<div class="language-text highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>In [1]: class Instrument:
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a>   ...:
 </code></pre></div></td></tr></tbody></table></div>
 <p>Een klasse wordt gedefinieerd door het woord <code>class</code>, gevolgd door de naam van de klasse, beginnend met een hoofdletter. De klassedefinitie wordt afgesloten met een dubbele punt (<code>:</code>).</p>
 <p>Nu is het de beurt om aan te geven uit welke attributen of eigenschappen deze class bestaat. Dit geven we mee aan de methode die aangeroepen wordt wanneer er een object van een klasse wordt aangemaakt: de zogenaamde <em>constructor</em>. In Python is deze methode <code>__init__</code> (we komen daar zo wat uitgebreider op terug):</p>
-<div class="language-ipython highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<div class="language-text highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#__codelineno-1-2">2</a></span>
 <span class="normal"><a href="#__codelineno-1-3">3</a></span>
 <span class="normal"><a href="#__codelineno-1-4">4</a></span>
-<span class="normal"><a href="#__codelineno-1-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>   <span class="o">...</span><span class="p">:</span>     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">naam</span><span class="p">,</span> <span class="n">huurprijs</span><span class="p">,</span> <span class="n">voorraad</span><span class="p">):</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2"></a>   <span class="o">...</span><span class="p">:</span>         <span class="bp">self</span><span class="o">.</span><span class="n">naam</span> <span class="o">=</span> <span class="n">naam</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3"></a>   <span class="o">...</span><span class="p">:</span>         <span class="bp">self</span><span class="o">.</span><span class="n">huurprijs</span> <span class="o">=</span> <span class="n">huurprijs</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4"></a>   <span class="o">...</span><span class="p">:</span>         <span class="bp">self</span><span class="o">.</span><span class="n">voorraad</span> <span class="o">=</span> <span class="n">voorraad</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5"></a>   <span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span>
+<span class="normal"><a href="#__codelineno-1-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>   ...:     def __init__(self, naam, huurprijs, voorraad):
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a>   ...:         self.naam = naam
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a>   ...:         self.huurprijs = huurprijs
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a>   ...:         self.voorraad = voorraad
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a>   In [2]:
 </code></pre></div></td></tr></tbody></table></div>
 <p>Het zijn er drie (3): <code>naam</code>, <code>huurprijs</code>, <code>voorraad</code>. De notatie <code>self</code> lijkt nu nog wat vreemd, maar dat went snel; zie eventueel <a href="https://www.bartbarnard.nl/programmeerblogs/python/self.html">deze blogpost</a> voor meer informatie rondom <code>self</code>.</p>
 <p>Nu de klasse is gedefinieerd kunnen we er objecten van maken – een ander woord hiervoor is <em>instantie</em>: we maken <em>instanties</em> van de klasse <code>Instrument</code>:</p>
-<div class="language-ipython highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="n">gitaar</span> <span class="o">=</span> <span class="n">Instrument</span><span class="p">(</span><span class="s2">"Elektrische gitaar"</span><span class="p">,</span> <span class="mf">17.50</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<div class="language-text highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>In [2]: gitaar = Instrument("Elektrische gitaar", 17.50, 5)
 </code></pre></div></td></tr></tbody></table></div>
 <p>Er is een object aangemaakt met de naam <code>gitaar</code>. Bij het aanmaken van deze nieuwe instantie is de invulling van drie eigenschappen verplicht. In de definitie van de klasse wordt gevraagd om <code>naam</code>, <code>huurprijs</code> en <code>voorraad</code>, dus deze drie waarden moeten opgegeven worden. Gebeurt dat niet, verschijnt er een foutmelding. Deze coderegel wil dus zeggen dat er een instantie (<code>gitaar</code>) is aangemaakt van de klasse (<code>Instrument</code>) waarbij naam (<code>Elektrische gitaar</code>), huurprijs (<code>17.50</code>) en voorraad (<code>5</code>) als verplichte waarden worden meegegeven. De inhoud van de waarden van de velden van de instantie <code>gitaar</code> kunnen ook getoond worden:</p>
-<div class="language-ipython highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<div class="language-text highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
 <span class="normal"><a href="#__codelineno-3-2">2</a></span>
 <span class="normal"><a href="#__codelineno-3-3">3</a></span>
 <span class="normal"><a href="#__codelineno-3-4">4</a></span>
 <span class="normal"><a href="#__codelineno-3-5">5</a></span>
 <span class="normal"><a href="#__codelineno-3-6">6</a></span>
-<span class="normal"><a href="#__codelineno-3-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="n">In</span> <span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="n">gitaar</span><span class="o">.</span><span class="n">naam</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="n">Out</span><span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="s1">'Elektrische gitaar'</span>
+<span class="normal"><a href="#__codelineno-3-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>In [3]: gitaar.naam
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a>Out[3]: 'Elektrische gitaar'
 <a id="__codelineno-3-3" name="__codelineno-3-3"></a>
-<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="n">In</span> <span class="p">[</span><span class="mi">4</span><span class="p">]:</span> <span class="n">gitaar</span><span class="o">.</span><span class="n">huurprijs</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="n">Out</span><span class="p">[</span><span class="mi">4</span><span class="p">]:</span> <span class="mf">17.5</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a>In [4]: gitaar.huurprijs
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a>Out[4]: 17.5
 <a id="__codelineno-3-6" name="__codelineno-3-6"></a>
-<a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="n">In</span> <span class="p">[</span><span class="mi">5</span><span class="p">]:</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a>In [5]:
 </code></pre></div></td></tr></tbody></table></div>
 <p>Uiteraard kunnen er meerdere objecten bij deze klasse worden aangemaakt. Een tweede instrument is bijvoorbeeld een keyboard.</p>
-<div class="language-ipython highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="n">In</span> <span class="p">[</span><span class="mi">5</span><span class="p">]:</span> <span class="n">keyboard</span> <span class="o">=</span> <span class="n">Instrument</span><span class="p">(</span><span class="s2">"Keyboard"</span><span class="p">,</span> <span class="mf">12.50</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
+<div class="language-text highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>In [5]: keyboard = Instrument("Keyboard", 12.50, 8)
 </code></pre></div></td></tr></tbody></table></div>
 <p>De gegevens van beide objecten kunnen ook gecombineerd worden getoond.</p>
-<div class="language-ipython highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<div class="language-text highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
 <span class="normal"><a href="#__codelineno-5-2">2</a></span>
 <span class="normal"><a href="#__codelineno-5-3">3</a></span>
-<span class="normal"><a href="#__codelineno-5-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="n">In</span> <span class="p">[</span><span class="mi">6</span><span class="p">]:</span> <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Te huur: </span><span class="si">{</span><span class="n">gitaar</span><span class="o">.</span><span class="n">naam</span><span class="si">}</span><span class="s2"> = €</span><span class="si">{</span><span class="n">gitaar</span><span class="o">.</span><span class="n">huurprijs</span><span class="si">}</span><span class="s2"> p/m, </span><span class="si">{</span><span class="n">keyboard</span><span class="o">.</span><span class="n">naam</span><span class="si">}</span><span class="s2"> = €</span><span class="si">{</span><span class="n">keyboard</span><span class="o">.</span><span class="n">huurprijs</span><span class="si">}</span><span class="s2"> p/m"</span><span class="p">)</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="n">Te</span> <span class="n">huur</span><span class="p">:</span> <span class="n">Elektrische</span> <span class="n">gitaar</span> <span class="o">=</span> <span class="err">€</span><span class="mf">17.5</span> <span class="n">p</span><span class="o">/</span><span class="n">m</span><span class="p">,</span> <span class="n">Keyboard</span> <span class="o">=</span> <span class="err">€</span><span class="mf">12.5</span> <span class="n">p</span><span class="o">/</span><span class="n">m</span>
+<span class="normal"><a href="#__codelineno-5-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>In [6]: print(f"Te huur: {gitaar.naam} = €{gitaar.huurprijs} p/m, {keyboard.naam} = €{keyboard.huurprijs} p/m")
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a>Te huur: Elektrische gitaar = €17.5 p/m, Keyboard = €12.5 p/m
 <a id="__codelineno-5-3" name="__codelineno-5-3"></a>
-<a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="n">In</span> <span class="p">[</span><span class="mi">7</span><span class="p">]:</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a>In [7]:
 </code></pre></div></td></tr></tbody></table></div>
 <p>Voor de overzichtelijkheid eerst een aantal beschrijvingen:</p>
 <table>

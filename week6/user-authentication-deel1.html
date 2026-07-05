@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
@@ -3340,37 +3340,37 @@
 <p><code>Bcrypt</code> en <code>Werkzeug</code> komen vaak mee als <code>Flask</code> geïnstalleerd wordt. Is dat niet het geval kunnen de pakketten <a href="../week3/flask-forms-deel1.html">op de bekende wijze</a> opgehaald worden.</p>
 <h3 id="bcrypt">Bcrypt<a class="headerlink" href="#bcrypt" title="Permanent link">¶</a></h3>
 <p>Is Bcrypt aanwezig, is de eerste actie het importeren ervan. Daarna maken we een object aan van het type <code>BCrypt()</code> en gebruiken dat object om het wachtwoord te hashen:</p>
-<div class="language-ipython highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<div class="language-text highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>
 <span class="normal"><a href="#__codelineno-0-3">3</a></span>
 <span class="normal"><a href="#__codelineno-0-4">4</a></span>
-<span class="normal"><a href="#__codelineno-0-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="kn">from</span><span class="w"> </span><span class="nn">flask_bcrypt</span><span class="w"> </span><span class="kn">import</span> <span class="n">Bcrypt</span>
+<span class="normal"><a href="#__codelineno-0-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>In [1]: from flask_bcrypt import Bcrypt
 <a id="__codelineno-0-2" name="__codelineno-0-2"></a>
-<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="n">bcrypt</span> <span class="o">=</span> <span class="n">Bcrypt</span><span class="p">()</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a>In [2]: bcrypt = Bcrypt()
 <a id="__codelineno-0-4" name="__codelineno-0-4"></a>
-<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="n">In</span> <span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="n">hashed_pass</span> <span class="o">=</span> <span class="n">bcrypt</span><span class="o">.</span><span class="n">generate_password_hash</span><span class="p">(</span><span class="s1">'supergeheimwachtwoord'</span><span class="p">)</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a>In [3]: hashed_pass = bcrypt.generate_password_hash('supergeheimwachtwoord')
 </code></pre></div></td></tr></tbody></table></div>
 <p>Het wachtwoord wordt gehashed en bewaard in de variabele <code>hashed_pass</code>. Nadat het geprint is, is het echt niet meer te herleiden naar het origineel:</p>
-<div class="language-ipython highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
-<span class="normal"><a href="#__codelineno-1-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">In</span> <span class="p">[</span><span class="mi">4</span><span class="p">]:</span> <span class="nb">print</span><span class="p">(</span><span class="n">hashed_pass</span><span class="p">)</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="sa">b</span><span class="s1">'$2b$12$rFOT5/VUiUpjODpcCn/0UONrhkQ2h224c7Srz3jk2qJOAUw2.xvyG'</span>
+<div class="language-text highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>In [4]: print(hashed_pass)
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a>b'$2b$12$rFOT5/VUiUpjODpcCn/0UONrhkQ2h224c7Srz3jk2qJOAUw2.xvyG'
 </code></pre></div></td></tr></tbody></table></div>
 <p>Wordt het runnen herhaald, verschijnt er een andere hash.</p>
 <p>Uiteraard nu weer een test naar de werking.</p>
-<div class="language-ipython highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<div class="language-text highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
 <span class="normal"><a href="#__codelineno-2-2">2</a></span>
 <span class="normal"><a href="#__codelineno-2-3">3</a></span>
 <span class="normal"><a href="#__codelineno-2-4">4</a></span>
-<span class="normal"><a href="#__codelineno-2-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="n">In</span> <span class="p">[</span><span class="mi">5</span><span class="p">]:</span> <span class="n">bcrypt</span><span class="o">.</span><span class="n">check_password_hash</span><span class="p">(</span><span class="n">hashed_pass</span><span class="p">,</span> <span class="s1">'verkeerdwachtwoord'</span><span class="p">)</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="n">Out</span><span class="p">[</span><span class="mi">5</span><span class="p">]:</span> <span class="kc">False</span>
+<span class="normal"><a href="#__codelineno-2-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>In [5]: bcrypt.check_password_hash(hashed_pass, 'verkeerdwachtwoord')
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a>Out[5]: False
 <a id="__codelineno-2-3" name="__codelineno-2-3"></a>
-<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="n">In</span> <span class="p">[</span><span class="mi">6</span><span class="p">]:</span> <span class="n">bcrypt</span><span class="o">.</span><span class="n">check_password_hash</span><span class="p">(</span><span class="n">hashed_pass</span><span class="p">,</span> <span class="s1">'supergeheimwachtwoord'</span><span class="p">)</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="n">Out</span><span class="p">[</span><span class="mi">6</span><span class="p">]:</span> <span class="kc">True</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a>In [6]: bcrypt.check_password_hash(hashed_pass, 'supergeheimwachtwoord')
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a>Out[6]: True
 </code></pre></div></td></tr></tbody></table></div>
 <p>Precies in de lijn der verwachting.</p>
 <h3 id="werkzeug">Werkzeug<a class="headerlink" href="#werkzeug" title="Permanent link">¶</a></h3>
 <p>Je kunt hetzelfde bereiken met Werkzeug, waarbij de syntax en de check zelfs nog iets simpeler is:</p>
-<div class="language-ipython highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
+<div class="language-text highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
@@ -3381,18 +3381,18 @@
 <span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
 <span class="normal"><a href="#__codelineno-3-10">10</a></span>
 <span class="normal"><a href="#__codelineno-3-11">11</a></span>
-<span class="normal"><a href="#__codelineno-3-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="kn">from</span><span class="w"> </span><span class="nn">werkzeug.security</span><span class="w"> </span><span class="kn">import</span> <span class="n">generate_password_hash</span><span class="p">,</span><span class="n">check_password_hash</span>
+<span class="normal"><a href="#__codelineno-3-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>In [1]: from werkzeug.security import generate_password_hash,check_password_hash
 <a id="__codelineno-3-2" name="__codelineno-3-2"></a>
-<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="n">hashed_pass</span> <span class="o">=</span> <span class="n">generate_password_hash</span><span class="p">(</span><span class="s1">'supergeheimwachtwoord'</span><span class="p">)</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a>In [2]: hashed_pass = generate_password_hash('supergeheimwachtwoord')
 <a id="__codelineno-3-4" name="__codelineno-3-4"></a>
-<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="n">In</span> <span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="nb">print</span> <span class="p">(</span><span class="n">hashed_pass</span><span class="p">)</span>
-<a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="n">pbkdf2</span><span class="p">:</span><span class="n">sha256</span><span class="p">:</span><span class="mi">150000</span><span class="err">$</span><span class="n">hUiH149n</span><span class="err">$</span><span class="n">af71be7ff46588f9c5d93b4ec9f46ef1a64801d02434ee2057ca81b8bb2939cb</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a>In [3]: print (hashed_pass)
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a>pbkdf2:sha256:150000$hUiH149n$af71be7ff46588f9c5d93b4ec9f46ef1a64801d02434ee2057ca81b8bb2939cb
 <a id="__codelineno-3-7" name="__codelineno-3-7"></a>
-<a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="n">In</span> <span class="p">[</span><span class="mi">4</span><span class="p">]:</span> <span class="n">check_password_hash</span><span class="p">(</span><span class="n">hashed_pass</span><span class="p">,</span><span class="s1">'verkeerdwachtwoord'</span><span class="p">)</span>
-<a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="n">Out</span><span class="p">[</span><span class="mi">4</span><span class="p">]:</span> <span class="kc">False</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a>In [4]: check_password_hash(hashed_pass,'verkeerdwachtwoord')
+<a id="__codelineno-3-9" name="__codelineno-3-9"></a>Out[4]: False
 <a id="__codelineno-3-10" name="__codelineno-3-10"></a>
-<a id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="n">In</span> <span class="p">[</span><span class="mi">5</span><span class="p">]:</span> <span class="n">check_password_hash</span><span class="p">(</span><span class="n">hashed_pass</span><span class="p">,</span><span class="s1">'supergeheimwachtwoord'</span><span class="p">)</span>
-<a id="__codelineno-3-12" name="__codelineno-3-12"></a><span class="n">Out</span><span class="p">[</span><span class="mi">5</span><span class="p">]:</span> <span class="kc">True</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11"></a>In [5]: check_password_hash(hashed_pass,'supergeheimwachtwoord')
+<a id="__codelineno-3-12" name="__codelineno-3-12"></a>Out[5]: True
 </code></pre></div></td></tr></tbody></table></div>
 <p>Het verschil tussen beiden is dat bij Werkzeug exact de juiste methoden binnengehaald worden en bij Bcrypt moet er soms een beetje over nagedacht worden. De keuze tussen deze pakketten is vrij arbitrair en ligt een beetje aan de voorkeuren van de ontwikkelaar.</p>
 <h2 id="samenvatting">Samenvatting<a class="headerlink" href="#samenvatting" title="Permanent link">¶</a></h2>

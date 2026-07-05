@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
@@ -3239,33 +3239,33 @@
 <p>Aan het eind van deze tekst maken we <a href="oefeningen/sql-oefening2.html">oefening nummer 2</a>.</p>
 <p>In de vorige paragraaf is er kennis opgedaan omtrent met wijzigen van gegevens uit een database door SQL-statements uit te voeren binnen een Python-file. Dat is gedaan door het e-mailadres hardcoded in te voeren gevolgd door een voorwaarde (<code>WHERE...</code>). Het zou meer in de lijn der verwachting liggen om gebruikt te maken van variabelen en de waarde van een variabele te gebruiken bij het wijzigen van een record.</p>
 <p>Dat zou er zo uit kunnen zien:</p>
-<div class="language-ipython highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<div class="language-text highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>
-<span class="normal"><a href="#__codelineno-0-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">new_email</span> <span class="o">=</span> <span class="s1">'anotherupdate@update.com'</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="n">phone</span> <span class="o">=</span> <span class="mi">1234567</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="n">In</span> <span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="n">update_sql</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"UPDATE contacts SET email = '</span><span class="si">{</span><span class="n">new_email</span><span class="si">}</span><span class="s2">' WHERE phone = </span><span class="si">{</span><span class="n">phone</span><span class="si">}</span><span class="s2">"</span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>In [1]: new_email = 'anotherupdate@update.com'
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a>In [2]: phone = 1234567
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a>In [3]: update_sql = f"UPDATE contacts SET email = '{new_email}' WHERE phone = {phone}"
 </code></pre></div></td></tr></tbody></table></div>
 <p>Dit werkt allemaal prima, zoals we hiervoor al gezien hebben. Maar wat gebeurt er nu als we een gebruiker in staat stellen zelf zijn telefoonnummer in te toetsen?</p>
-<div class="language-ipython highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<div class="language-text highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#__codelineno-1-2">2</a></span>
 <span class="normal"><a href="#__codelineno-1-3">3</a></span>
 <span class="normal"><a href="#__codelineno-1-4">4</a></span>
 <span class="normal"><a href="#__codelineno-1-5">5</a></span>
 <span class="normal"><a href="#__codelineno-1-6">6</a></span>
 <span class="normal"><a href="#__codelineno-1-7">7</a></span>
-<span class="normal"><a href="#__codelineno-1-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">In</span> <span class="p">[</span><span class="mi">4</span><span class="p">]:</span> <span class="n">phone</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">'Voer uw nummer in '</span><span class="p">)</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="hll"><span class="n">Voer</span> <span class="n">uw</span> <span class="n">nummer</span> <span class="ow">in</span> <span class="mi">123456</span>
+<span class="normal"><a href="#__codelineno-1-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>In [4]: phone = input('Voer uw nummer in ')
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="hll">Voer uw nummer in 123456
 </span><a id="__codelineno-1-3" name="__codelineno-1-3"></a>
-<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="n">In</span> <span class="p">[</span><span class="mi">5</span><span class="p">]:</span> <span class="n">update_sql</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"UPDATE contacts SET email = '</span><span class="si">{</span><span class="n">new_email</span><span class="si">}</span><span class="s2">'</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="o">...</span><span class="p">:</span> <span class="n">WHERE</span> <span class="n">phone</span> <span class="o">=</span> <span class="p">{</span><span class="n">phone</span><span class="p">}</span><span class="s2">"</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a>In [5]: update_sql = f"UPDATE contacts SET email = '{new_email}'
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a>...: WHERE phone = {phone}"
 <a id="__codelineno-1-6" name="__codelineno-1-6"></a>
-<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="n">In</span> <span class="p">[</span><span class="mi">6</span><span class="p">]:</span> <span class="n">update_sql</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="n">Out</span><span class="p">[</span><span class="mi">6</span><span class="p">]:</span> <span class="s2">"UPDATE contacts SET email = 'anotherupdate@update.com' WHERE phone =  123456"</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a>In [6]: update_sql
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a>Out[6]: "UPDATE contacts SET email = 'anotherupdate@update.com' WHERE phone =  123456"
 </code></pre></div></td></tr></tbody></table></div>
 <p>Ook dit zal het gewenste resultaat opleveren.</p>
 <h2 id="meerdere-regels-updaten">Meerdere regels updaten<a class="headerlink" href="#meerdere-regels-updaten" title="Permanent link">¶</a></h2>
 <p>Python is heel pienter in de omgang met SQL en stelt gebruikers in staat meerdere SQL-statements na elkaar te laten uitvoeren. Daarvoor kan het commando <code>executescript()</code> uitgevoerd worden. Een aantal wijzigingen in de code:</p>
-<div class="language-ipython highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
+<div class="language-text highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
@@ -3285,33 +3285,33 @@
 <span class="normal"><a href="#__codelineno-2-18">18</a></span>
 <span class="normal"><a href="#__codelineno-2-19">19</a></span>
 <span class="normal"><a href="#__codelineno-2-20">20</a></span>
-<span class="normal"><a href="#__codelineno-2-21">21</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="n">In</span> <span class="p">[</span><span class="mi">7</span><span class="p">]:</span> <span class="n">new_email</span> <span class="o">=</span> <span class="s1">'newemail@update.com'</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="n">In</span> <span class="p">[</span><span class="mi">8</span><span class="p">]:</span> <span class="n">phone</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Please enter your phone number"</span><span class="p">)</span>
+<span class="normal"><a href="#__codelineno-2-21">21</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>In [7]: new_email = 'newemail@update.com'
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a>In [8]: phone = input("Please enter your phone number")
 <a id="__codelineno-2-3" name="__codelineno-2-3"></a>
-<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="hll"><span class="n">Please</span> <span class="n">enter</span> <span class="n">your</span> <span class="n">phone</span> <span class="n">number</span> <span class="mi">12345</span><span class="p">;</span> <span class="n">drop</span> <span class="n">table</span> <span class="n">contacts</span><span class="p">;</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="hll">Please enter your phone number 12345; drop table contacts;
 </span><a id="__codelineno-2-5" name="__codelineno-2-5"></a>
-<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="n">In</span> <span class="p">[</span><span class="mi">9</span><span class="p">]:</span> <span class="n">update_sql</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"UPDATE contacts SET email = '</span><span class="si">{</span><span class="n">new_email</span><span class="si">}</span><span class="s2">' WHERE phone = </span><span class="si">{</span><span class="n">phone</span><span class="si">}</span><span class="s2">"</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a>In [9]: update_sql = f"UPDATE contacts SET email = '{new_email}' WHERE phone = {phone}"
 <a id="__codelineno-2-7" name="__codelineno-2-7"></a>
-<a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="n">In</span> <span class="p">[</span><span class="mi">10</span><span class="p">]:</span> <span class="n">update_sql</span>
-<a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="n">Out</span><span class="p">[</span><span class="mi">10</span><span class="p">]:</span> <span class="s2">"UPDATE contacts SET email = 'newemail@update.com'</span>
-<a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="hll">   <span class="n">WHERE</span> <span class="n">phone</span> <span class="o">=</span>  <span class="mi">12345</span><span class="p">;</span> <span class="n">drop</span> <span class="n">table</span> <span class="n">contacts</span><span class="p">;</span><span class="s2">"</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8"></a>In [10]: update_sql
+<a id="__codelineno-2-9" name="__codelineno-2-9"></a>Out[10]: "UPDATE contacts SET email = 'newemail@update.com'
+<a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="hll">   WHERE phone =  12345; drop table contacts;"
 </span><a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="hll">
-</span><a id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="n">In</span> <span class="p">[</span><span class="mi">11</span><span class="p">]:</span> <span class="n">update_cursor</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
-<a id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="n">In</span> <span class="p">[</span><span class="mi">12</span><span class="p">]:</span> <span class="n">update_cursor</span><span class="o">.</span><span class="n">executescript</span><span class="p">(</span><span class="n">update_sql</span><span class="p">)</span>
+</span><a id="__codelineno-2-12" name="__codelineno-2-12"></a>In [11]: update_cursor = db.cursor()
+<a id="__codelineno-2-13" name="__codelineno-2-13"></a>In [12]: update_cursor.executescript(update_sql)
 <a id="__codelineno-2-14" name="__codelineno-2-14"></a>
-<a id="__codelineno-2-15" name="__codelineno-2-15"></a><span class="o">---------------------------------------------------------------------------</span>
-<a id="__codelineno-2-16" name="__codelineno-2-16"></a><span class="n">OperationalError</span>                          <span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">)</span>
-<a id="__codelineno-2-17" name="__codelineno-2-17"></a><span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">12</span><span class="o">-</span><span class="mi">431</span><span class="n">cdd50b1d0</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<a id="__codelineno-2-18" name="__codelineno-2-18"></a>      <span class="mi">1</span> <span class="n">update_cursor</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
-<a id="__codelineno-2-19" name="__codelineno-2-19"></a><span class="o">----&gt;</span> <span class="mi">2</span> <span class="n">update_cursor</span><span class="o">.</span><span class="n">executescript</span><span class="p">(</span><span class="n">update_sql</span><span class="p">)</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15"></a>---------------------------------------------------------------------------
+<a id="__codelineno-2-16" name="__codelineno-2-16"></a>OperationalError                          Traceback (most recent call last)
+<a id="__codelineno-2-17" name="__codelineno-2-17"></a>&lt;ipython-input-12-431cdd50b1d0&gt; in &lt;module&gt;
+<a id="__codelineno-2-18" name="__codelineno-2-18"></a>      1 update_cursor = db.cursor()
+<a id="__codelineno-2-19" name="__codelineno-2-19"></a>----&gt; 2 update_cursor.executescript(update_sql)
 <a id="__codelineno-2-20" name="__codelineno-2-20"></a>
-<a id="__codelineno-2-21" name="__codelineno-2-21"></a><span class="n">OperationalError</span><span class="p">:</span> <span class="n">no</span> <span class="n">such</span> <span class="n">table</span><span class="p">:</span> <span class="n">contacts</span>
+<a id="__codelineno-2-21" name="__codelineno-2-21"></a>OperationalError: no such table: contacts
 </code></pre></div></td></tr></tbody></table></div>
 <p>Omdat de methode <code>executescript()</code> een gebruiker dus in staat stelt meerdere SQL-statements uit de laten voeren is het mogelijk een dusdanig commando op te geven dat de hele tabel is verdwenen. En dat kan heel vervelende consequenties hebben voor een organisatie, bijvoorbeeld wanneer de gehele orderportefeuille gewist wordt. Gelukkig bestaat de file <a href="bestanden/contacts.py"><code>contacts.py</code></a> nog en kan de tabel zonder al te veel moeite weer in ere hersteld worden.</p>
 <p>Wat er nu net gedemonstreerd is, staat bekend als een <em>SQL-injectie</em> aanval. Een aanvaller injecteert dan een statement in de ‘gewone’ SQL-code. Vroeger was het zo eenvoudig als hier net getoond is, maar tegenwoordig moet er meer moeite voor gedaan worden.</p>
 <p>Zoals gezegd, administrators en programmeurs zijn zich bewust van dit probleem en dus bestaat het fenomeen nog steeds, maar er veel meer specialistische kennis nodig van SQL en database om een succesvolle aanval in te kunnen zetten.</p>
 <p>Ook hier is het in scène gezet (<code>executescript()</code>) om duidelijk te maken hoe de SQL-injection kan plaatsvinden. De methode <code>executescript()</code> wordt weer terug geschaald naar de methode <code>execute()</code>. Het volgende voorbeeld maakt dit duidelijk:</p>
-<div class="language-ipython highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
+<div class="language-text highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
@@ -3327,29 +3327,29 @@
 <span class="normal"><a href="#__codelineno-3-14">14</a></span>
 <span class="normal"><a href="#__codelineno-3-15">15</a></span>
 <span class="normal"><a href="#__codelineno-3-16">16</a></span>
-<span class="normal"><a href="#__codelineno-3-17">17</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">new_email</span> <span class="o">=</span> <span class="s1">'newmail@update.com'</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="n">phone</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Voer uw nummer in: "</span><span class="p">)</span>
+<span class="normal"><a href="#__codelineno-3-17">17</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>In [1]: new_email = 'newmail@update.com'
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a>In [2]: phone = input("Voer uw nummer in: ")
 <a id="__codelineno-3-3" name="__codelineno-3-3"></a>
-<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="n">Voer</span> <span class="n">uw</span> <span class="n">nummer</span> <span class="ow">in</span><span class="p">:</span> <span class="mi">1234</span><span class="p">;</span> <span class="n">drop</span> <span class="n">table</span> <span class="n">contacts</span><span class="p">;</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a>Voer uw nummer in: 1234; drop table contacts;
 <a id="__codelineno-3-5" name="__codelineno-3-5"></a>
-<a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="n">In</span> <span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="n">update_sql</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"UPDATE contacts SET email = '</span><span class="si">{</span><span class="n">new_email</span><span class="si">}</span><span class="s2">' WHERE phone = </span><span class="si">{</span><span class="n">phone</span><span class="si">}</span><span class="s2">"</span>
-<a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="n">In</span> <span class="p">[</span><span class="mi">4</span><span class="p">]:</span> <span class="n">update_cursor</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
-<a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="n">In</span> <span class="p">[</span><span class="mi">5</span><span class="p">]:</span> <span class="n">update_cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">update_sql</span><span class="p">)</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a>In [3]: update_sql = f"UPDATE contacts SET email = '{new_email}' WHERE phone = {phone}"
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a>In [4]: update_cursor = db.cursor()
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a>In [5]: update_cursor.execute(update_sql)
 <a id="__codelineno-3-9" name="__codelineno-3-9"></a>
-<a id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="o">---------------------------------------------------------------------------</span>
-<a id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="ne">Warning</span>                                   <span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">)</span>
-<a id="__codelineno-3-12" name="__codelineno-3-12"></a><span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">4</span><span class="o">-</span><span class="mi">9</span><span class="n">d2f5feb0b58</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<a id="__codelineno-3-13" name="__codelineno-3-13"></a>      <span class="mi">1</span> <span class="n">update_sql</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"UPDATE contacts SET email = '</span><span class="si">{</span><span class="n">new_email</span><span class="si">}</span><span class="s2">' WHERE phone = </span><span class="si">{</span><span class="n">phone</span><span class="si">}</span><span class="s2">"</span>
-<a id="__codelineno-3-14" name="__codelineno-3-14"></a>      <span class="mi">2</span> <span class="n">update_cursor</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
-<a id="__codelineno-3-15" name="__codelineno-3-15"></a><span class="o">----&gt;</span> <span class="mi">3</span> <span class="n">update_cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">update_sql</span><span class="p">)</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10"></a>---------------------------------------------------------------------------
+<a id="__codelineno-3-11" name="__codelineno-3-11"></a>Warning                                   Traceback (most recent call last)
+<a id="__codelineno-3-12" name="__codelineno-3-12"></a>&lt;ipython-input-4-9d2f5feb0b58&gt; in &lt;module&gt;
+<a id="__codelineno-3-13" name="__codelineno-3-13"></a>      1 update_sql = f"UPDATE contacts SET email = '{new_email}' WHERE phone = {phone}"
+<a id="__codelineno-3-14" name="__codelineno-3-14"></a>      2 update_cursor = db.cursor()
+<a id="__codelineno-3-15" name="__codelineno-3-15"></a>----&gt; 3 update_cursor.execute(update_sql)
 <a id="__codelineno-3-16" name="__codelineno-3-16"></a>
-<a id="__codelineno-3-17" name="__codelineno-3-17"></a><span class="ne">Warning</span><span class="p">:</span> <span class="n">You</span> <span class="n">can</span> <span class="n">only</span> <span class="n">execute</span> <span class="n">one</span> <span class="n">statement</span> <span class="n">at</span> <span class="n">a</span> <span class="n">time</span><span class="o">.</span>
+<a id="__codelineno-3-17" name="__codelineno-3-17"></a>Warning: You can only execute one statement at a time.
 </code></pre></div></td></tr></tbody></table></div>
 <p>De tabel bestaat nog en er verschijnt alleen een waarschuwing dat het niet mogelijk is meerdere SQL-statements na elkaar uit te voeren.</p>
 <h2 id="placeholders">Placeholders<a class="headerlink" href="#placeholders" title="Permanent link">¶</a></h2>
 <p>Het verwijderen van de tabel is weliswaar tegengegaan, maar er is wel een foutmelding ontstaan waardoor de wijziging niet is doorgevoerd. Hoe kan dit beter? Door gebruik te maken van <em>placeholders</em>  en <em>parameter substitution</em>.</p>
 <p>Een voorbeeld om dit duidelijk te maken.</p>
-<div class="language-ipython highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
+<div class="language-text highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-4-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-4-4"> 4</a></span>
@@ -3363,21 +3363,21 @@
 <span class="normal"><a href="#__codelineno-4-12">12</a></span>
 <span class="normal"><a href="#__codelineno-4-13">13</a></span>
 <span class="normal"><a href="#__codelineno-4-14">14</a></span>
-<span class="normal"><a href="#__codelineno-4-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="n">In</span> <span class="p">[</span><span class="mi">6</span><span class="p">]:</span> <span class="n">new_email</span> <span class="o">=</span> <span class="s2">"newemail@update.com"</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="n">In</span> <span class="p">[</span><span class="mi">7</span><span class="p">]:</span> <span class="n">phone</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Voer uw nummer in: "</span><span class="p">)</span>
+<span class="normal"><a href="#__codelineno-4-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>In [6]: new_email = "newemail@update.com"
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a>In [7]: phone = input("Voer uw nummer in: ")
 <a id="__codelineno-4-3" name="__codelineno-4-3"></a>
-<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="n">Voer</span> <span class="n">uw</span> <span class="n">nummer</span> <span class="ow">in</span><span class="p">:</span> <span class="mi">1234</span><span class="p">;</span> <span class="n">drop</span> <span class="n">table</span> <span class="n">contact</span><span class="p">;</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a>Voer uw nummer in: 1234; drop table contact;
 <a id="__codelineno-4-5" name="__codelineno-4-5"></a>
-<a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="n">In</span> <span class="p">[</span><span class="mi">8</span><span class="p">]:</span> <span class="n">update_sql</span> <span class="o">=</span> <span class="s2">"UPDATE contacts SET email = ? WHERE phone = ?"</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a>In [8]: update_sql = "UPDATE contacts SET email = ? WHERE phone = ?"
 <a id="__codelineno-4-7" name="__codelineno-4-7"></a>
-<a id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="n">In</span> <span class="p">[</span><span class="mi">9</span><span class="p">]:</span> <span class="n">update_sql</span>
-<a id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="n">Out</span><span class="p">[</span><span class="mi">9</span><span class="p">]:</span> <span class="s1">'UPDATE contacts SET email = ? WHERE phone = ?'</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8"></a>In [9]: update_sql
+<a id="__codelineno-4-9" name="__codelineno-4-9"></a>Out[9]: 'UPDATE contacts SET email = ? WHERE phone = ?'
 <a id="__codelineno-4-10" name="__codelineno-4-10"></a>
-<a id="__codelineno-4-11" name="__codelineno-4-11"></a><span class="n">In</span> <span class="p">[</span><span class="mi">10</span><span class="p">]:</span> <span class="n">update_cursor</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
-<a id="__codelineno-4-12" name="__codelineno-4-12"></a><span class="n">In</span> <span class="p">[</span><span class="mi">11</span><span class="p">]:</span> <span class="n">update_cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">update_sql</span><span class="p">,</span> <span class="p">(</span><span class="n">new_email</span><span class="p">,</span> <span class="n">phone</span><span class="p">))</span>
-<a id="__codelineno-4-13" name="__codelineno-4-13"></a><span class="n">In</span> <span class="p">[</span><span class="mi">12</span><span class="p">]:</span> <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">update_cursor</span><span class="o">.</span><span class="n">rowcount</span><span class="si">}</span><span class="s2"> rows updated"</span><span class="p">)</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11"></a>In [10]: update_cursor = db.cursor()
+<a id="__codelineno-4-12" name="__codelineno-4-12"></a>In [11]: update_cursor.execute(update_sql, (new_email, phone))
+<a id="__codelineno-4-13" name="__codelineno-4-13"></a>In [12]: print(f"{update_cursor.rowcount} rows updated")
 <a id="__codelineno-4-14" name="__codelineno-4-14"></a>
-<a id="__codelineno-4-15" name="__codelineno-4-15"></a><span class="mi">0</span> <span class="n">rows</span> <span class="n">updated</span>
+<a id="__codelineno-4-15" name="__codelineno-4-15"></a>0 rows updated
 </code></pre></div></td></tr></tbody></table></div>
 <p>In het <code>UPDATE</code>-statement zijn de waarde van de kolommen <code>email</code> en <code>phone</code> vervangen door een vraagteken. Dat zijn de <em>placeholders</em>. Bij het uitvoeren van de wijziging worden de variabelen als parameters opgevoerd. De methode <code>execute()</code> krijgt nu als tweede parameter een tupel mee waarin de waarden zitten waardoor de vraagtekens vervangen moeten worden. Tijdens deze vervanging worden alle bijzonder tekens, zoals een puntkomma, <em>geëscaped</em>: dat wil zeggen dat ze onschadelijk worden gemaakt, zodat ze niet meer als database-commando worden gezien, maar gewoon als tekst.</p>
 <p>Feitelijk betekent dit dat het update statement er na het invoeren van de kwalijke waarde (<code>1234;drop table contacts</code>) als volgt uit komt te zien:</p>

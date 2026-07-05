@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
@@ -3261,26 +3261,26 @@
 <p>Hoogste tijd om SQL te gebruiken in Python. Het mooie van Python is dat bij de installatie automatisch SQLite3 wordt aangemaakt. In een vorige paragraaf is al kennis gemaakt met de tabel <code>contacts</code>. Bij wijze van voorbeeld zullen we deze tabel met behulp van Python opnieuw aanmaken en van een aantal records voorzien. Aansluitend zullen we vanuit een Python-programma de gegevens uit de database lezen.</p>
 <h2 id="import-sqlite3">import sqlite3<a class="headerlink" href="#import-sqlite3" title="Permanent link">¶</a></h2>
 <p>Als een Python-file gekoppeld dient te worden aan een SQLite-database, moet als eerste SQLite geïmporteerd worden. De tweede stap is bekend te maken met welke database de Python-file gekoppeld gaat worden. Hieronder worden beide stappen weergegeven:</p>
-<div class="language-ipython highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
-<span class="normal"><a href="#__codelineno-0-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="kn">import</span><span class="w"> </span><span class="nn">sqlite3</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="n">db</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">"contacts.sqlite"</span><span class="p">)</span>
+<div class="language-text highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>In [1]: import sqlite3
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a>In [2]: db = sqlite3.connect("contacts.sqlite")
 </code></pre></div></td></tr></tbody></table></div>
 <p>Met dit commando wordt de database aangemaakt (als je op je filesystem kijkt, zie je dat het bestand <a href="bestanden/contacts.sqlite"><code>contacts.sqlite</code></a> is aangemaakt). Omdat de database nog geen tabellen heeft, moeten we deze eerst aanmaken. Om sql in Python uit te voeren, maken we gebruik van het commando <code>execute</code>.</p>
-<div class="language-ipython highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
-<span class="normal"><a href="#__codelineno-1-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">In</span> <span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="n">db</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">"CREATE TABLE IF NOT EXISTS contacts(name text, phone integer, email text)"</span><span class="p">)</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="n">Out</span><span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="o">&lt;</span><span class="n">sqlite3</span><span class="o">.</span><span class="n">Cursor</span> <span class="n">at</span> <span class="mh">0x10bf95f10</span><span class="o">&gt;</span>
+<div class="language-text highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>In [3]: db.execute("CREATE TABLE IF NOT EXISTS contacts(name text, phone integer, email text)")
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a>Out[3]: &lt;sqlite3.Cursor at 0x10bf95f10&gt;
 </code></pre></div></td></tr></tbody></table></div>
 <div class="admonition info">
 <p class="admonition-title">Checken of de tabel al bestaat</p>
 <p>De toevoeging <code>IF NOT EXISTS</code> zorgt ervoor dat er geen foutmelding verschijnt op het moment dat er al een tabel met dezelfde naam is. Deze regel wordt dan door het programma genegeerd.</p>
 </div>
 <p>Nu voeren we twee records toe:</p>
-<div class="language-ipython highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
-<span class="normal"><a href="#__codelineno-2-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="n">In</span> <span class="p">[</span><span class="mi">4</span><span class="p">]:</span> <span class="n">db</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">"INSERT INTO contacts VALUES ('Bart', 1234567, 'bart@org.nl')"</span><span class="p">)</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="n">In</span> <span class="p">[</span><span class="mi">4</span><span class="p">]:</span> <span class="n">db</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">"INSERT INTO contacts VALUES ('Henk', 7654321, 'henk@org.nl')"</span><span class="p">)</span>
+<div class="language-text highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>In [4]: db.execute("INSERT INTO contacts VALUES ('Bart', 1234567, 'bart@org.nl')")
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a>In [4]: db.execute("INSERT INTO contacts VALUES ('Henk', 7654321, 'henk@org.nl')")
 </code></pre></div></td></tr></tbody></table></div>
 <p>Om er zeker van te zijn dat de gegevens zijn opgeslagen, maken we gebruik van het commando <code>commit</code>. Dit herken je, als het goed is, uit de periode 1, waar het ging over <em>transacties</em>.</p>
-<div class="language-ipython highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="n">In</span> <span class="p">[</span><span class="mi">5</span><span class="p">]:</span> <span class="n">db</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+<div class="language-text highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>In [5]: db.commit()
 </code></pre></div></td></tr></tbody></table></div>
 <h2 id="cursors">Cursors<a class="headerlink" href="#cursors" title="Permanent link">¶</a></h2>
 <p>Om in Python met data te kunnen werken, moeten we gebruik maken van een <em>cursor</em>.  Een database-cursor is een techniek die het mogelijk maakt om over regels in een result-set te itereren. Je kunt je een cursor voorstellen als een pijltje naar een specifieke regel in zo'n result-set. Met behulp van die pijl kun je de huidige record ophalen, aanpassen of verwijderen.</p>
@@ -3295,27 +3295,27 @@
 <p>We zullen dat stappenplan hieronder met voorbeelden verder toelichten.</p>
 <h2 id="opvragen-van-data">Opvragen van data<a class="headerlink" href="#opvragen-van-data" title="Permanent link">¶</a></h2>
 <p>Na het runnen van deze regels is de database aangemaakt en zijn de records toegevoegd. Een testje is te zien of de gegevens ook daadwerkelijk zijn verwerkt. Daarvoor moeten we dus gebruik maken van een cursor:</p>
-<div class="language-ipython highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<div class="language-text highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
 <span class="normal"><a href="#__codelineno-4-2">2</a></span>
 <span class="normal"><a href="#__codelineno-4-3">3</a></span>
-<span class="normal"><a href="#__codelineno-4-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="n">In</span> <span class="p">[</span><span class="mi">6</span><span class="p">]:</span> <span class="n">cursor</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+<span class="normal"><a href="#__codelineno-4-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>In [6]: cursor = db.cursor()
 <a id="__codelineno-4-2" name="__codelineno-4-2"></a>
-<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="n">In</span> <span class="p">[</span><span class="mi">7</span><span class="p">]:</span> <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">"SELECT * FROM contacts"</span><span class="p">)</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="n">Out</span><span class="p">[</span><span class="mi">7</span><span class="p">]:</span> <span class="o">&lt;</span><span class="n">sqlite3</span><span class="o">.</span><span class="n">Cursor</span> <span class="n">at</span> <span class="mh">0x10c06bab0</span><span class="o">&gt;</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a>In [7]: cursor.execute("SELECT * FROM contacts")
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a>Out[7]: &lt;sqlite3.Cursor at 0x10c06bab0&gt;
 </code></pre></div></td></tr></tbody></table></div>
 <p>De opgevraagde rijen zijn nu benaderbaar via de cursor. We kunnen hier gebruik maken van een <code>for</code>-lus om deze gegevens één voor één af te drukken.</p>
-<div class="language-ipython highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<div class="language-text highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
 <span class="normal"><a href="#__codelineno-5-2">2</a></span>
 <span class="normal"><a href="#__codelineno-5-3">3</a></span>
 <span class="normal"><a href="#__codelineno-5-4">4</a></span>
-<span class="normal"><a href="#__codelineno-5-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="n">In</span> <span class="p">[</span><span class="mi">8</span><span class="p">]:</span> <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">cursor</span><span class="p">:</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2"></a>   <span class="o">...</span><span class="p">:</span>     <span class="nb">print</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+<span class="normal"><a href="#__codelineno-5-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>In [8]: for row in cursor:
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a>   ...:     print(row)
 <a id="__codelineno-5-3" name="__codelineno-5-3"></a>
-<a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="p">(</span><span class="s1">'Bart'</span><span class="p">,</span> <span class="mi">1234567</span><span class="p">,</span> <span class="s1">'bart@org.nl'</span><span class="p">)</span>
-<a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="p">(</span><span class="s1">'Henk'</span><span class="p">,</span> <span class="mi">7654321</span><span class="p">,</span> <span class="s1">'henk@org.nl'</span><span class="p">)</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a>('Bart', 1234567, 'bart@org.nl')
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a>('Henk', 7654321, 'henk@org.nl')
 </code></pre></div></td></tr></tbody></table></div>
 <p>Het resultaat van de query is een tupel. Het is daarom ook mogelijk om individuele gegevens afzonderlijk naar het scherm te schrijven.</p>
-<div class="language-ipython highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>
+<div class="language-text highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-6-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-6-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-6-4"> 4</a></span>
@@ -3328,29 +3328,29 @@
 <span class="normal"><a href="#__codelineno-6-11">11</a></span>
 <span class="normal"><a href="#__codelineno-6-12">12</a></span>
 <span class="normal"><a href="#__codelineno-6-13">13</a></span>
-<span class="normal"><a href="#__codelineno-6-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="n">In</span> <span class="p">[</span><span class="mi">9</span><span class="p">]:</span> <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">phone</span><span class="p">,</span> <span class="n">email</span> <span class="ow">in</span> <span class="n">cursor</span><span class="p">:</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2"></a>   <span class="o">...</span><span class="p">:</span>     <span class="nb">print</span><span class="p">(</span><span class="n">name</span>  <span class="p">)</span>
-<a id="__codelineno-6-3" name="__codelineno-6-3"></a>   <span class="o">...</span><span class="p">:</span>     <span class="nb">print</span><span class="p">(</span><span class="n">phone</span><span class="p">)</span>
-<a id="__codelineno-6-4" name="__codelineno-6-4"></a>   <span class="o">...</span><span class="p">:</span>     <span class="nb">print</span><span class="p">(</span><span class="n">email</span><span class="p">)</span>
-<a id="__codelineno-6-5" name="__codelineno-6-5"></a>   <span class="o">...</span><span class="p">:</span>     <span class="nb">print</span> <span class="p">(</span><span class="s1">'---------'</span><span class="p">)</span>
+<span class="normal"><a href="#__codelineno-6-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a>In [9]: for name, phone, email in cursor:
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a>   ...:     print(name  )
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a>   ...:     print(phone)
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a>   ...:     print(email)
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a>   ...:     print ('---------')
 <a id="__codelineno-6-6" name="__codelineno-6-6"></a>
-<a id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="n">Bart</span>
-<a id="__codelineno-6-8" name="__codelineno-6-8"></a><span class="mi">1234567</span>
-<a id="__codelineno-6-9" name="__codelineno-6-9"></a><span class="n">bart</span><span class="nd">@org</span><span class="o">.</span><span class="n">nl</span>
-<a id="__codelineno-6-10" name="__codelineno-6-10"></a><span class="o">---------</span>
-<a id="__codelineno-6-11" name="__codelineno-6-11"></a><span class="n">Henk</span>
-<a id="__codelineno-6-12" name="__codelineno-6-12"></a><span class="mi">7654321</span>
-<a id="__codelineno-6-13" name="__codelineno-6-13"></a><span class="n">henk</span><span class="nd">@org</span><span class="o">.</span><span class="n">nl</span>
-<a id="__codelineno-6-14" name="__codelineno-6-14"></a><span class="o">---------</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7"></a>Bart
+<a id="__codelineno-6-8" name="__codelineno-6-8"></a>1234567
+<a id="__codelineno-6-9" name="__codelineno-6-9"></a>bart@org.nl
+<a id="__codelineno-6-10" name="__codelineno-6-10"></a>---------
+<a id="__codelineno-6-11" name="__codelineno-6-11"></a>Henk
+<a id="__codelineno-6-12" name="__codelineno-6-12"></a>7654321
+<a id="__codelineno-6-13" name="__codelineno-6-13"></a>henk@org.nl
+<a id="__codelineno-6-14" name="__codelineno-6-14"></a>---------
 </code></pre></div></td></tr></tbody></table></div>
 <p>Moeten de gegevens als een lijst getoond worden is daar de methode <code>fetchall()</code> voor beschikbaar.</p>
-<div class="language-ipython highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
+<div class="language-text highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
 <span class="normal"><a href="#__codelineno-7-2">2</a></span>
 <span class="normal"><a href="#__codelineno-7-3">3</a></span>
-<span class="normal"><a href="#__codelineno-7-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="n">In</span> <span class="p">[</span><span class="mi">10</span><span class="p">]:</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
-<a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="n">Out</span><span class="p">[</span><span class="mi">10</span><span class="p">]:</span>
-<a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="p">[(</span><span class="s1">'Bart'</span><span class="p">,</span> <span class="mi">1234567</span><span class="p">,</span> <span class="s1">'bart@org.nl'</span><span class="p">),</span>
-<a id="__codelineno-7-4" name="__codelineno-7-4"></a> <span class="p">(</span><span class="s1">'Henk'</span><span class="p">,</span> <span class="mi">7654321</span><span class="p">,</span> <span class="s1">'henk@org.nl'</span><span class="p">),</span>
+<span class="normal"><a href="#__codelineno-7-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a>In [10]: cursor.fetchall()
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a>Out[10]:
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a>[('Bart', 1234567, 'bart@org.nl'),
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a> ('Henk', 7654321, 'henk@org.nl'),
 </code></pre></div></td></tr></tbody></table></div>
 <p>Merk op dat het resultaat van de bovenstaande methode een <em>list</em> is: er zitten blokhaken (<code>[</code> een <code>]</code>) omheen.</p>
 <div class="admonition info">
@@ -3358,19 +3358,19 @@
 <p>De bovenstaande code werkt niet zonder meer. Om het resultaat opnieuw te krijgen moeten we de cursor <em>resetten</em> of de query opnieuw uitvoeren. We gaan hieronder uitgebreid in op die cursor.</p>
 </div>
 <p>Een andere handige methode is <code>fetchone()</code>. Deze methode haalt de huidige regel op en verplaatst de cursor naar de volgende regel. Op deze manier kun je door je resultaten heen itereren totdat de methode geen resultaat meer teruggeeft:</p>
-<div class="language-ipython highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
+<div class="language-text highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
 <span class="normal"><a href="#__codelineno-8-2">2</a></span>
 <span class="normal"><a href="#__codelineno-8-3">3</a></span>
 <span class="normal"><a href="#__codelineno-8-4">4</a></span>
 <span class="normal"><a href="#__codelineno-8-5">5</a></span>
 <span class="normal"><a href="#__codelineno-8-6">6</a></span>
-<span class="normal"><a href="#__codelineno-8-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="n">In</span> <span class="p">[</span><span class="mi">11</span><span class="p">]:</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchone</span><span class="p">()</span>
-<a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="n">Out</span><span class="p">[</span><span class="mi">11</span><span class="p">]:</span> <span class="p">(</span><span class="s1">'Bart'</span><span class="p">,</span> <span class="mi">1234567</span><span class="p">,</span> <span class="s1">'bart@org.nl'</span><span class="p">)</span>
+<span class="normal"><a href="#__codelineno-8-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a>In [11]: cursor.fetchone()
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a>Out[11]: ('Bart', 1234567, 'bart@org.nl')
 <a id="__codelineno-8-3" name="__codelineno-8-3"></a>
-<a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="n">In</span> <span class="p">[</span><span class="mi">12</span><span class="p">]:</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchone</span><span class="p">()</span>
-<a id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="n">Out</span><span class="p">[</span><span class="mi">12</span><span class="p">]:</span> <span class="p">(</span><span class="s1">'Henk'</span><span class="p">,</span> <span class="mi">7654321</span><span class="p">,</span> <span class="s1">'henk@org.nl'</span><span class="p">)</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a>In [12]: cursor.fetchone()
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a>Out[12]: ('Henk', 7654321, 'henk@org.nl')
 <a id="__codelineno-8-6" name="__codelineno-8-6"></a>
-<a id="__codelineno-8-7" name="__codelineno-8-7"></a><span class="n">In</span> <span class="p">[</span><span class="mi">13</span><span class="p">]:</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchone</span><span class="p">()</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7"></a>In [13]: cursor.fetchone()
 </code></pre></div></td></tr></tbody></table></div>
 
 
