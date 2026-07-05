@@ -1,37 +1,34 @@
 # OOP Python – Oefening 2
 
-Maak binnen de file [`product.py`](../bestanden/webshop/product.py) een nieuwe klasse aan, `DigitaalProduct`, die een subklasse is van `Product`.
+In deze oefening breiden we het verhuursysteem van Sessions uit met overerving. Vertrek vanuit de klasse `Instrument` uit [`instrument.py`](../bestanden/muziekschool/instrument.py).
 
-Digitale producten hebben geen verzendkosten maar wel een bestandsgrootte. Geef digitale producten een standaard voorraad van 999 (want ze zijn bijna onbeperkt beschikbaar) en voeg een attribuut `_bestandsgrootte` toe (in MB).
+## a. Subklassen maken
 
-Test de klasse door een tweetal instanties aan te maken en hun details te tonen. Goede voorbeelden zijn software zoals "Photoshop" en "Microsoft Office".
+Maak twee subklassen van `Instrument`:
 
-Test verder of de methode `verkoop()` naar behoren werkt. Dat is ook nog niet getest voor de objecten uit de klasse `FysiekProduct`. Nu is daar een mooie gelegenheid voor. Mocht blijken dat de test nog een probleem laat zien, graag een oplossing ervoor.
+- `SnaarInstrument`, met een extra attribuut `_aantal_snaren`
+- `Blaasinstrument`, met een extra attribuut `_materiaal` (bijvoorbeeld "koper" of "hout")
 
-We gaan verder met overerving. Ook fysieke producten kunnen weer onderverdeeld worden. Bekende groepen zijn *Boek* en *Elektronica*. Alleen de klasse `Boek` wordt hier aangemaakt als voorbeeld. Een boek heeft een naam, prijs en voorraad nodig, plus een aantal extra eigenschappen zoals auteur en ISBN. Boeken krijgen standaard 0.5 kg als gewicht.
+Geef beide klassen een eigen `__init__()` die met `super().__init__()` de constructor van `Instrument` aanroept. Test de klassen door een paar instanties aan te maken en te printen, bijvoorbeeld een westerngitaar (6 snaren) en een trompet (koper).
 
-```python
-class Boek(FysiekProduct):
+## b. Overriding
 
-    def __init__(self, naam, prijs, voorraad, auteur, isbn):
-        super().__init__(naam, prijs, voorraad, gewicht=0.5)
-        self._auteur = auteur
-        self._isbn = isbn
+Bij Sessions geldt: wie een blaasinstrument huurt, betaalt eenmalig €25,00 reinigingskosten (hygiëne!). Override de methode `verhuur()` in de klasse `Blaasinstrument` zodanig dat:
 
-    def __str__(self):
-        basis = super().__str__()
-        return f"{basis}, Auteur: {self._auteur}, ISBN: {self._isbn}"
+- eerst een melding wordt getoond over de reinigingskosten,
+- daarna via `super().verhuur(aantal)` de gewone verhuurlogica wordt uitgevoerd.
+
+Verwachte uitvoer:
+
+```console
+Let op: voor Trompet geldt €25.00 reinigingskosten per verhuur
+Verhuurd: 1x Trompet. Nog 3 beschikbaar
 ```
 
-Een bekend boek is 'Python Crash Course' van Eric Matthes. Dat wordt het object uit deze klasse dat aangemaakt wordt.
+## c. Polymorfisme
 
-```python
-python_boek = Boek("Python Crash Course", 34.95, 8, "Eric Matthes", "978-1593279288")
-print(python_boek)
-python_boek.verkoop(3)
-print(python_boek)
-```
+Maak een lijst met verschillende instrumenten (minimaal één `Instrument`, één `SnaarInstrument` en één `Blaasinstrument`) en loop er met een `for`-lus doorheen waarbij je elk instrument print en er één exemplaar van verhuurt. Als het goed is zie je bij het blaasinstrument automatisch de reinigingsmelding verschijnen en bij de andere instrumenten niet — zonder dat de lus daar iets van hoeft te weten. Dat is polymorfisme!
 
-Maak nu de klasse `Software` aan als subklasse van `DigitaalProduct` met zelfgekozen eigenschappen zoals versienummer en besturingssysteem, en test deze door een instantie aan te maken en deze verschillende hoeveelheden verkopen toe te passen.
+## d. Extra uitdaging
 
-**Extra uitdaging:** Voeg een methode `download()` toe aan de klasse `DigitaalProduct` die een downloadlink genereert. Bij fysieke producten zou dit een error moeten geven.
+Geef `SnaarInstrument` een methode `vervang_snaren()` die meldt dat de snaren vervangen zijn. Wat gebeurt er als je deze methode aanroept op een `Blaasinstrument`? Verklaar de foutmelding.

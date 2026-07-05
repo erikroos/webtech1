@@ -1,23 +1,25 @@
 # OOP Python – Oefening 1
 
-Bekijk nogmaals het bestand [`voorraad.py`](../bestanden/webshop/voorraad.py). Het programma is nog niet helemaal perfect. Kijk naar de volgende coderegels voor een nieuw product, een muis:
+Bekijk nogmaals het bestand [`cursist.py`](../bestanden/muziekschool/cursist.py). Het programma is nog niet helemaal perfect. Kijk naar de volgende coderegels voor een nieuwe cursist, die bij inschrijving direct een begintegoed meekrijgt:
 
 ```ipython
-In [1]: run "voorraad"
+In [1]: run "cursist"
 
-In [2]: muis_voorraad = Voorraad("Draadloze muis", 50)
-Voorraad aangemaakt voor Draadloze muis
+In [2]: bram = Cursist("Bram", "bram@email.nl", 250.0)
+Cursist Bram ingeschreven bij Sessions
 
-In [3]: muis_voorraad.bijbestellen(20)
-Voorraad Draadloze muis bedraagt 70
+In [3]: bram.stort(50.0)
+Tegoed van Bram bedraagt €300.00
 
-In [4]: muis_voorraad.verkoop(15)
-Voorraad Draadloze muis bedraagt 55
+In [4]: bram.betaal_les(35.0)
+Tegoed van Bram bedraagt €265.00
 
-In [5]: muis_voorraad.toon_mutaties()
-Mutatie-geschiedenis voor Draadloze muis:
-  2026-01-31 14:23:15: 20 bijbesteld
-  2026-01-31 14:23:15: 15 verkocht
+In [5]: bram.toon_betalingen()
+Betalingsgeschiedenis van Bram:
+  2026-02-02 14:23:15: €50.00 gestort
+  2026-02-02 14:23:15: €35.00 les betaald
 ```
 
-Er is iets nog niet helemaal goed gegaan. De eerste mutatie, het beginvoorraad van 50 stuks, is niet in de mutatielijst te zien. Graag een oplossing hiervoor.
+Er is iets nog niet helemaal goed gegaan. De eerste mutatie, het begintegoed van €250,00, is niet in de betalingsgeschiedenis te zien. Graag een oplossing hiervoor.
+
+**Extra:** voeg ook een property `email` toe (getter én setter). De setter mag alleen waarden accepteren waar een `@` in voorkomt — anders volgt een nette melding en blijft het oude e-mailadres staan.

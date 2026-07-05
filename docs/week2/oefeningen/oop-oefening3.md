@@ -1,91 +1,36 @@
 # OOP Python – Oefening 3
 
-In deze oefening gaan we de `Bestelling`-klasse uit deel 7 verder uitbreiden.
+In deze oefening gaan we de klasse `Les` uit deel 4 verder uitbreiden. Vertrek vanuit [`les.py`](../bestanden/muziekschool/les.py) en [`persoon.py`](../bestanden/muziekschool/persoon.py).
 
-## a. Bestellingsnummer toevoegen
+## a. Inschrijfnummer toevoegen
 
-Pas de code van [`bestelling.py`](../bestanden/webshop/bestelling.py) zodanig aan dat elke bestelling automatisch een uniek bestellingsnummer krijgt. Je kunt hiervoor een class-attribuut gebruiken dat bij elke nieuwe bestelling opgehoogd wordt.
+Pas de code van `les.py` zodanig aan dat elke les automatisch een uniek lesnummer krijgt. Je kunt hiervoor een class-attribuut gebruiken dat bij elke nieuwe les opgehoogd wordt.
 
-**Tip:** Een class-attribuut wordt gedefinieerd buiten de `__init__()` methode en wordt aangeroepen met de klassenaam ervoor, bijvoorbeeld: `Bestelling._volgend_nummer`.
+**Tip:** een class-attribuut wordt gedefinieerd buiten de `__init__()`-methode en wordt aangeroepen met de klassenaam ervoor, bijvoorbeeld: `Les._volgend_nummer`.
 
-## b. Verzendmethode toevoegen
+## b. Lespakket toevoegen
 
-Er zijn verschillende verzendmethoden mogelijk: standaard verzending (2-3 werkdagen), express verzending (volgende werkdag) of afhalen in de winkel. Maak een nieuwe klasse `Verzendmethode` die de volgende eigenschappen heeft:
+Sessions biedt verschillende lespakketten aan: een losse les, een strippenkaart (10 lessen) of een jaarabonnement. Maak een nieuwe klasse `Lespakket` met de volgende eigenschappen:
 
-- **type**: Het type verzending ("Standaard", "Express", "Afhalen")
-- **kosten**: De verzendkosten
-- **levertijd**: De levertijd als tekst (bijv. "2-3 werkdagen")
+- **type**: het soort pakket ("Losse les", "Strippenkaart", "Jaarabonnement")
+- **prijs**: de prijs van het pakket
+- **aantal_lessen**: het aantal lessen dat het pakket omvat
 
-Pas vervolgens de klasse `Bestelling` aan zodat je een `Verzendmethode` object mee kunt geven in plaats van alleen verzendkosten. Zorg ervoor dat de levertijd ook wordt getoond bij het plaatsen van een bestelling.
+Pas vervolgens de klasse `Cursist` (uit `persoon.py`) aan zodat een cursist bij het inschrijven voor een les een `Lespakket`-object mee kan krijgen. Zorg ervoor dat het pakket ook getoond wordt bij `toon_deelnemers()`.
 
-## c. Kortingscode toevoegen (optionele uitdaging)
+## c. Jeugdkorting toevoegen (optionele uitdaging)
 
-Klanten kunnen soms een kortingscode gebruiken. Maak een nieuwe klasse `Kortingscode` die een code en een kortingspercentage bevat. Breid de klasse `Bestelling` op zo'n manier uit, dat het mogelijk is om een kortingscode toe te passen. Maak hiervoor een methode `pas_kortingscode_toe(kortingscode)`. Zorg er ook voor dat bij het *plaatsen* van de bestelling de korting correct wordt toegepast en getoond.
+Cursisten die jonger zijn dan 18 jaar krijgen 25% korting op hun lespakket. Voeg aan de klasse `Cursist` een methode `bereken_pakketprijs()` toe die op basis van het geboortejaar bepaalt of de korting van toepassing is, en de juiste prijs teruggeeft en toont.
 
-Voorbeeld gebruik:
+Verwachte output:
 
-```python
-# Maak kortingscode aan
-zomer2026 = Kortingscode("ZOMER2026", 0.15)  # 15% korting
-
-# Pas toe op bestelling
-bestelling.pas_kortingscode_toe(zomer2026)
+```console
+Lespakket Strippenkaart voor Roos: €297.50 (25% jeugdkorting toegepast)
+Lespakket Strippenkaart voor Joyce: €350.00
 ```
 
-Verwachte output bij plaatsen bestelling:
-```
-Subtotaal: €915.48
-Kortingscode ZOMER2026: -€137.32 (15%)
-Subtotaal na korting: €778.16
-Verzendkosten: €0.00 (GRATIS verzending!)
-Verwachte levertijd: 2-3 werkdagen
-Totaal: €778.16
-```
+## d. Instrumentverhuur koppelen (nog een optionele uitdaging)
 
-## d. Meerdere verzendadressen (nog een optionele uitdaging)
+Combineer dit met het verhuursysteem uit oefening 2: geef een `Cursist` een attribuut `gehuurde_instrumenten` (een lijst) en een methode `huur_instrument(instrument)` die het instrument verhuurt (via `instrument.verhuur(1)`) en aan de lijst toevoegt. Laat in een testscript een cursist een lespakket kiezen én een instrument huren, en print daarna een compleet overzicht van deze cursist.
 
-In een echte webshop kunnen klanten meerdere adressen hebben (thuisadres, werkadres etc.). Maak een klasse `Adres` met velden voor straat, huisnummer, en plaats. Pas de klasse `Klant` aan zodat een klant meerdere adressen kan hebben. Bij het aanmaken van een bestelling moet je dan kunnen kiezen naar welk adres verzonden moet worden.
-
-Als je dit is gelukt kun je jezelf feliciteren: je hebt nu een realistische webshop-structuur gemaakt met compositie!
-
-## Testcode
-
-Hier is een voorbeeld hoe je de complete functionaliteit kunt testen:
-
-```python
-from product import Product
-from klant import Klant
-from webshop import Winkelwagen
-from bestelling import Bestelling, Verzendmethode, Kortingscode
-from betaalmethode import Betaalmethode
-
-# Maak producten
-laptop = Product("Laptop", 799.99, 5)
-muis = Product("Draadloze muis", 25.50, 20)
-
-# Maak klant en winkelwagen
-jan = Klant("Jan Jansen", "jan@email.nl")
-jan.voeg_adres_toe("Bloemstraat", 1, "Groningen")
-jan.voeg_adres_toe("Zernikeplein", 11, "Groningen")
-wagen = Winkelwagen(jan)
-wagen.voeg_toe(laptop)
-wagen.voeg_toe(muis)
-
-# Maak verzendmethode
-express = Verzendmethode("Express", 9.95, "volgende werkdag")
-
-# Maak betaalmethode
-ideal = Betaalmethode("iDEAL", 0.0)
-
-# Maak bestelling
-bestelling = Bestelling(jan, wagen, ideal, verzendmethode=express)
-
-# Pas kortingscode toe
-korting = Kortingscode("WELKOM10", 0.10)
-bestelling.pas_kortingscode_toe(korting)
-
-# Plaats bestelling
-bestelling.plaats_bestelling(adres_index=1)
-
-print(f"\nBestellingsnummer: {bestelling.nummer}")
-```
+Als dit gelukt is kun je jezelf feliciteren: je hebt het complete datamodel van een muziekschool gebouwd met overerving én compositie — precies de structuur die in week 5 terugkomt als database-model!
