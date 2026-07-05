@@ -9,7 +9,7 @@ De module is onderdeel van de propedeuse van de opleiding HBO-ICT en is daarom b
 
 ## Opzet van het thema
 
-Elke week staat een specifiek onderdeel van het web centraal. Dit onderwerp wordt ondersteund door een vooraf opgenomen theorieles die studenten in hun eigen tijd kunnen doornemen. Hiernaast zijn er werkcolleges, waarin studenten werken aan oefeningen die het onderwerp van die week via een meer praktische weg over het voetlicht brengen. Vanaf week vier werken studenten in duo’s aan hun eigen project, op basis waarvan de beoordeling plaatsvindt.
+Elke week staat een specifiek onderdeel van het web centraal. Dit onderwerp wordt ondersteund door een vooraf opgenomen theorieles die studenten in hun eigen tijd kunnen doornemen. Hiernaast zijn er werkcolleges, waarin studenten werken aan oefeningen die het onderwerp van die week via een meer praktische weg over het voetlicht brengen. Vanaf week drie werken studenten in duo’s aan hun eigen project, op basis waarvan de beoordeling plaatsvindt.
 
 Elke klas heeft twee werkcolleges per week. Bij dit werkcollege wordt de theoretische opzet nog een keer praktisch uitgebreid toegelicht. Per week zijn er ook oefeningen gegeven waar studenten individueel of met hun projectduopartner aan kunnen werken. De werkcolleges zijn verder natuurlijk bedoeld om te werken aan het project; de practiumdocent is dan aanwezig om vragen te stellen of te beantwoorden.
 
@@ -22,15 +22,15 @@ Lesweek | Onderwerpen
 ---|---
 1 | [Front-end: html, css en Bootstrap](week1/1.html/html-deel1.md)
 2 | [Python OOP](week2/oop-deel1.md)
-3 | [Python en databases](week3/sql-deel1.md)
-4 | [Flask: routing, templates en formulieren](week4/flask-deel1.md)
+3 | [Flask: routing, templates en formulieren](week3/flask-deel1.md)
+4 | [Python en databases](week4/sql-deel1.md)
 5 | [Flask en databases (ORM)](week5/flask-views-deel1.md)
 6 | [Inloggen](week6/user-authentication-deel1.md)
 &nbsp; | _Verdieping (optioneel): [refactoring van Flask-applicaties](verdieping/flask-applicaties-deel1.md)_
 
 ## Toetsing
 
-Liefst zo snel mogelijk, in ieder geval vanaf week vier, werken studenten in duo's aan hun eigen project, waarbij de volgende onderdelen van belang zijn:
+Liefst zo snel mogelijk, in ieder geval vanaf week drie, werken studenten in duo's aan hun eigen project, waarbij de volgende onderdelen van belang zijn:
 
 - Website heeft vormgeving en een koppeling met een database
 - Op de site ingevulde data komt door sqlalchemy terecht in een sqlite-database

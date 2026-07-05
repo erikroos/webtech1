@@ -130,29 +130,29 @@ nav:
       - week2/oefeningen/oop-oefening1.md
       - week2/oefeningen/oop-oefening2.md
       - week2/oefeningen/oop-oefening3.md
-  - Week 3 - Python en databases:
-    - week3/sql-deel1.md
-    - week3/sql-deel2.md
-    - week3/sql-deel3.md
-    - week3/sql-deel4.md
-    - week3/sql-deel5.md
-    - week3/sql-deel6.md
+  - Week 3 - Flask en formulieren:
+    - week3/flask-deel1.md
+    - week3/flask-deel2.md
+    - week3/flask-deel3.md
+    - week3/flask-deel4.md
+    - week3/flask-forms-deel1.md
+    - week3/flask-forms-deel2.md
+    - week3/flask-forms-deel3.md
     - Oefeningen:
-      - week3/oefeningen/sql-oefening1.md
-      - week3/oefeningen/sql-oefening2.md
-      - week3/oefeningen/sql-oefening3.md
-      - week3/oefeningen/sql-oefening4.md
-  - Week 4 - Flask en formulieren:
-    - week4/flask-deel1.md
-    - week4/flask-deel2.md
-    - week4/flask-deel3.md
-    - week4/flask-deel4.md
-    - week4/flask-forms-deel1.md
-    - week4/flask-forms-deel2.md
-    - week4/flask-forms-deel3.md
+      - week3/oefeningen/flask-oefening1.md
+      - week3/oefeningen/flask-forms-oefening1.md
+  - Week 4 - Python en databases:
+    - week4/sql-deel1.md
+    - week4/sql-deel2.md
+    - week4/sql-deel3.md
+    - week4/sql-deel4.md
+    - week4/sql-deel5.md
+    - week4/sql-deel6.md
     - Oefeningen:
-      - week4/oefeningen/flask-oefening1.md
-      - week4/oefeningen/flask-forms-oefening1.md
+      - week4/oefeningen/sql-oefening1.md
+      - week4/oefeningen/sql-oefening2.md
+      - week4/oefeningen/sql-oefening3.md
+      - week4/oefeningen/sql-oefening4.md
   - Week 5 - Flask en databases (ORM):
     - week5/flask-views-deel1.md
     - week5/flask-views-deel2.md

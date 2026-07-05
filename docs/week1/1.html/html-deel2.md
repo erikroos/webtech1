@@ -67,7 +67,7 @@ Wanneer je deze code opslaat en opent in een browser, krijg je het onderstaande 
 
 
 !!! info "Gebruik van het file system"
-    Normaliter maken we gebruik van een webserver om bestanden in je browser te laten zien. In de eerste drie weken openen we de bestanden gewoon via het file system. Vanaf week 4, wanneer we met Flask gaan werken, zullen we daadwerkelijk met een (ontwikkel)server gaan werken.
+    Normaliter maken we gebruik van een webserver om bestanden in je browser te laten zien. In de eerste twee weken openen we de bestanden gewoon via het file system. Vanaf week 3, wanneer we met Flask gaan werken, zullen we daadwerkelijk met een (ontwikkel)server gaan werken.
 
 
 De eerste regel `<!DOCTYPE html>`, oftewel *Document Type Definition* (DTD) is bedoeld om aan te geven door welke versie van HTML het document is opgebouwd.

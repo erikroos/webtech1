@@ -28,7 +28,7 @@ Voor het werken met die hashes kan uit een tweetal beschikbare bibliotheken geko
 
 Beiden kunnen zeer goed gebruikt worden in een Flask-applicatie om te kunnen achterhalen of er een juist wachtwoord is ingevoerd. Van beide pakketten wordt een voorbeeld gegeven hoe het gebruikt kan worden.
 
-`Bcrypt` en `Werkzeug` komen vaak mee als `Flask` geïnstalleerd wordt. Is dat niet het geval kunnen de pakketten [op de bekende wijze](../week4/flask-forms-deel1.md) opgehaald worden.
+`Bcrypt` en `Werkzeug` komen vaak mee als `Flask` geïnstalleerd wordt. Is dat niet het geval kunnen de pakketten [op de bekende wijze](../week3/flask-forms-deel1.md) opgehaald worden.
 
 ### Bcrypt
 

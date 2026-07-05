@@ -1,7 +1,7 @@
 # Flask en SQL - Theorie
 
 ## Inleiding
-Nu duidelijk is op welke wijze gebruikersinformatie verzameld kan worden via Forms met Flask is het tijd voor een volgende stap. Die stap is het koppelen van de Flask-applicaties aan een database, zodat de gebruikersinformatie vastgelegd kan worden.
+Nu duidelijk is op welke wijze gebruikersinformatie verzameld kan worden via Forms met Flask (week 3) en hoe gegevens met SQL in een database opgeslagen kunnen worden (week 4), is het tijd om deze twee werelden samen te brengen: we koppelen de Flask-applicatie aan een database, zodat de gebruikersinformatie blijvend vastgelegd kan worden.
 Met behulp van SQL kunnen gegevens in een tabelvorm opgeslagen worden.
 
 |   |Kolom 1| Kolom 2| Kolom 3

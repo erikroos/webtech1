@@ -1,5 +1,8 @@
 # Databasebeheer in Python
 
+!!! info "Waar zijn we?"
+    Vorige week heb je met Flask en formulieren gebruikersinvoer verzameld, maar die gegevens waren steeds weer verdwenen zodra de applicatie opnieuw werd gestart. Deze week leggen we de basis om gegevens *blijvend* op te slaan: databases en SQL. Volgende week koppelen we de database aan onze Flask-applicatie, zodat de gegevens van bijvoorbeeld het aanmeldformulier van muziekschool Sessions netjes bewaard blijven.
+
 In het informatietijdperk waarin de wereld momenteel verkeert, spelen gegevens een enorme rol. Er worden ongelofelijk veel gegevens onderling uitgewisseld, denk maar eens aan de sociale media. Een uurtje online vergt al gauw 100MB nog zonder dat er allerlei films en video ge-upload of gestreamd worden. Daarnaast heeft het  online bestellen van goederen een enorme vlucht genomen. 
 
 Kleding, eten, films, reizen, ... alles kan online geboekt worden. En aan het bedrijfsleven de taak dat allemaal in goede banen te leiden. In essentie is de hele wereld bezig met het maken, opslaan en ophalen van gegevens!  En er komt nog heel wat bij kijken om dat allemaal in goede banen te leiden. Hier komt een databasebeheersysteem (DBMS) uitstekend van pas.
