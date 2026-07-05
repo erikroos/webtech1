@@ -24,7 +24,7 @@
     
     
       
-        <title>OOP Python - Meerdere klassen - Webtechnologie 1</title>
+        <title>OOP Python – Overerving en polymorfisme - Webtechnologie 1</title>
       
     
     
@@ -87,7 +87,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#oop-python-meerdere-klassen" class="md-skip">
+        <a href="#oop-python-overerving-en-polymorfisme" class="md-skip">
           Ga naar inhoud
         </a>
       
@@ -123,7 +123,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              OOP Python - Meerdere klassen
+              OOP Python – Overerving en polymorfisme
             
           </span>
         </div>
@@ -1084,12 +1084,6 @@
       
         
       
-        
-      
-        
-      
-        
-      
     
     
     
@@ -1172,7 +1166,7 @@
   <span class="md-ellipsis">
     
   
-    OOP Python – Methoden en inkapseling
+    OOP Python – Inkapseling en properties
   
 
     
@@ -1209,7 +1203,7 @@
   <span class="md-ellipsis">
     
   
-    OOP Python - Meerdere klassen
+    OOP Python – Overerving en polymorfisme
   
 
     
@@ -1227,7 +1221,7 @@
   <span class="md-ellipsis">
     
   
-    OOP Python - Meerdere klassen
+    OOP Python – Overerving en polymorfisme
   
 
     
@@ -1253,10 +1247,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#de-klasse-product" class="md-nav__link">
+  <a href="#het-principe-van-overerving" class="md-nav__link">
     <span class="md-ellipsis">
       
-        De klasse Product
+        Het principe van overerving
       
     </span>
   </a>
@@ -1264,10 +1258,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#de-klasse-winkelwagen" class="md-nav__link">
+  <a href="#de-klasse-persoon" class="md-nav__link">
     <span class="md-ellipsis">
       
-        De klasse Winkelwagen
+        De klasse Persoon
       
     </span>
   </a>
@@ -1275,10 +1269,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#de-klasse-klant" class="md-nav__link">
+  <a href="#de-klasse-docent" class="md-nav__link">
     <span class="md-ellipsis">
       
-        De klasse Klant
+        De klasse Docent
       
     </span>
   </a>
@@ -1286,10 +1280,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#het-geheel-in-actie" class="md-nav__link">
+  <a href="#extra-eigenschappen-in-de-subklasse" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Het geheel in actie
+        Extra eigenschappen in de subklasse
       
     </span>
   </a>
@@ -1297,10 +1291,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#waarom-meerdere-klassen" class="md-nav__link">
+  <a href="#overriding" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Waarom meerdere klassen?
+        Overriding
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#polymorfisme" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Polymorfisme
       
     </span>
   </a>
@@ -1341,91 +1346,7 @@
   <span class="md-ellipsis">
     
   
-    OOP Python – Getters en Setters
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="oop-deel5.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    OOP Python – Overerving
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="oop-deel6.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    OOP Python – Overriding en polymorfisme
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="oop-deel7.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    OOP Python – Compositie
+    OOP Python – Meerdere klassen en compositie
   
 
     
@@ -1462,10 +1383,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5">
         
           
-          <label class="md-nav__link" for="__nav_3_8" id="__nav_3_8_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
             
   
   
@@ -1483,8 +1404,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_8_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_8">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1616,6 +1537,8 @@
       
         
       
+        
+      
     
     
     
@@ -1634,7 +1557,7 @@
   <span class="md-ellipsis">
     
   
-    Week 3 - Python en databases
+    Week 3 - Flask en formulieren
   
 
     
@@ -1650,7 +1573,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Week 3 - Python en databases
+    Week 3 - Flask en formulieren
   
 
           </label>
@@ -1663,7 +1586,390 @@
   
   
     <li class="md-nav__item">
-      <a href="../week3/sql-deel1.html" class="md-nav__link">
+      <a href="../week3/flask-deel1.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Flask – Inleiding
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../week3/flask-deel2.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Flask – Installatie
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../week3/flask-deel3.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Flask – basale werking
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../week3/flask-deel4.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Flask – Templates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../week3/flask-forms-deel1.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Flask forms deel1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../week3/flask-forms-deel2.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Flask en Forms - Form Fields
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../week3/flask-forms-deel3.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Flask en Forms - Flash-berichten
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_8">
+        
+          
+          <label class="md-nav__link" for="__nav_4_8" id="__nav_4_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Oefeningen
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Oefeningen
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../week3/oefeningen/flask-oefening1.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Flask – Oefening 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../week3/oefeningen/flask-forms-oefening1.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Flask en forms - Oefening 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5">
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Week 4 - Python en databases
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Week 4 - Python en databases
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../week4/sql-deel1.html" class="md-nav__link">
         
   
   
@@ -1691,7 +1997,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../week3/sql-deel2.html" class="md-nav__link">
+      <a href="../week4/sql-deel2.html" class="md-nav__link">
         
   
   
@@ -1719,7 +2025,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../week3/sql-deel3.html" class="md-nav__link">
+      <a href="../week4/sql-deel3.html" class="md-nav__link">
         
   
   
@@ -1747,7 +2053,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../week3/sql-deel4.html" class="md-nav__link">
+      <a href="../week4/sql-deel4.html" class="md-nav__link">
         
   
   
@@ -1775,7 +2081,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../week3/sql-deel5.html" class="md-nav__link">
+      <a href="../week4/sql-deel5.html" class="md-nav__link">
         
   
   
@@ -1803,7 +2109,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../week3/sql-deel6.html" class="md-nav__link">
+      <a href="../week4/sql-deel6.html" class="md-nav__link">
         
   
   
@@ -1849,10 +2155,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_7">
         
           
-          <label class="md-nav__link" for="__nav_4_7" id="__nav_4_7_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5_7" id="__nav_5_7_label" tabindex="0">
             
   
   
@@ -1870,8 +2176,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_7">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_7">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1888,7 +2194,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../week3/oefeningen/sql-oefening1.html" class="md-nav__link">
+      <a href="../week4/oefeningen/sql-oefening1.html" class="md-nav__link">
         
   
   
@@ -1916,7 +2222,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../week3/oefeningen/sql-oefening2.html" class="md-nav__link">
+      <a href="../week4/oefeningen/sql-oefening2.html" class="md-nav__link">
         
   
   
@@ -1944,7 +2250,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../week3/oefeningen/sql-oefening3.html" class="md-nav__link">
+      <a href="../week4/oefeningen/sql-oefening3.html" class="md-nav__link">
         
   
   
@@ -1972,7 +2278,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../week3/oefeningen/sql-oefening4.html" class="md-nav__link">
+      <a href="../week4/oefeningen/sql-oefening4.html" class="md-nav__link">
         
   
   
@@ -1980,391 +2286,6 @@
     
   
     Oefening 4
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5">
-        
-          
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Week 4 - Flask en formulieren
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Week 4 - Flask en formulieren
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix="">
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../week4/flask-deel1.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Flask – Inleiding
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../week4/flask-deel2.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Flask – Installatie
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../week4/flask-deel3.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Flask – basale werking
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../week4/flask-deel4.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Flask – Templates
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../week4/flask-forms-deel1.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Flask forms deel1
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../week4/flask-forms-deel2.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Flask en Forms - Form Fields
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../week4/flask-forms-deel3.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Flask en Forms - Flash-berichten
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_8">
-        
-          
-          <label class="md-nav__link" for="__nav_5_8" id="__nav_5_8_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Oefeningen
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_8_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5_8">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Oefeningen
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix="">
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../week4/oefeningen/flask-oefening1.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Flask – Oefening 1
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../week4/oefeningen/flask-forms-oefening1.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Flask en forms - Oefening 1
   
 
     
@@ -2705,6 +2626,8 @@
       
         
       
+        
+      
     
     
     
@@ -2852,6 +2775,93 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_5">
+        
+          
+          <label class="md-nav__link" for="__nav_7_5" id="__nav_7_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Oefeningen
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Oefeningen
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../week6/oefeningen/user-authentication-oefening1.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    User authentication - Oefening 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -3226,10 +3236,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#de-klasse-product" class="md-nav__link">
+  <a href="#het-principe-van-overerving" class="md-nav__link">
     <span class="md-ellipsis">
       
-        De klasse Product
+        Het principe van overerving
       
     </span>
   </a>
@@ -3237,10 +3247,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#de-klasse-winkelwagen" class="md-nav__link">
+  <a href="#de-klasse-persoon" class="md-nav__link">
     <span class="md-ellipsis">
       
-        De klasse Winkelwagen
+        De klasse Persoon
       
     </span>
   </a>
@@ -3248,10 +3258,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#de-klasse-klant" class="md-nav__link">
+  <a href="#de-klasse-docent" class="md-nav__link">
     <span class="md-ellipsis">
       
-        De klasse Klant
+        De klasse Docent
       
     </span>
   </a>
@@ -3259,10 +3269,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#het-geheel-in-actie" class="md-nav__link">
+  <a href="#extra-eigenschappen-in-de-subklasse" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Het geheel in actie
+        Extra eigenschappen in de subklasse
       
     </span>
   </a>
@@ -3270,10 +3280,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#waarom-meerdere-klassen" class="md-nav__link">
+  <a href="#overriding" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Waarom meerdere klassen?
+        Overriding
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#polymorfisme" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Polymorfisme
       
     </span>
   </a>
@@ -3324,11 +3345,43 @@
   
 
 
-<h1 id="oop-python-meerdere-klassen">OOP Python - Meerdere klassen<a class="headerlink" href="#oop-python-meerdere-klassen" title="Permanent link">¶</a></h1>
-<p>Het is belangrijk om commentaar op te nemen binnen codeblokken. Het is dan voor iemand die de code niet ontwikkeld heeft, maar deze wel moet refactoren, duidelijk wat de bedoeling is. Dat gaan we hier ook doen.</p>
-<h2 id="de-klasse-product">De klasse <code>Product</code><a class="headerlink" href="#de-klasse-product" title="Permanent link">¶</a></h2>
-<p>Als voorbeeld wordt hier een applicatie opgebouwd, waarbij gegevens vanuit drie klassen aangeroepen zullen worden. Die klassen zijn <code>Product</code>, <code>Klant</code> en <code>Winkelwagen</code>. De code is te vinden in het bestand <a href="bestanden/webshop/webshop.py">webshop.py</a></p>
-<p>De eerste klasse is <code>Product</code>. In het commentaar van deze klasse zetten we een korte beschrijving van de klasse, gevolgd door een omschrijving van de attributen die van objecten deze klasse worden bijgehouden. Na dit commentaar volgt de <em>constructor</em>, die we ook voorzien van een korte beschrijving.</p>
+<h1 id="oop-python-overerving-en-polymorfisme">OOP Python – Overerving en polymorfisme<a class="headerlink" href="#oop-python-overerving-en-polymorfisme" title="Permanent link">¶</a></h1>
+<p>Overerving is een mechanisme waarmee het probleem van gedupliceerde code opgelost kan worden. Het concept is eenvoudig. Stel je voor dat we een model willen maken van verschillende typen vogels. Dan kun je je voorstellen dat dat model er bijvoorbeeld als volgt uit zou komen te zien:</p>
+<p>Aan het eind van deze tekst maken we <a href="oefeningen/oop-oefening2.html">oefening nummer 2</a>.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="imgs/klasse-diagram.png" data-desc-position="bottom"><img alt="Plaatje van overerving" src="imgs/klasse-diagram.png"></a></p>
+<h2 id="het-principe-van-overerving">Het principe van overerving<a class="headerlink" href="#het-principe-van-overerving" title="Permanent link">¶</a></h2>
+<p>Deze afbeelding laat het principe van overerving duidelijk zien. Op het plaatje zijn allemaal vogels te zien. Een kenmerk van alle vogels is dat zij allen een snavel hebben en vleugels. De kenmerken die voor alle vogels gelden, worden zoveel mogelijk centraal vastgelegd, hier dus in de klasse <code>VOGEL</code>.</p>
+<p>Daarna is er een tweedeling te zien tussen vogels die kunnen vliegen en vogels die die capaciteit niet beheersen. Alle vogels die kunnen vliegen bezitten de methode <code>vlieg()</code>. Deze methode wordt zo hoog mogelijk in de hiërarchie opgeslagen, hier in <code>VLIEGEND</code>. De vogels die niet kunnen vliegen hebben blijkbaar geen gemeenschappelijke methode. De struisvogel kan hardlopen (<code>ren()</code>) en de pinguïn kan zwemmen (<code>zwem()</code>). Omdat dit dus allemaal individuele methoden zijn, worden ze in de klasse zelf opgeslagen.</p>
+<p>Dat levert het volgende overzicht op:</p>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Omschrijving</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Overerving</td>
+<td>Het definiëren van een klasse als uitbreiding van een andere klasse.</td>
+</tr>
+<tr>
+<td>Superklasse</td>
+<td>Een klasse die uitgebreid wordt door een andere klasse.</td>
+</tr>
+<tr>
+<td>Subklasse</td>
+<td>Een klasse die een uitbreiding erft van een andere klasse. Een subklasse erft alle attributen en methoden van de bijbehorende superklasse.</td>
+</tr>
+</tbody>
+</table>
+<p>Zo is <code>VOGEL</code> een superklasse van <code>VLIEGEND</code> en is <code>VLIEGEND</code> een subklasse van <code>VOGEL</code>. Maar <code>VLIEGEND</code> is tegelijkertijd een superklasse van <code>ADELAAR</code>, <code>KRAAI</code> en <code>MEEUW</code>. Super- en subklasse is een transitieve eigenschap: <code>VOGEL</code> is ook een superklasse van <code>KRAAI</code>.</p>
+<h2 id="de-klasse-persoon">De klasse <code>Persoon</code><a class="headerlink" href="#de-klasse-persoon" title="Permanent link">¶</a></h2>
+<p>Terug naar muziekschool Sessions. Bij de school lopen verschillende soorten mensen rond: <em>docenten</em> en <em>cursisten</em>. Beiden hebben een naam en een e-mailadres, en beiden moeten zich kunnen voorstellen. Die gemeenschappelijke kenmerken leggen we vast in een superklasse <code>Persoon</code>, in het bestand <a href="bestanden/muziekschool/persoon.py"><code>persoon.py</code></a>:</p>
+<div class="admonition info">
+<p class="admonition-title">Werken vanuit een bestand</p>
+<p>Vanaf nu werken we vanuit bestanden om de werking van de code te demonstreren. Dat is directer en makkelijker dan telkens alles in de interactieve shell opnieuw in te laden. Probeer dit voor je eigen project ook op deze manier te doen.</p>
+</div>
 <div class="language-python highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
@@ -3340,404 +3393,165 @@
 <span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
 <span class="normal"><a href="#__codelineno-0-10">10</a></span>
 <span class="normal"><a href="#__codelineno-0-11">11</a></span>
-<span class="normal"><a href="#__codelineno-0-12">12</a></span>
-<span class="normal"><a href="#__codelineno-0-13">13</a></span>
-<span class="normal"><a href="#__codelineno-0-14">14</a></span>
-<span class="normal"><a href="#__codelineno-0-15">15</a></span>
-<span class="normal"><a href="#__codelineno-0-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Product</span><span class="p">:</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="sd">"""Klasse waarin productgegevens worden vastgelegd</span>
+<span class="normal"><a href="#__codelineno-0-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Persoon</span><span class="p">:</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="sd">"""Superklasse voor alle personen bij muziekschool Sessions"""</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3"></a>
-<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="sd">    Attributen:</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="sd">        naam (str): De naam van het product.</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="sd">        prijs (float): De prijs van het product in euro's.</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="sd">        voorraad (int): Het aantal beschikbare producten. Standaard 0.</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="sd">    """</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9"></a>
-<a id="__codelineno-0-10" name="__codelineno-0-10"></a>    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">naam</span><span class="p">,</span> <span class="n">prijs</span><span class="p">,</span> <span class="n">voorraad</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_naam</span> <span class="o">=</span> <span class="n">naam</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_prijs</span> <span class="o">=</span> <span class="n">prijs</span>
-<a id="__codelineno-0-13" name="__codelineno-0-13"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_voorraad</span> <span class="o">=</span> <span class="n">voorraad</span>
-<a id="__codelineno-0-14" name="__codelineno-0-14"></a>
-<a id="__codelineno-0-15" name="__codelineno-0-15"></a>    <span class="k">def</span><span class="w"> </span><span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<a id="__codelineno-0-16" name="__codelineno-0-16"></a>        <span class="k">return</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_naam</span><span class="si">}</span><span class="s2"> (€</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_prijs</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">)"</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a>    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">naam</span><span class="p">,</span> <span class="n">email</span><span class="p">):</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_naam</span> <span class="o">=</span> <span class="n">naam</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_email</span> <span class="o">=</span> <span class="n">email</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">stel_voor</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Hallo, ik ben </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_naam</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a>
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a>    <span class="k">def</span><span class="w"> </span><span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a>        <span class="k">return</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_naam</span><span class="si">}</span><span class="s2"> (</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_email</span><span class="si">}</span><span class="s2">)"</span>
 </code></pre></div></td></tr></tbody></table></div>
-<h2 id="de-klasse-winkelwagen">De klasse <code>Winkelwagen</code><a class="headerlink" href="#de-klasse-winkelwagen" title="Permanent link">¶</a></h2>
-<p>In hetzelfde bestand maken we nu een tweede klasse: <code>Winkelwagen</code>. Aan deze winkelwagen kunnen producten worden toegevoegd.</p>
-<div class="language-python highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-1-10">10</a></span>
-<span class="normal"><a href="#__codelineno-1-11">11</a></span>
-<span class="normal"><a href="#__codelineno-1-12">12</a></span>
-<span class="normal"><a href="#__codelineno-1-13">13</a></span>
-<span class="normal"><a href="#__codelineno-1-14">14</a></span>
-<span class="normal"><a href="#__codelineno-1-15">15</a></span>
-<span class="normal"><a href="#__codelineno-1-16">16</a></span>
-<span class="normal"><a href="#__codelineno-1-17">17</a></span>
-<span class="normal"><a href="#__codelineno-1-18">18</a></span>
-<span class="normal"><a href="#__codelineno-1-19">19</a></span>
-<span class="normal"><a href="#__codelineno-1-20">20</a></span>
-<span class="normal"><a href="#__codelineno-1-21">21</a></span>
-<span class="normal"><a href="#__codelineno-1-22">22</a></span>
-<span class="normal"><a href="#__codelineno-1-23">23</a></span>
-<span class="normal"><a href="#__codelineno-1-24">24</a></span>
-<span class="normal"><a href="#__codelineno-1-25">25</a></span>
-<span class="normal"><a href="#__codelineno-1-26">26</a></span>
-<span class="normal"><a href="#__codelineno-1-27">27</a></span>
-<span class="normal"><a href="#__codelineno-1-28">28</a></span>
-<span class="normal"><a href="#__codelineno-1-29">29</a></span>
-<span class="normal"><a href="#__codelineno-1-30">30</a></span>
-<span class="normal"><a href="#__codelineno-1-31">31</a></span>
-<span class="normal"><a href="#__codelineno-1-32">32</a></span>
-<span class="normal"><a href="#__codelineno-1-33">33</a></span>
-<span class="normal"><a href="#__codelineno-1-34">34</a></span>
-<span class="normal"><a href="#__codelineno-1-35">35</a></span>
-<span class="normal"><a href="#__codelineno-1-36">36</a></span>
-<span class="normal"><a href="#__codelineno-1-37">37</a></span>
-<span class="normal"><a href="#__codelineno-1-38">38</a></span>
-<span class="normal"><a href="#__codelineno-1-39">39</a></span>
-<span class="normal"><a href="#__codelineno-1-40">40</a></span>
-<span class="normal"><a href="#__codelineno-1-41">41</a></span>
-<span class="normal"><a href="#__codelineno-1-42">42</a></span>
-<span class="normal"><a href="#__codelineno-1-43">43</a></span>
-<span class="normal"><a href="#__codelineno-1-44">44</a></span>
-<span class="normal"><a href="#__codelineno-1-45">45</a></span>
-<span class="normal"><a href="#__codelineno-1-46">46</a></span>
-<span class="normal"><a href="#__codelineno-1-47">47</a></span>
-<span class="normal"><a href="#__codelineno-1-48">48</a></span>
-<span class="normal"><a href="#__codelineno-1-49">49</a></span>
-<span class="normal"><a href="#__codelineno-1-50">50</a></span>
-<span class="normal"><a href="#__codelineno-1-51">51</a></span>
-<span class="normal"><a href="#__codelineno-1-52">52</a></span>
-<span class="normal"><a href="#__codelineno-1-53">53</a></span>
-<span class="normal"><a href="#__codelineno-1-54">54</a></span>
-<span class="normal"><a href="#__codelineno-1-55">55</a></span>
-<span class="normal"><a href="#__codelineno-1-56">56</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Winkelwagen</span><span class="p">:</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">    </span><span class="sd">"""Klasse voor een winkelwagen met producten</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3"></a>
-<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="sd">    Attributen:</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="sd">        items (list): Een lijst met producten in de winkelwagen.</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="sd">        klant (Klant): De klant bij wie deze winkelwagen hoort.</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7"></a>
-<a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="sd">    Methods:</span>
-<a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="sd">        voeg_toe: Voegt een product toe aan de winkelwagen.</span>
-<a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="sd">        verwijder: Verwijdert een product uit de winkelwagen.</span>
-<a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="sd">        bereken_totaal: Berekent het totaalbedrag van alle producten.</span>
-<a id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="sd">    """</span>
-<a id="__codelineno-1-13" name="__codelineno-1-13"></a>
-<a id="__codelineno-1-14" name="__codelineno-1-14"></a>    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">klant</span><span class="p">):</span>
-<a id="__codelineno-1-15" name="__codelineno-1-15"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">items</span> <span class="o">=</span> <span class="p">[]</span>
-<a id="__codelineno-1-16" name="__codelineno-1-16"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">klant</span> <span class="o">=</span> <span class="n">klant</span>
-<a id="__codelineno-1-17" name="__codelineno-1-17"></a>
-<a id="__codelineno-1-18" name="__codelineno-1-18"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">voeg_toe</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">product</span><span class="p">):</span>
-<a id="__codelineno-1-19" name="__codelineno-1-19"></a><span class="w">        </span><span class="sd">"""Voegt een product toe aan de winkelwagen</span>
-<a id="__codelineno-1-20" name="__codelineno-1-20"></a>
-<a id="__codelineno-1-21" name="__codelineno-1-21"></a><span class="sd">        Parameters:</span>
-<a id="__codelineno-1-22" name="__codelineno-1-22"></a><span class="sd">            product (Product): Het toe te voegen product</span>
-<a id="__codelineno-1-23" name="__codelineno-1-23"></a><span class="sd">        """</span>
-<a id="__codelineno-1-24" name="__codelineno-1-24"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">items</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">product</span><span class="p">)</span>
-<a id="__codelineno-1-25" name="__codelineno-1-25"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">product</span><span class="o">.</span><span class="n">_naam</span><span class="si">}</span><span class="s2"> toegevoegd aan winkelwagen van </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">klant</span><span class="o">.</span><span class="n">_naam</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-<a id="__codelineno-1-26" name="__codelineno-1-26"></a>
-<a id="__codelineno-1-27" name="__codelineno-1-27"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">verwijder</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">product</span><span class="p">):</span>
-<a id="__codelineno-1-28" name="__codelineno-1-28"></a><span class="w">        </span><span class="sd">"""Verwijdert een product uit de winkelwagen</span>
-<a id="__codelineno-1-29" name="__codelineno-1-29"></a>
-<a id="__codelineno-1-30" name="__codelineno-1-30"></a><span class="sd">        Parameters:</span>
-<a id="__codelineno-1-31" name="__codelineno-1-31"></a><span class="sd">            product (Product): Het te verwijderen product</span>
-<a id="__codelineno-1-32" name="__codelineno-1-32"></a><span class="sd">        """</span>
-<a id="__codelineno-1-33" name="__codelineno-1-33"></a>        <span class="k">if</span> <span class="n">product</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">items</span><span class="p">:</span>
-<a id="__codelineno-1-34" name="__codelineno-1-34"></a>            <span class="bp">self</span><span class="o">.</span><span class="n">items</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">product</span><span class="p">)</span>
-<a id="__codelineno-1-35" name="__codelineno-1-35"></a>            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">product</span><span class="o">.</span><span class="n">_naam</span><span class="si">}</span><span class="s2"> verwijderd uit winkelwagen"</span><span class="p">)</span>
-<a id="__codelineno-1-36" name="__codelineno-1-36"></a>        <span class="k">else</span><span class="p">:</span>
-<a id="__codelineno-1-37" name="__codelineno-1-37"></a>            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">product</span><span class="o">.</span><span class="n">_naam</span><span class="si">}</span><span class="s2"> zit niet in de winkelwagen"</span><span class="p">)</span>
-<a id="__codelineno-1-38" name="__codelineno-1-38"></a>
-<a id="__codelineno-1-39" name="__codelineno-1-39"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">bereken_totaal</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<a id="__codelineno-1-40" name="__codelineno-1-40"></a><span class="w">        </span><span class="sd">"""Berekent het totaalbedrag van alle producten in de winkelwagen</span>
-<a id="__codelineno-1-41" name="__codelineno-1-41"></a>
-<a id="__codelineno-1-42" name="__codelineno-1-42"></a><span class="sd">        Returns:</span>
-<a id="__codelineno-1-43" name="__codelineno-1-43"></a><span class="sd">            float: Het totaalbedrag</span>
-<a id="__codelineno-1-44" name="__codelineno-1-44"></a><span class="sd">        """</span>
-<a id="__codelineno-1-45" name="__codelineno-1-45"></a>        <span class="n">totaal</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">product</span><span class="o">.</span><span class="n">_prijs</span> <span class="k">for</span> <span class="n">product</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">items</span><span class="p">)</span>
-<a id="__codelineno-1-46" name="__codelineno-1-46"></a>        <span class="k">return</span> <span class="n">totaal</span>
-<a id="__codelineno-1-47" name="__codelineno-1-47"></a>
-<a id="__codelineno-1-48" name="__codelineno-1-48"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">toon_inhoud</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<a id="__codelineno-1-49" name="__codelineno-1-49"></a><span class="w">        </span><span class="sd">"""Toont de volledige inhoud van de winkelwagen"""</span>
-<a id="__codelineno-1-50" name="__codelineno-1-50"></a>        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">items</span><span class="p">:</span>
-<a id="__codelineno-1-51" name="__codelineno-1-51"></a>            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Winkelwagen van </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">klant</span><span class="o">.</span><span class="n">_naam</span><span class="si">}</span><span class="s2"> is leeg"</span><span class="p">)</span>
-<a id="__codelineno-1-52" name="__codelineno-1-52"></a>        <span class="k">else</span><span class="p">:</span>
-<a id="__codelineno-1-53" name="__codelineno-1-53"></a>            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2">Winkelwagen van </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">klant</span><span class="o">.</span><span class="n">_naam</span><span class="si">}</span><span class="s2">:"</span><span class="p">)</span>
-<a id="__codelineno-1-54" name="__codelineno-1-54"></a>            <span class="k">for</span> <span class="n">product</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">items</span><span class="p">:</span>
-<a id="__codelineno-1-55" name="__codelineno-1-55"></a>                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"  - </span><span class="si">{</span><span class="n">product</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-<a id="__codelineno-1-56" name="__codelineno-1-56"></a>            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Totaal: €</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">bereken_totaal</span><span class="p">()</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<h2 id="de-klasse-docent">De klasse <code>Docent</code><a class="headerlink" href="#de-klasse-docent" title="Permanent link">¶</a></h2>
+<p>Nu de eerste subklasse: let op de wijze waarop we aangeven dat <code>Docent</code> een subklasse is van <code>Persoon</code>.</p>
+<div class="language-python highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="hll"><span class="k">class</span><span class="w"> </span><span class="nc">Docent</span><span class="p">(</span><span class="n">Persoon</span><span class="p">):</span>
+</span><a id="__codelineno-1-2" name="__codelineno-1-2"></a>    <span class="k">pass</span>
 </code></pre></div></td></tr></tbody></table></div>
-<p>Het is hier allemaal een beetje overdone, maar het idee is duidelijk.</p>
-<h2 id="de-klasse-klant">De klasse <code>Klant</code><a class="headerlink" href="#de-klasse-klant" title="Permanent link">¶</a></h2>
-<p>Er is al verwezen naar de klasse Klant, maar die bestaat op dit moment nog niet. Daar gaat nu verandering in komen.</p>
-<div class="language-python highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-2-10">10</a></span>
-<span class="normal"><a href="#__codelineno-2-11">11</a></span>
-<span class="normal"><a href="#__codelineno-2-12">12</a></span>
-<span class="normal"><a href="#__codelineno-2-13">13</a></span>
-<span class="normal"><a href="#__codelineno-2-14">14</a></span>
-<span class="normal"><a href="#__codelineno-2-15">15</a></span>
-<span class="normal"><a href="#__codelineno-2-16">16</a></span>
-<span class="normal"><a href="#__codelineno-2-17">17</a></span>
-<span class="normal"><a href="#__codelineno-2-18">18</a></span>
-<span class="normal"><a href="#__codelineno-2-19">19</a></span>
-<span class="normal"><a href="#__codelineno-2-20">20</a></span>
-<span class="normal"><a href="#__codelineno-2-21">21</a></span>
-<span class="normal"><a href="#__codelineno-2-22">22</a></span>
-<span class="normal"><a href="#__codelineno-2-23">23</a></span>
-<span class="normal"><a href="#__codelineno-2-24">24</a></span>
-<span class="normal"><a href="#__codelineno-2-25">25</a></span>
-<span class="normal"><a href="#__codelineno-2-26">26</a></span>
-<span class="normal"><a href="#__codelineno-2-27">27</a></span>
-<span class="normal"><a href="#__codelineno-2-28">28</a></span>
-<span class="normal"><a href="#__codelineno-2-29">29</a></span>
-<span class="normal"><a href="#__codelineno-2-30">30</a></span>
-<span class="normal"><a href="#__codelineno-2-31">31</a></span>
-<span class="normal"><a href="#__codelineno-2-32">32</a></span>
-<span class="normal"><a href="#__codelineno-2-33">33</a></span>
-<span class="normal"><a href="#__codelineno-2-34">34</a></span>
-<span class="normal"><a href="#__codelineno-2-35">35</a></span>
-<span class="normal"><a href="#__codelineno-2-36">36</a></span>
-<span class="normal"><a href="#__codelineno-2-37">37</a></span>
-<span class="normal"><a href="#__codelineno-2-38">38</a></span>
-<span class="normal"><a href="#__codelineno-2-39">39</a></span>
-<span class="normal"><a href="#__codelineno-2-40">40</a></span>
-<span class="normal"><a href="#__codelineno-2-41">41</a></span>
-<span class="normal"><a href="#__codelineno-2-42">42</a></span>
-<span class="normal"><a href="#__codelineno-2-43">43</a></span>
-<span class="normal"><a href="#__codelineno-2-44">44</a></span>
-<span class="normal"><a href="#__codelineno-2-45">45</a></span>
-<span class="normal"><a href="#__codelineno-2-46">46</a></span>
-<span class="normal"><a href="#__codelineno-2-47">47</a></span>
-<span class="normal"><a href="#__codelineno-2-48">48</a></span>
-<span class="normal"><a href="#__codelineno-2-49">49</a></span>
-<span class="normal"><a href="#__codelineno-2-50">50</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Klant</span><span class="p">:</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="w">    </span><span class="sd">"""Klasse om klantgegevens op te slaan</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3"></a>
-<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="sd">    Attributen:</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="sd">        naam (str): De naam van de klant.</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="sd">        email (str): Het e-mailadres van de klant.</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="sd">        bestellingen (list): Een lijst met de bestellingen van deze klant.</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8"></a>
-<a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="sd">    Methods:</span>
-<a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="sd">        plaats_bestelling: Plaatst een bestelling voor de klant.</span>
-<a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="sd">    """</span>
-<a id="__codelineno-2-12" name="__codelineno-2-12"></a>
-<a id="__codelineno-2-13" name="__codelineno-2-13"></a>    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">naam</span><span class="p">,</span> <span class="n">email</span><span class="p">):</span>
-<a id="__codelineno-2-14" name="__codelineno-2-14"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_naam</span> <span class="o">=</span> <span class="n">naam</span>
-<a id="__codelineno-2-15" name="__codelineno-2-15"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_email</span> <span class="o">=</span> <span class="n">email</span>
-<a id="__codelineno-2-16" name="__codelineno-2-16"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_bestellingen</span> <span class="o">=</span> <span class="p">[]</span>
-<a id="__codelineno-2-17" name="__codelineno-2-17"></a>
-<a id="__codelineno-2-18" name="__codelineno-2-18"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">plaats_bestelling</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">winkelwagen</span><span class="p">):</span>
-<a id="__codelineno-2-19" name="__codelineno-2-19"></a><span class="w">        </span><span class="sd">"""Plaatst een bestelling</span>
-<a id="__codelineno-2-20" name="__codelineno-2-20"></a>
-<a id="__codelineno-2-21" name="__codelineno-2-21"></a><span class="sd">        Parameters:</span>
-<a id="__codelineno-2-22" name="__codelineno-2-22"></a><span class="sd">            winkelwagen (Winkelwagen): De winkelwagen met producten</span>
-<a id="__codelineno-2-23" name="__codelineno-2-23"></a><span class="sd">        """</span>
-<a id="__codelineno-2-24" name="__codelineno-2-24"></a>        <span class="k">if</span> <span class="ow">not</span> <span class="n">winkelwagen</span><span class="o">.</span><span class="n">items</span><span class="p">:</span>
-<a id="__codelineno-2-25" name="__codelineno-2-25"></a>            <span class="nb">print</span><span class="p">(</span><span class="s2">"Winkelwagen is leeg!"</span><span class="p">)</span>
-<a id="__codelineno-2-26" name="__codelineno-2-26"></a>            <span class="k">return</span>
-<a id="__codelineno-2-27" name="__codelineno-2-27"></a>
-<a id="__codelineno-2-28" name="__codelineno-2-28"></a>        <span class="n">totaal</span> <span class="o">=</span> <span class="n">winkelwagen</span><span class="o">.</span><span class="n">bereken_totaal</span><span class="p">()</span>
-<a id="__codelineno-2-29" name="__codelineno-2-29"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_bestellingen</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
-<a id="__codelineno-2-30" name="__codelineno-2-30"></a>            <span class="s1">'items'</span><span class="p">:</span> <span class="n">winkelwagen</span><span class="o">.</span><span class="n">items</span><span class="o">.</span><span class="n">copy</span><span class="p">(),</span>
-<a id="__codelineno-2-31" name="__codelineno-2-31"></a>            <span class="s1">'totaal'</span><span class="p">:</span> <span class="n">totaal</span>
-<a id="__codelineno-2-32" name="__codelineno-2-32"></a>        <span class="p">})</span>
-<a id="__codelineno-2-33" name="__codelineno-2-33"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2">Bestelling geplaatst voor </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_naam</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-<a id="__codelineno-2-34" name="__codelineno-2-34"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Totaalbedrag: €</span><span class="si">{</span><span class="n">totaal</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-<a id="__codelineno-2-35" name="__codelineno-2-35"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Bevestiging verstuurd naar </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_email</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-<a id="__codelineno-2-36" name="__codelineno-2-36"></a>
-<a id="__codelineno-2-37" name="__codelineno-2-37"></a>        <span class="c1"># Leeg de winkelwagen na bestelling</span>
-<a id="__codelineno-2-38" name="__codelineno-2-38"></a>        <span class="n">winkelwagen</span><span class="o">.</span><span class="n">items</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
-<a id="__codelineno-2-39" name="__codelineno-2-39"></a>
-<a id="__codelineno-2-40" name="__codelineno-2-40"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">toon_bestellingen</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<a id="__codelineno-2-41" name="__codelineno-2-41"></a><span class="w">        </span><span class="sd">"""Toont alle bestellingen van deze klant"""</span>
-<a id="__codelineno-2-42" name="__codelineno-2-42"></a>        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_bestellingen</span><span class="p">:</span>
-<a id="__codelineno-2-43" name="__codelineno-2-43"></a>            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_naam</span><span class="si">}</span><span class="s2"> heeft nog geen bestellingen geplaatst"</span><span class="p">)</span>
-<a id="__codelineno-2-44" name="__codelineno-2-44"></a>        <span class="k">else</span><span class="p">:</span>
-<a id="__codelineno-2-45" name="__codelineno-2-45"></a>            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2">Bestellingen van </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_naam</span><span class="si">}</span><span class="s2">:"</span><span class="p">)</span>
-<a id="__codelineno-2-46" name="__codelineno-2-46"></a>            <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">bestelling</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_bestellingen</span><span class="p">,</span> <span class="mi">1</span><span class="p">):</span>
-<a id="__codelineno-2-47" name="__codelineno-2-47"></a>                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2">  Bestelling </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">:"</span><span class="p">)</span>
-<a id="__codelineno-2-48" name="__codelineno-2-48"></a>                <span class="k">for</span> <span class="n">product</span> <span class="ow">in</span> <span class="n">bestelling</span><span class="p">[</span><span class="s1">'items'</span><span class="p">]:</span>
-<a id="__codelineno-2-49" name="__codelineno-2-49"></a>                    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"    - </span><span class="si">{</span><span class="n">product</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-<a id="__codelineno-2-50" name="__codelineno-2-50"></a>                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"  Totaal: €</span><span class="si">{</span><span class="n">bestelling</span><span class="p">[</span><span class="s1">'totaal'</span><span class="p">]</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<p>Een beetje apart om een commando op te nemen in de definitie van een klasse dat niets doet. Het commando <code>pass</code> heeft tot doel invulling te zijn op het moment dat er een actie gevraagd wordt, maar er eigenlijk geen reden toe is een actie in de code op te nemen.</p>
+<p>Ook zonder eigen code erft <code>Docent</code> alles van <code>Persoon</code>:</p>
+<div class="language-python highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="n">bart</span> <span class="o">=</span> <span class="n">Docent</span><span class="p">(</span><span class="s2">"Bart"</span><span class="p">,</span> <span class="s2">"bart@sessions.nl"</span><span class="p">)</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="n">bart</span><span class="o">.</span><span class="n">stel_voor</span><span class="p">()</span>
 </code></pre></div></td></tr></tbody></table></div>
-<p>Ook deze klasse moet de mogelijkheid hebben bestellingen te plaatsen. Bijzondere aandacht voor het feit dat de winkelwagen wordt geleegd na een bestelling.</p>
-<h2 id="het-geheel-in-actie">Het geheel in actie<a class="headerlink" href="#het-geheel-in-actie" title="Permanent link">¶</a></h2>
-<p>Nu de drie klassen af zijn, kunnen we deze gebruiken. Eerst importeren we alles:</p>
-<div class="language-python highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-3-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-3-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-3-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-3-10">10</a></span>
-<span class="normal"><a href="#__codelineno-3-11">11</a></span>
-<span class="normal"><a href="#__codelineno-3-12">12</a></span>
-<span class="normal"><a href="#__codelineno-3-13">13</a></span>
-<span class="normal"><a href="#__codelineno-3-14">14</a></span>
-<span class="normal"><a href="#__codelineno-3-15">15</a></span>
-<span class="normal"><a href="#__codelineno-3-16">16</a></span>
-<span class="normal"><a href="#__codelineno-3-17">17</a></span>
-<span class="normal"><a href="#__codelineno-3-18">18</a></span>
-<span class="normal"><a href="#__codelineno-3-19">19</a></span>
-<span class="normal"><a href="#__codelineno-3-20">20</a></span>
-<span class="normal"><a href="#__codelineno-3-21">21</a></span>
-<span class="normal"><a href="#__codelineno-3-22">22</a></span>
-<span class="normal"><a href="#__codelineno-3-23">23</a></span>
-<span class="normal"><a href="#__codelineno-3-24">24</a></span>
-<span class="normal"><a href="#__codelineno-3-25">25</a></span>
-<span class="normal"><a href="#__codelineno-3-26">26</a></span>
-<span class="normal"><a href="#__codelineno-3-27">27</a></span>
-<span class="normal"><a href="#__codelineno-3-28">28</a></span>
-<span class="normal"><a href="#__codelineno-3-29">29</a></span>
-<span class="normal"><a href="#__codelineno-3-30">30</a></span>
-<span class="normal"><a href="#__codelineno-3-31">31</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="c1"># Maak enkele producten aan</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="n">laptop</span> <span class="o">=</span> <span class="n">Product</span><span class="p">(</span><span class="s2">"Laptop"</span><span class="p">,</span> <span class="mf">799.99</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="n">muis</span> <span class="o">=</span> <span class="n">Product</span><span class="p">(</span><span class="s2">"Draadloze muis"</span><span class="p">,</span> <span class="mf">25.50</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="n">toetsenbord</span> <span class="o">=</span> <span class="n">Product</span><span class="p">(</span><span class="s2">"Mechanisch toetsenbord"</span><span class="p">,</span> <span class="mf">89.99</span><span class="p">,</span> <span class="mi">15</span><span class="p">)</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="n">monitor</span> <span class="o">=</span> <span class="n">Product</span><span class="p">(</span><span class="s2">"27-inch monitor"</span><span class="p">,</span> <span class="mf">299.99</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
-<a id="__codelineno-3-6" name="__codelineno-3-6"></a>
-<a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="c1"># Maak een klant aan</span>
-<a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="n">jan</span> <span class="o">=</span> <span class="n">Klant</span><span class="p">(</span><span class="s2">"Jan Jansen"</span><span class="p">,</span> <span class="s2">"jan@email.nl"</span><span class="p">)</span>
-<a id="__codelineno-3-9" name="__codelineno-3-9"></a>
-<a id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="c1"># Maak een winkelwagen voor Jan</span>
-<a id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="n">winkelmand</span> <span class="o">=</span> <span class="n">Winkelwagen</span><span class="p">(</span><span class="n">jan</span><span class="p">)</span>
-<a id="__codelineno-3-12" name="__codelineno-3-12"></a>
-<a id="__codelineno-3-13" name="__codelineno-3-13"></a><span class="c1"># Voeg producten toe</span>
-<a id="__codelineno-3-14" name="__codelineno-3-14"></a><span class="n">winkelmand</span><span class="o">.</span><span class="n">voeg_toe</span><span class="p">(</span><span class="n">laptop</span><span class="p">)</span>
-<a id="__codelineno-3-15" name="__codelineno-3-15"></a><span class="n">winkelmand</span><span class="o">.</span><span class="n">voeg_toe</span><span class="p">(</span><span class="n">muis</span><span class="p">)</span>
-<a id="__codelineno-3-16" name="__codelineno-3-16"></a><span class="n">winkelmand</span><span class="o">.</span><span class="n">voeg_toe</span><span class="p">(</span><span class="n">toetsenbord</span><span class="p">)</span>
-<a id="__codelineno-3-17" name="__codelineno-3-17"></a>
-<a id="__codelineno-3-18" name="__codelineno-3-18"></a><span class="c1"># Toon de inhoud</span>
-<a id="__codelineno-3-19" name="__codelineno-3-19"></a><span class="n">winkelmand</span><span class="o">.</span><span class="n">toon_inhoud</span><span class="p">()</span>
-<a id="__codelineno-3-20" name="__codelineno-3-20"></a>
-<a id="__codelineno-3-21" name="__codelineno-3-21"></a><span class="c1"># Plaats de bestelling</span>
-<a id="__codelineno-3-22" name="__codelineno-3-22"></a><span class="n">jan</span><span class="o">.</span><span class="n">plaats_bestelling</span><span class="p">(</span><span class="n">winkelmand</span><span class="p">)</span>
-<a id="__codelineno-3-23" name="__codelineno-3-23"></a>
-<a id="__codelineno-3-24" name="__codelineno-3-24"></a><span class="c1"># Voeg nog meer producten toe en plaats een tweede bestelling</span>
-<a id="__codelineno-3-25" name="__codelineno-3-25"></a><span class="n">winkelmand</span><span class="o">.</span><span class="n">voeg_toe</span><span class="p">(</span><span class="n">monitor</span><span class="p">)</span>
-<a id="__codelineno-3-26" name="__codelineno-3-26"></a><span class="n">winkelmand</span><span class="o">.</span><span class="n">voeg_toe</span><span class="p">(</span><span class="n">muis</span><span class="p">)</span>  <span class="c1"># Nog een muis</span>
-<a id="__codelineno-3-27" name="__codelineno-3-27"></a><span class="n">winkelmand</span><span class="o">.</span><span class="n">toon_inhoud</span><span class="p">()</span>
-<a id="__codelineno-3-28" name="__codelineno-3-28"></a><span class="n">jan</span><span class="o">.</span><span class="n">plaats_bestelling</span><span class="p">(</span><span class="n">winkelmand</span><span class="p">)</span>
-<a id="__codelineno-3-29" name="__codelineno-3-29"></a>
-<a id="__codelineno-3-30" name="__codelineno-3-30"></a><span class="c1"># Toon alle bestellingen</span>
-<a id="__codelineno-3-31" name="__codelineno-3-31"></a><span class="n">jan</span><span class="o">.</span><span class="n">toon_bestellingen</span><span class="p">()</span>
+<div class="language-console highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="go">Hallo, ik ben Bart</span>
 </code></pre></div></td></tr></tbody></table></div>
-<p>Dit geeft de volgende uitvoer:</p>
-<div class="language-console highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-4-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-4-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-4-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-4-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-4-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-4-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-4-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-4-10">10</a></span>
-<span class="normal"><a href="#__codelineno-4-11">11</a></span>
-<span class="normal"><a href="#__codelineno-4-12">12</a></span>
-<span class="normal"><a href="#__codelineno-4-13">13</a></span>
-<span class="normal"><a href="#__codelineno-4-14">14</a></span>
-<span class="normal"><a href="#__codelineno-4-15">15</a></span>
-<span class="normal"><a href="#__codelineno-4-16">16</a></span>
-<span class="normal"><a href="#__codelineno-4-17">17</a></span>
-<span class="normal"><a href="#__codelineno-4-18">18</a></span>
-<span class="normal"><a href="#__codelineno-4-19">19</a></span>
-<span class="normal"><a href="#__codelineno-4-20">20</a></span>
-<span class="normal"><a href="#__codelineno-4-21">21</a></span>
-<span class="normal"><a href="#__codelineno-4-22">22</a></span>
-<span class="normal"><a href="#__codelineno-4-23">23</a></span>
-<span class="normal"><a href="#__codelineno-4-24">24</a></span>
-<span class="normal"><a href="#__codelineno-4-25">25</a></span>
-<span class="normal"><a href="#__codelineno-4-26">26</a></span>
-<span class="normal"><a href="#__codelineno-4-27">27</a></span>
-<span class="normal"><a href="#__codelineno-4-28">28</a></span>
-<span class="normal"><a href="#__codelineno-4-29">29</a></span>
-<span class="normal"><a href="#__codelineno-4-30">30</a></span>
-<span class="normal"><a href="#__codelineno-4-31">31</a></span>
-<span class="normal"><a href="#__codelineno-4-32">32</a></span>
-<span class="normal"><a href="#__codelineno-4-33">33</a></span>
-<span class="normal"><a href="#__codelineno-4-34">34</a></span>
-<span class="normal"><a href="#__codelineno-4-35">35</a></span>
-<span class="normal"><a href="#__codelineno-4-36">36</a></span>
-<span class="normal"><a href="#__codelineno-4-37">37</a></span>
-<span class="normal"><a href="#__codelineno-4-38">38</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="go">Laptop toegevoegd aan winkelwagen van Jan Jansen</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="go">Draadloze muis toegevoegd aan winkelwagen van Jan Jansen</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="go">Mechanisch toetsenbord toegevoegd aan winkelwagen van Jan Jansen</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4"></a>
-<a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="go">Winkelwagen van Jan Jansen:</span>
-<a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="go">  - Laptop (€799.99)</span>
-<a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="go">  - Draadloze muis (€25.50)</span>
-<a id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="go">  - Mechanisch toetsenbord (€89.99)</span>
-<a id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="go">Totaal: €915.48</span>
-<a id="__codelineno-4-10" name="__codelineno-4-10"></a>
-<a id="__codelineno-4-11" name="__codelineno-4-11"></a><span class="go">Bestelling geplaatst voor Jan Jansen</span>
-<a id="__codelineno-4-12" name="__codelineno-4-12"></a><span class="go">Totaalbedrag: €915.48</span>
-<a id="__codelineno-4-13" name="__codelineno-4-13"></a><span class="go">Bevestiging verstuurd naar jan@email.nl</span>
-<a id="__codelineno-4-14" name="__codelineno-4-14"></a>
-<a id="__codelineno-4-15" name="__codelineno-4-15"></a><span class="go">27-inch monitor toegevoegd aan winkelwagen van Jan Jansen</span>
-<a id="__codelineno-4-16" name="__codelineno-4-16"></a><span class="go">Draadloze muis toegevoegd aan winkelwagen van Jan Jansen</span>
-<a id="__codelineno-4-17" name="__codelineno-4-17"></a>
-<a id="__codelineno-4-18" name="__codelineno-4-18"></a><span class="go">Winkelwagen van Jan Jansen:</span>
-<a id="__codelineno-4-19" name="__codelineno-4-19"></a><span class="go">  - 27-inch monitor (€299.99)</span>
-<a id="__codelineno-4-20" name="__codelineno-4-20"></a><span class="go">  - Draadloze muis (€25.50)</span>
-<a id="__codelineno-4-21" name="__codelineno-4-21"></a><span class="go">Totaal: €325.49</span>
-<a id="__codelineno-4-22" name="__codelineno-4-22"></a>
-<a id="__codelineno-4-23" name="__codelineno-4-23"></a><span class="go">Bestelling geplaatst voor Jan Jansen</span>
-<a id="__codelineno-4-24" name="__codelineno-4-24"></a><span class="go">Totaalbedrag: €325.49</span>
-<a id="__codelineno-4-25" name="__codelineno-4-25"></a><span class="go">Bevestiging verstuurd naar jan@email.nl</span>
-<a id="__codelineno-4-26" name="__codelineno-4-26"></a>
-<a id="__codelineno-4-27" name="__codelineno-4-27"></a><span class="go">Bestellingen van Jan Jansen:</span>
-<a id="__codelineno-4-28" name="__codelineno-4-28"></a>
-<a id="__codelineno-4-29" name="__codelineno-4-29"></a><span class="go">  Bestelling 1:</span>
-<a id="__codelineno-4-30" name="__codelineno-4-30"></a><span class="go">    - Laptop (€799.99)</span>
-<a id="__codelineno-4-31" name="__codelineno-4-31"></a><span class="go">    - Draadloze muis (€25.50)</span>
-<a id="__codelineno-4-32" name="__codelineno-4-32"></a><span class="go">    - Mechanisch toetsenbord (€89.99)</span>
-<a id="__codelineno-4-33" name="__codelineno-4-33"></a><span class="go">  Totaal: €915.48</span>
-<a id="__codelineno-4-34" name="__codelineno-4-34"></a>
-<a id="__codelineno-4-35" name="__codelineno-4-35"></a><span class="go">  Bestelling 2:</span>
-<a id="__codelineno-4-36" name="__codelineno-4-36"></a><span class="go">    - 27-inch monitor (€299.99)</span>
-<a id="__codelineno-4-37" name="__codelineno-4-37"></a><span class="go">    - Draadloze muis (€25.50)</span>
-<a id="__codelineno-4-38" name="__codelineno-4-38"></a><span class="go">  Totaal: €325.49</span>
+<p>De klasse <code>Docent</code> kent geen eigen methode <code>__init__()</code>. Voor de invulling wordt daarom gekeken of de superklasse wél een methode <code>__init__()</code> kent, waarvan de attributen gebruikt kunnen worden. Die is er, de volgorde van de parameters klopt en Python snapt de bedoeling.</p>
+<p>Maar een docent heeft méér dan een naam en een e-mailadres: een docent geeft les in een instrument en hanteert een uurtarief. De klasse <code>Docent</code> krijgt daarom een eigen constructor. De aanroep <code>super().__init__()</code> zorgt ervoor dat de constructor van de superklasse (<code>Persoon</code>) wordt aangeroepen voor de gemeenschappelijke attributen:</p>
+<div class="language-python highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span>
+<span class="normal"><a href="#__codelineno-4-3">3</a></span>
+<span class="normal"><a href="#__codelineno-4-4">4</a></span>
+<span class="normal"><a href="#__codelineno-4-5">5</a></span>
+<span class="normal"><a href="#__codelineno-4-6">6</a></span>
+<span class="normal"><a href="#__codelineno-4-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Docent</span><span class="p">(</span><span class="n">Persoon</span><span class="p">):</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="w">    </span><span class="sd">"""Een docent geeft les in een bepaald instrument"""</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a>    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">naam</span><span class="p">,</span> <span class="n">email</span><span class="p">,</span> <span class="n">instrument</span><span class="p">,</span> <span class="n">uurtarief</span><span class="o">=</span><span class="mf">40.0</span><span class="p">):</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a>        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">naam</span><span class="o">=</span><span class="n">naam</span><span class="p">,</span> <span class="n">email</span><span class="o">=</span><span class="n">email</span><span class="p">)</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_instrument</span> <span class="o">=</span> <span class="n">instrument</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_uurtarief</span> <span class="o">=</span> <span class="n">uurtarief</span>
 </code></pre></div></td></tr></tbody></table></div>
-<h2 id="waarom-meerdere-klassen">Waarom meerdere klassen?<a class="headerlink" href="#waarom-meerdere-klassen" title="Permanent link">¶</a></h2>
-<p>Het gebruik van meerdere klassen heeft verschillende voordelen:</p>
-<ol>
-<li><strong>Scheiding van verantwoordelijkheden</strong>: Elke klasse heeft zijn eigen taak (Product: productinfo, Klant: klantinfo, Winkelwagen: producten verzamelen)</li>
-<li><strong>Herbruikbaarheid</strong>: De <code>Product</code> klasse kan worden hergebruikt in andere delen van de applicatie</li>
-<li><strong>Onderhoudbaarheid</strong>: Wijzigingen in één klasse hebben minder impact op andere klassen</li>
-<li><strong>Realistische modellering</strong>: Het komt overeen met hoe een echte webshop werkt</li>
-</ol>
+<h2 id="extra-eigenschappen-in-de-subklasse">Extra eigenschappen in de subklasse<a class="headerlink" href="#extra-eigenschappen-in-de-subklasse" title="Permanent link">¶</a></h2>
+<p>Het is ook mogelijk extra methoden bij een subklasse in te bouwen. Als voorbeeld een methode voor de klasse <code>Docent</code>:</p>
+<div class="language-python highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span>
+<span class="normal"><a href="#__codelineno-5-3">3</a></span>
+<span class="normal"><a href="#__codelineno-5-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">bereken_lesprijs</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">minuten</span><span class="p">):</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a>    <span class="n">prijs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_uurtarief</span> <span class="o">*</span> <span class="n">minuten</span> <span class="o">/</span> <span class="mi">60</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Een les van </span><span class="si">{</span><span class="n">minuten</span><span class="si">}</span><span class="s2"> minuten bij </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_naam</span><span class="si">}</span><span class="s2"> kost €</span><span class="si">{</span><span class="n">prijs</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a>    <span class="k">return</span> <span class="n">prijs</span>
+</code></pre></div></td></tr></tbody></table></div>
+<p>Een test:</p>
+<div class="language-python highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
+<span class="normal"><a href="#__codelineno-6-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="n">bart</span> <span class="o">=</span> <span class="n">Docent</span><span class="p">(</span><span class="s2">"Bart"</span><span class="p">,</span> <span class="s2">"bart@sessions.nl"</span><span class="p">,</span> <span class="s2">"gitaar"</span><span class="p">)</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="n">bart</span><span class="o">.</span><span class="n">bereken_lesprijs</span><span class="p">(</span><span class="mi">45</span><span class="p">)</span>
+</code></pre></div></td></tr></tbody></table></div>
+<p>Resultaat:</p>
+<div class="language-console highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="go">Een les van 45 minuten bij Bart kost €30.00</span>
+</code></pre></div></td></tr></tbody></table></div>
+<p>Deze methode is alleen beschikbaar voor de objecten uit de klasse <code>Docent</code>. Een object van de klasse <code>Persoon</code> (of straks <code>Cursist</code>) kan deze methode niet benaderen.</p>
+<h2 id="overriding">Overriding<a class="headerlink" href="#overriding" title="Permanent link">¶</a></h2>
+<p>Binnen subklassen kunnen methodes ingebouwd worden die dezelfde naam hebben als methodes in hun superklasse: de methode wordt dan <em>overschreven</em> (Engels: <em>overriding</em>). Wanneer een docent zich voorstelt, willen we bijvoorbeeld ook weten waarin hij of zij lesgeeft. We geven <code>Docent</code> daarom een eigen versie van <code>stel_voor()</code>:</p>
+<div class="language-python highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
+<span class="normal"><a href="#__codelineno-8-2">2</a></span>
+<span class="normal"><a href="#__codelineno-8-3">3</a></span>
+<span class="normal"><a href="#__codelineno-8-4">4</a></span>
+<span class="normal"><a href="#__codelineno-8-5">5</a></span>
+<span class="normal"><a href="#__codelineno-8-6">6</a></span>
+<span class="normal"><a href="#__codelineno-8-7">7</a></span>
+<span class="normal"><a href="#__codelineno-8-8">8</a></span>
+<span class="normal"><a href="#__codelineno-8-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Docent</span><span class="p">(</span><span class="n">Persoon</span><span class="p">):</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a>
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a>    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">naam</span><span class="p">,</span> <span class="n">email</span><span class="p">,</span> <span class="n">instrument</span><span class="p">,</span> <span class="n">uurtarief</span><span class="o">=</span><span class="mf">40.0</span><span class="p">):</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a>        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">naam</span><span class="o">=</span><span class="n">naam</span><span class="p">,</span> <span class="n">email</span><span class="o">=</span><span class="n">email</span><span class="p">)</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_instrument</span> <span class="o">=</span> <span class="n">instrument</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_uurtarief</span> <span class="o">=</span> <span class="n">uurtarief</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7"></a>
+<a id="__codelineno-8-8" name="__codelineno-8-8"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">stel_voor</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Hallo, ik ben </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_naam</span><span class="si">}</span><span class="s2"> en ik geef les in </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_instrument</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+</code></pre></div></td></tr></tbody></table></div>
+<p>Wanneer nu <code>stel_voor()</code> wordt aangeroepen op een <code>Docent</code>-object, wordt eerst gekeken of de methode voorkomt in de klasse <code>Docent</code> zelf, en pas daarna in de klasse erboven. De docent-versie <em>wint</em> dus van de persoon-versie.</p>
+<p>Op dezelfde manier maken we een subklasse <code>Cursist</code>, met een geboortejaar (handig voor jeugdkorting, later) en een eigen <code>stel_voor()</code>:</p>
+<div class="language-python highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
+<span class="normal"><a href="#__codelineno-9-2">2</a></span>
+<span class="normal"><a href="#__codelineno-9-3">3</a></span>
+<span class="normal"><a href="#__codelineno-9-4">4</a></span>
+<span class="normal"><a href="#__codelineno-9-5">5</a></span>
+<span class="normal"><a href="#__codelineno-9-6">6</a></span>
+<span class="normal"><a href="#__codelineno-9-7">7</a></span>
+<span class="normal"><a href="#__codelineno-9-8">8</a></span>
+<span class="normal"><a href="#__codelineno-9-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Cursist</span><span class="p">(</span><span class="n">Persoon</span><span class="p">):</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="w">    </span><span class="sd">"""Een cursist volgt lessen bij Sessions"""</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a>
+<a id="__codelineno-9-4" name="__codelineno-9-4"></a>    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">naam</span><span class="p">,</span> <span class="n">email</span><span class="p">,</span> <span class="n">geboortejaar</span><span class="p">):</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5"></a>        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">naam</span><span class="o">=</span><span class="n">naam</span><span class="p">,</span> <span class="n">email</span><span class="o">=</span><span class="n">email</span><span class="p">)</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_geboortejaar</span> <span class="o">=</span> <span class="n">geboortejaar</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7"></a>
+<a id="__codelineno-9-8" name="__codelineno-9-8"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">stel_voor</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-9-9" name="__codelineno-9-9"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Hallo, ik ben </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_naam</span><span class="si">}</span><span class="s2"> en ik ben cursist bij Sessions"</span><span class="p">)</span>
+</code></pre></div></td></tr></tbody></table></div>
+<h2 id="polymorfisme">Polymorfisme<a class="headerlink" href="#polymorfisme" title="Permanent link">¶</a></h2>
+<p>Het woord <em>polymorfisme</em> is samengesteld uit twee Griekse woorden: <em>polus</em> (πολύς, wat 'veel' betekent) en <em>morphè</em> (μορφή, wat 'vorm' betekent). Iets wat polymorf is, kan dus veel (verschillende) vormen aannemen. In de informatica wil dat zeggen dat een methode met dezelfde <em>naam</em> (<em>signature</em>) verschillende <em>vormen</em> kan hebben. Je kunt dus verschillende methoden op dezelfde manier aanspreken, afhankelijk van de klasse die deze methode implementeert.</p>
+<p>Een eerste, eenvoudig voorbeeld ken je eigenlijk al:</p>
+<div class="language-python highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span>
+<span class="normal"><a href="#__codelineno-10-2">2</a></span>
+<span class="normal"><a href="#__codelineno-10-3">3</a></span>
+<span class="normal"><a href="#__codelineno-10-4">4</a></span>
+<span class="normal"><a href="#__codelineno-10-5">5</a></span>
+<span class="normal"><a href="#__codelineno-10-6">6</a></span>
+<span class="normal"><a href="#__codelineno-10-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="n">a</span> <span class="o">=</span> <span class="mi">3</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="n">b</span> <span class="o">=</span> <span class="s2">"tim"</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="n">c</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4"></a>
+<a id="__codelineno-10-5" name="__codelineno-10-5"></a><span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6"></a><span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7"></a><span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+</code></pre></div></td></tr></tbody></table></div>
+<div class="language-console highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span>
+<span class="normal"><a href="#__codelineno-11-2">2</a></span>
+<span class="normal"><a href="#__codelineno-11-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="go">3</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="go">tim</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="gp gp-VirtualEnv">(1, 2, 3)</span>
+</code></pre></div></td></tr></tbody></table></div>
+<p>Python heeft er geen enkele moeite mee om verschillende typen objecten (hier: <code>int</code>, <code>string</code> en <code>tuple</code>) naar het scherm te schrijven. Dat komt omdat alle typen beschikken over de methode <code>__str__()</code>. De functie <code>print()</code> kan daardoor in vele situaties succesvol toegepast worden: polymorfisme.</p>
+<p>Nu een voorbeeld met onze eigen klassen. We zetten een docent, een cursist en een 'gewone' persoon bij elkaar in een lijst en laten iedereen zich voorstellen:</p>
+<div class="language-python highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span>
+<span class="normal"><a href="#__codelineno-12-2">2</a></span>
+<span class="normal"><a href="#__codelineno-12-3">3</a></span>
+<span class="normal"><a href="#__codelineno-12-4">4</a></span>
+<span class="normal"><a href="#__codelineno-12-5">5</a></span>
+<span class="normal"><a href="#__codelineno-12-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="n">bart</span> <span class="o">=</span> <span class="n">Docent</span><span class="p">(</span><span class="s2">"Bart"</span><span class="p">,</span> <span class="s2">"bart@sessions.nl"</span><span class="p">,</span> <span class="s2">"gitaar"</span><span class="p">)</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2"></a><span class="n">roos</span> <span class="o">=</span> <span class="n">Cursist</span><span class="p">(</span><span class="s2">"Roos"</span><span class="p">,</span> <span class="s2">"roos@email.nl"</span><span class="p">,</span> <span class="mi">2007</span><span class="p">)</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="n">henk</span> <span class="o">=</span> <span class="n">Persoon</span><span class="p">(</span><span class="s2">"Henk"</span><span class="p">,</span> <span class="s2">"henk@email.nl"</span><span class="p">)</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4"></a>
+<a id="__codelineno-12-5" name="__codelineno-12-5"></a><span class="k">for</span> <span class="n">persoon</span> <span class="ow">in</span> <span class="p">[</span><span class="n">bart</span><span class="p">,</span> <span class="n">roos</span><span class="p">,</span> <span class="n">henk</span><span class="p">]:</span>
+<a id="__codelineno-12-6" name="__codelineno-12-6"></a>    <span class="n">persoon</span><span class="o">.</span><span class="n">stel_voor</span><span class="p">()</span>
+</code></pre></div></td></tr></tbody></table></div>
+<p>Wat blijkt? Moeiteloos:</p>
+<div class="language-console highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span>
+<span class="normal"><a href="#__codelineno-13-2">2</a></span>
+<span class="normal"><a href="#__codelineno-13-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="go">Hallo, ik ben Bart en ik geef les in gitaar</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2"></a><span class="go">Hallo, ik ben Roos en ik ben cursist bij Sessions</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3"></a><span class="go">Hallo, ik ben Henk</span>
+</code></pre></div></td></tr></tbody></table></div>
+<p>Dit is een mooi voorbeeld van polymorfisme: we roepen drie keer <em>dezelfde</em> methode aan (<code>stel_voor()</code>), maar afhankelijk van de klasse van het object wordt een <em>andere</em> implementatie uitgevoerd. De aanroepende code (de <code>for</code>-lus) hoeft helemaal niet te weten met welk type persoon hij te maken heeft.</p>
+<p>Er is nog (heel veel) meer te zeggen over polymorfisme; <a href="https://nl.wikipedia.org/wiki/Polymorfisme_(informatica)">check eventueel de wiki-pagina hierover</a>. Voor nu is het voldoende als je weet dat dit bestaat – in een later stadium komen we hier nog uitgebreid op terug.</p>
 <h2 id="samenvatting">Samenvatting<a class="headerlink" href="#samenvatting" title="Permanent link">¶</a></h2>
 <p>In dit deel hebben we geleerd over:</p>
 <ul>
-<li>Het werken met meerdere klassen die elkaar gebruiken</li>
-<li>Het documenteren van klassen met docstrings</li>
-<li>Het modelleren van een realistische applicatie (webshop)</li>
-<li>Het gebruik van lijsten om collecties van objecten op te slaan</li>
-<li>Het doorgeven van objecten als parameters</li>
+<li>Overerving: subklassen die attributen en methoden van een superklasse overnemen</li>
+<li><code>super().__init__()</code> om de constructor van de superklasse aan te roepen</li>
+<li>Extra attributen en methoden in een subklasse</li>
+<li>Overriding: een methode uit de superklasse overschrijven in de subklasse</li>
+<li>Polymorfisme: dezelfde aanroep, verschillend gedrag per klasse</li>
 </ul>
-<p>In het volgende deel gaan we dieper in op getters en setters met de <code>@property</code> decorator.</p>
+<p>In het volgende deel bekijken we hoe meerdere klassen samenwerken: <em>compositie</em>.</p>
+<p>Maak nu <a href="oefeningen/oop-oefening2.html">oefening nummer 2</a>.</p>
 
 
 

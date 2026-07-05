@@ -24,7 +24,7 @@
     
     
       
-        <title>OOP Python – Methoden en inkapseling - Webtechnologie 1</title>
+        <title>OOP Python – Inkapseling en properties - Webtechnologie 1</title>
       
     
     
@@ -87,7 +87,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#oop-python-methoden-en-inkapseling" class="md-skip">
+        <a href="#oop-python-inkapseling-en-properties" class="md-skip">
           Ga naar inhoud
         </a>
       
@@ -123,7 +123,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              OOP Python – Methoden en inkapseling
+              OOP Python – Inkapseling en properties
             
           </span>
         </div>
@@ -1084,12 +1084,6 @@
       
         
       
-        
-      
-        
-      
-        
-      
     
     
     
@@ -1181,7 +1175,7 @@
   <span class="md-ellipsis">
     
   
-    OOP Python – Methoden en inkapseling
+    OOP Python – Inkapseling en properties
   
 
     
@@ -1199,7 +1193,7 @@
   <span class="md-ellipsis">
     
   
-    OOP Python – Methoden en inkapseling
+    OOP Python – Inkapseling en properties
   
 
     
@@ -1225,10 +1219,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#het-voorbeeld-voorraad" class="md-nav__link">
+  <a href="#het-voorbeeld-lestegoed" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Het voorbeeld Voorraad
+        Het voorbeeld: lestegoed
       
     </span>
   </a>
@@ -1258,10 +1252,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#bijbestellen-en-verkopen" class="md-nav__link">
+  <a href="#storten-en-betalen" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Bijbestellen en verkopen
+        Storten en betalen
       
     </span>
   </a>
@@ -1269,21 +1263,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#mutatie-overzicht" class="md-nav__link">
+  <a href="#betalingsoverzicht" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Mutatie-overzicht
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#de-volledige-code" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        De volledige code
+        Betalingsoverzicht
       
     </span>
   </a>
@@ -1306,6 +1289,17 @@
     <span class="md-ellipsis">
       
         Private versus Protected attributen
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getters-setters-en-de-property-decorator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Getters, setters en de @property decorator
       
     </span>
   </a>
@@ -1357,7 +1351,7 @@
   <span class="md-ellipsis">
     
   
-    OOP Python - Meerdere klassen
+    OOP Python – Overerving en polymorfisme
   
 
     
@@ -1385,91 +1379,7 @@
   <span class="md-ellipsis">
     
   
-    OOP Python – Getters en Setters
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="oop-deel5.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    OOP Python – Overerving
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="oop-deel6.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    OOP Python – Overriding en polymorfisme
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="oop-deel7.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    OOP Python – Compositie
+    OOP Python – Meerdere klassen en compositie
   
 
     
@@ -1506,10 +1416,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5">
         
           
-          <label class="md-nav__link" for="__nav_3_8" id="__nav_3_8_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
             
   
   
@@ -1527,8 +1437,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_8_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_8">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1660,6 +1570,8 @@
       
         
       
+        
+      
     
     
     
@@ -1678,7 +1590,7 @@
   <span class="md-ellipsis">
     
   
-    Week 3 - Python en databases
+    Week 3 - Flask en formulieren
   
 
     
@@ -1694,7 +1606,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Week 3 - Python en databases
+    Week 3 - Flask en formulieren
   
 
           </label>
@@ -1707,7 +1619,390 @@
   
   
     <li class="md-nav__item">
-      <a href="../week3/sql-deel1.html" class="md-nav__link">
+      <a href="../week3/flask-deel1.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Flask – Inleiding
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../week3/flask-deel2.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Flask – Installatie
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../week3/flask-deel3.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Flask – basale werking
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../week3/flask-deel4.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Flask – Templates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../week3/flask-forms-deel1.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Flask forms deel1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../week3/flask-forms-deel2.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Flask en Forms - Form Fields
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../week3/flask-forms-deel3.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Flask en Forms - Flash-berichten
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_8">
+        
+          
+          <label class="md-nav__link" for="__nav_4_8" id="__nav_4_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Oefeningen
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Oefeningen
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../week3/oefeningen/flask-oefening1.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Flask – Oefening 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../week3/oefeningen/flask-forms-oefening1.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Flask en forms - Oefening 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5">
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Week 4 - Python en databases
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Week 4 - Python en databases
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../week4/sql-deel1.html" class="md-nav__link">
         
   
   
@@ -1735,7 +2030,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../week3/sql-deel2.html" class="md-nav__link">
+      <a href="../week4/sql-deel2.html" class="md-nav__link">
         
   
   
@@ -1763,7 +2058,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../week3/sql-deel3.html" class="md-nav__link">
+      <a href="../week4/sql-deel3.html" class="md-nav__link">
         
   
   
@@ -1791,7 +2086,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../week3/sql-deel4.html" class="md-nav__link">
+      <a href="../week4/sql-deel4.html" class="md-nav__link">
         
   
   
@@ -1819,7 +2114,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../week3/sql-deel5.html" class="md-nav__link">
+      <a href="../week4/sql-deel5.html" class="md-nav__link">
         
   
   
@@ -1847,7 +2142,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../week3/sql-deel6.html" class="md-nav__link">
+      <a href="../week4/sql-deel6.html" class="md-nav__link">
         
   
   
@@ -1893,10 +2188,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_7">
         
           
-          <label class="md-nav__link" for="__nav_4_7" id="__nav_4_7_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5_7" id="__nav_5_7_label" tabindex="0">
             
   
   
@@ -1914,8 +2209,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_7">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_7">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1932,7 +2227,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../week3/oefeningen/sql-oefening1.html" class="md-nav__link">
+      <a href="../week4/oefeningen/sql-oefening1.html" class="md-nav__link">
         
   
   
@@ -1960,7 +2255,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../week3/oefeningen/sql-oefening2.html" class="md-nav__link">
+      <a href="../week4/oefeningen/sql-oefening2.html" class="md-nav__link">
         
   
   
@@ -1988,7 +2283,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../week3/oefeningen/sql-oefening3.html" class="md-nav__link">
+      <a href="../week4/oefeningen/sql-oefening3.html" class="md-nav__link">
         
   
   
@@ -2016,7 +2311,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../week3/oefeningen/sql-oefening4.html" class="md-nav__link">
+      <a href="../week4/oefeningen/sql-oefening4.html" class="md-nav__link">
         
   
   
@@ -2024,391 +2319,6 @@
     
   
     Oefening 4
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5">
-        
-          
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Week 4 - Flask en formulieren
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Week 4 - Flask en formulieren
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix="">
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../week4/flask-deel1.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Flask – Inleiding
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../week4/flask-deel2.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Flask – Installatie
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../week4/flask-deel3.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Flask – basale werking
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../week4/flask-deel4.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Flask – Templates
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../week4/flask-forms-deel1.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Flask forms deel1
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../week4/flask-forms-deel2.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Flask en Forms - Form Fields
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../week4/flask-forms-deel3.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Flask en Forms - Flash-berichten
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_8">
-        
-          
-          <label class="md-nav__link" for="__nav_5_8" id="__nav_5_8_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Oefeningen
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_8_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5_8">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Oefeningen
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix="">
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../week4/oefeningen/flask-oefening1.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Flask – Oefening 1
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../week4/oefeningen/flask-forms-oefening1.html" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Flask en forms - Oefening 1
   
 
     
@@ -2749,6 +2659,8 @@
       
         
       
+        
+      
     
     
     
@@ -2896,6 +2808,93 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_5">
+        
+          
+          <label class="md-nav__link" for="__nav_7_5" id="__nav_7_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Oefeningen
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Oefeningen
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../week6/oefeningen/user-authentication-oefening1.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    User authentication - Oefening 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -3270,10 +3269,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#het-voorbeeld-voorraad" class="md-nav__link">
+  <a href="#het-voorbeeld-lestegoed" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Het voorbeeld Voorraad
+        Het voorbeeld: lestegoed
       
     </span>
   </a>
@@ -3303,10 +3302,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#bijbestellen-en-verkopen" class="md-nav__link">
+  <a href="#storten-en-betalen" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Bijbestellen en verkopen
+        Storten en betalen
       
     </span>
   </a>
@@ -3314,21 +3313,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#mutatie-overzicht" class="md-nav__link">
+  <a href="#betalingsoverzicht" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Mutatie-overzicht
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#de-volledige-code" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        De volledige code
+        Betalingsoverzicht
       
     </span>
   </a>
@@ -3351,6 +3339,17 @@
     <span class="md-ellipsis">
       
         Private versus Protected attributen
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getters-setters-en-de-property-decorator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Getters, setters en de @property decorator
       
     </span>
   </a>
@@ -3412,31 +3411,31 @@
   
 
 
-<h1 id="oop-python-methoden-en-inkapseling">OOP Python – Methoden en inkapseling<a class="headerlink" href="#oop-python-methoden-en-inkapseling" title="Permanent link">¶</a></h1>
-<p>Inkapseling (Engels: <em>encapsulation</em>) is één van de fundamenten van object-georiënteerd programmeren. Het wordt gebruikt om onbevoegden niet de gelegenheid te bieden de kenmerken van een object zomaar aan te passen. Als dat mogelijk moet zijn dan dienen zij toegang te krijgen tot de zogenaamde <code>getters</code> en <code>setters</code>, waarover zo dadelijk meer.</p>
+<h1 id="oop-python-inkapseling-en-properties">OOP Python – Inkapseling en properties<a class="headerlink" href="#oop-python-inkapseling-en-properties" title="Permanent link">¶</a></h1>
+<p>Inkapseling (Engels: <em>encapsulation</em>) is één van de fundamenten van object-georiënteerd programmeren. Het wordt gebruikt om onbevoegden niet de gelegenheid te bieden de kenmerken van een object zomaar aan te passen. Als dat mogelijk moet zijn, dienen zij toegang te krijgen tot zogenaamde <em>getters</em> en <em>setters</em>, waarover zo dadelijk meer.</p>
 <p>Aan het eind van deze tekst maken we <a href="oefeningen/oop-oefening1.html">oefening nummer 1</a>.</p>
 <div class="admonition info">
 <p class="admonition-title">zichtbaarheid</p>
-<p>Python wijkt nadrukkelijk af van het idee van inkapseling zoals het bijvoorbeeld gedaan wordt bij Java. Python gebruikt niet de sleutel-woorden <code>private</code> of <code>protected</code> om de zichtbaarheid van een methode aan te geven.</p>
+<p>Python wijkt nadrukkelijk af van het idee van inkapseling zoals het bijvoorbeeld gedaan wordt bij Java. Python gebruikt niet de sleutelwoorden <code>private</code> of <code>protected</code> om de zichtbaarheid van een methode aan te geven.</p>
 </div>
-<h2 id="het-voorbeeld-voorraad">Het voorbeeld Voorraad<a class="headerlink" href="#het-voorbeeld-voorraad" title="Permanent link">¶</a></h2>
-<p>Als voorbeeld hier een uitbreiding van onze webshop, waarbij het mogelijk is voorraad bij te bestellen, producten te verkopen en een geschiedenis van alle voorraad-mutaties bij te houden, inclusief tijdstip. Uiteraard is de opzet erg beperkt.</p>
-<p>De code wordt in stapjes opgebouwd; we slaan deze code uiteindelijk op in het bestand <a href="bestanden/webshop/voorraad.py"><code>voorraad.py</code></a>.</p>
+<h2 id="het-voorbeeld-lestegoed">Het voorbeeld: lestegoed<a class="headerlink" href="#het-voorbeeld-lestegoed" title="Permanent link">¶</a></h2>
+<p>Cursisten van Sessions betalen hun lessen vanuit een <em>lestegoed</em>: ze storten een bedrag, en de kosten van elke les gaan daar vanaf. Zo'n tegoed is bij uitstek iets wat je niet zomaar van buitenaf wilt laten aanpassen — een cursist die zijn eigen tegoed op €1.000.000 zet, daar wordt alleen de cursist zelf beter van. We bouwen daarom een klasse <code>Cursist</code> waarin het tegoed netjes is ingekapseld, inclusief een geschiedenis van alle betalingen, met tijdstip.</p>
+<p>De code wordt in stapjes opgebouwd; we slaan deze uiteindelijk op in het bestand <a href="bestanden/muziekschool/cursist.py"><code>cursist.py</code></a>.</p>
 <h2 id="klasse-en-methoden">Klasse en methoden<a class="headerlink" href="#klasse-en-methoden" title="Permanent link">¶</a></h2>
 <p>Stap 1: de klasse</p>
-<div class="language-python highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Voorraad</span><span class="p">:</span>
+<div class="language-python highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Cursist</span><span class="p">:</span>
 </code></pre></div></td></tr></tbody></table></div>
 <p>Stap 2: het importeren van de huidige tijd</p>
 <div class="language-python highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">datetime</span>
 </code></pre></div></td></tr></tbody></table></div>
-<p>Stap 3: een functie om het tijdstip van de mutatie vast te leggen.</p>
+<p>Stap 3: een functie om het tijdstip van de betaling vast te leggen.</p>
 <div class="language-python highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
 <span class="normal"><a href="#__codelineno-2-2">2</a></span>
 <span class="normal"><a href="#__codelineno-2-3">3</a></span>
 <span class="normal"><a href="#__codelineno-2-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="nd">@staticmethod</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="k">def</span><span class="w"> </span><span class="nf">_current_time</span><span class="p">():</span>
 <a id="__codelineno-2-3" name="__codelineno-2-3"></a>    <span class="n">now</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4"></a>    <span class="k">return</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">now</span><span class="si">:</span><span class="s2"> %Y-%m-%d %H:%M:%S</span><span class="si">}</span><span class="s2">"</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a>    <span class="k">return</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">now</span><span class="si">:</span><span class="s2">%Y-%m-%d %H:%M:%S</span><span class="si">}</span><span class="s2">"</span>
 </code></pre></div></td></tr></tbody></table></div>
 <p>De functie <code>_current_time()</code> retourneert het tijdstip van de mutatie in het opgegeven formaat, tot op de seconde nauwkeurig. De <code>@staticmethod</code> decorator geeft aan dat dit een functie is die bij de klasse hoort maar niet afhankelijk is van een specifieke instantie.</p>
 <h2 id="de-constructor">De constructor<a class="headerlink" href="#de-constructor" title="Permanent link">¶</a></h2>
@@ -3445,49 +3444,51 @@
 <span class="normal"><a href="#__codelineno-3-2">2</a></span>
 <span class="normal"><a href="#__codelineno-3-3">3</a></span>
 <span class="normal"><a href="#__codelineno-3-4">4</a></span>
-<span class="normal"><a href="#__codelineno-3-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">product_naam</span><span class="p">,</span> <span class="n">aantal</span><span class="p">):</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">_product_naam</span> <span class="o">=</span> <span class="n">product_naam</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">__aantal</span> <span class="o">=</span> <span class="n">aantal</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">_mutatie_geschiedenis</span> <span class="o">=</span> <span class="p">[]</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Voorraad aangemaakt voor </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_product_naam</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="normal"><a href="#__codelineno-3-5">5</a></span>
+<span class="normal"><a href="#__codelineno-3-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">naam</span><span class="p">,</span> <span class="n">email</span><span class="p">,</span> <span class="n">tegoed</span><span class="o">=</span><span class="mf">0.0</span><span class="p">):</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">_naam</span> <span class="o">=</span> <span class="n">naam</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">_email</span> <span class="o">=</span> <span class="n">email</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">__tegoed</span> <span class="o">=</span> <span class="n">tegoed</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">_betalingsgeschiedenis</span> <span class="o">=</span> <span class="p">[]</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Cursist </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_naam</span><span class="si">}</span><span class="s2"> ingeschreven bij Sessions"</span><span class="p">)</span>
 </code></pre></div></td></tr></tbody></table></div>
-<h2 id="bijbestellen-en-verkopen">Bijbestellen en verkopen<a class="headerlink" href="#bijbestellen-en-verkopen" title="Permanent link">¶</a></h2>
-<p>Bij het aanmaken van een nieuwe voorraad wordt gevraagd om een productnaam en een beginhoeveelheid. De variabele <code>_mutatie_geschiedenis</code> is een lijst (<code>[]</code>) waarin alle mutaties worden vastgelegd.</p>
-<p>Stap 5: de methode <code>bijbestellen()</code></p>
+<p>Bij het inschrijven van een nieuwe cursist wordt gevraagd om een naam en een e-mailadres; een begintegoed is optioneel. De variabele <code>_betalingsgeschiedenis</code> is een lijst (<code>[]</code>) waarin alle mutaties worden vastgelegd. Let op de underscores voor de attribuutnamen — daarover zo meer.</p>
+<h2 id="storten-en-betalen">Storten en betalen<a class="headerlink" href="#storten-en-betalen" title="Permanent link">¶</a></h2>
+<p>Stap 5: de methode <code>stort()</code></p>
 <div class="language-python highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
 <span class="normal"><a href="#__codelineno-4-2">2</a></span>
 <span class="normal"><a href="#__codelineno-4-3">3</a></span>
 <span class="normal"><a href="#__codelineno-4-4">4</a></span>
-<span class="normal"><a href="#__codelineno-4-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">bijbestellen</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">aantal</span><span class="p">):</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2"></a>    <span class="k">if</span> <span class="n">aantal</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">__aantal</span> <span class="o">+=</span> <span class="n">aantal</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_mutatie_geschiedenis</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">Voorraad</span><span class="o">.</span><span class="n">_current_time</span><span class="p">(),</span> <span class="n">aantal</span><span class="p">))</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">toon_voorraad</span><span class="p">()</span>
+<span class="normal"><a href="#__codelineno-4-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">stort</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bedrag</span><span class="p">):</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a>    <span class="k">if</span> <span class="n">bedrag</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">__tegoed</span> <span class="o">+=</span> <span class="n">bedrag</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_betalingsgeschiedenis</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">Cursist</span><span class="o">.</span><span class="n">_current_time</span><span class="p">(),</span> <span class="n">bedrag</span><span class="p">))</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">toon_tegoed</span><span class="p">()</span>
 </code></pre></div></td></tr></tbody></table></div>
-<p>Indien het bij te bestellen aantal groter dan nul (<code>0</code>) is, wordt de voorraad aangepast en wordt de mutatie toegevoegd aan de lijst <code>_mutatie_geschiedenis[]</code> (zie je wat het datatype is van dat wat er aan de lijst wordt toegevoegd?). Ook de actuele voorraad wordt nu getoond.</p>
-<p>Stap 6: de methode <code>verkoop()</code></p>
+<p>Indien het te storten bedrag groter dan nul (<code>0</code>) is, wordt het tegoed aangepast en wordt de mutatie toegevoegd aan de lijst <code>_betalingsgeschiedenis</code> (zie je wat het datatype is van dat wat er aan de lijst wordt toegevoegd?). Ook het actuele tegoed wordt nu getoond.</p>
+<p>Stap 6: de methode <code>betaal_les()</code></p>
 <div class="language-python highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
 <span class="normal"><a href="#__codelineno-5-2">2</a></span>
 <span class="normal"><a href="#__codelineno-5-3">3</a></span>
 <span class="normal"><a href="#__codelineno-5-4">4</a></span>
 <span class="normal"><a href="#__codelineno-5-5">5</a></span>
 <span class="normal"><a href="#__codelineno-5-6">6</a></span>
-<span class="normal"><a href="#__codelineno-5-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">verkoop</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">aantal</span><span class="p">):</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2"></a>    <span class="k">if</span> <span class="mi">0</span> <span class="o">&lt;</span> <span class="n">aantal</span> <span class="o">&lt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__aantal</span><span class="p">:</span>
-<a id="__codelineno-5-3" name="__codelineno-5-3"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">__aantal</span> <span class="o">-=</span> <span class="n">aantal</span>
-<a id="__codelineno-5-4" name="__codelineno-5-4"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_mutatie_geschiedenis</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">Voorraad</span><span class="o">.</span><span class="n">_current_time</span><span class="p">(),</span> <span class="o">-</span><span class="n">aantal</span><span class="p">))</span>
+<span class="normal"><a href="#__codelineno-5-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">betaal_les</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bedrag</span><span class="p">):</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a>    <span class="k">if</span> <span class="mi">0</span> <span class="o">&lt;</span> <span class="n">bedrag</span> <span class="o">&lt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__tegoed</span><span class="p">:</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">__tegoed</span> <span class="o">-=</span> <span class="n">bedrag</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_betalingsgeschiedenis</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">Cursist</span><span class="o">.</span><span class="n">_current_time</span><span class="p">(),</span> <span class="o">-</span><span class="n">bedrag</span><span class="p">))</span>
 <a id="__codelineno-5-5" name="__codelineno-5-5"></a>    <span class="k">else</span><span class="p">:</span>
-<a id="__codelineno-5-6" name="__codelineno-5-6"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">"Het aantal dient groter dan nul (0) en maximaal gelijk aan de voorraad te zijn"</span><span class="p">)</span>
-<a id="__codelineno-5-7" name="__codelineno-5-7"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">toon_voorraad</span><span class="p">()</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">"Het bedrag dient groter dan nul (0) en maximaal gelijk aan het tegoed te zijn"</span><span class="p">)</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7"></a>    <span class="bp">self</span><span class="o">.</span><span class="n">toon_tegoed</span><span class="p">()</span>
 </code></pre></div></td></tr></tbody></table></div>
-<p>Er vindt een controle plaats of de voorraad toereikend is voor de verkoop. Zo niet, volgt er een passende mededeling. Zo ja, wordt de voorraad bijgewerkt en de mutatie weer in de lijst vastgelegd. Ook hier wordt de actuele voorraad getoond.</p>
-<p>Stap 7: de methode <code>toon_voorraad()</code></p>
+<p>Er vindt een controle plaats of het tegoed toereikend is voor de les. Zo niet, volgt er een passende mededeling. Zo ja, wordt het tegoed bijgewerkt en de mutatie weer in de lijst vastgelegd.</p>
+<p>Stap 7: de methode <code>toon_tegoed()</code></p>
 <div class="language-python highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
-<span class="normal"><a href="#__codelineno-6-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">toon_voorraad</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Voorraad </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_product_naam</span><span class="si">}</span><span class="s2"> bedraagt </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">__aantal</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="normal"><a href="#__codelineno-6-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">toon_tegoed</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Tegoed van </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_naam</span><span class="si">}</span><span class="s2"> bedraagt €</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">__tegoed</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </code></pre></div></td></tr></tbody></table></div>
-<h2 id="mutatie-overzicht">Mutatie-overzicht<a class="headerlink" href="#mutatie-overzicht" title="Permanent link">¶</a></h2>
-<p>Stap 8: het mutatie-overzicht</p>
+<h2 id="betalingsoverzicht">Betalingsoverzicht<a class="headerlink" href="#betalingsoverzicht" title="Permanent link">¶</a></h2>
+<p>Stap 8: het betalingsoverzicht</p>
 <div class="language-python highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
 <span class="normal"><a href="#__codelineno-7-2">2</a></span>
 <span class="normal"><a href="#__codelineno-7-3">3</a></span>
@@ -3496,185 +3497,163 @@
 <span class="normal"><a href="#__codelineno-7-6">6</a></span>
 <span class="normal"><a href="#__codelineno-7-7">7</a></span>
 <span class="normal"><a href="#__codelineno-7-8">8</a></span>
-<span class="normal"><a href="#__codelineno-7-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">toon_mutaties</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<a id="__codelineno-7-2" name="__codelineno-7-2"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2">Mutatie-geschiedenis voor </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_product_naam</span><span class="si">}</span><span class="s2">:"</span><span class="p">)</span>
-<a id="__codelineno-7-3" name="__codelineno-7-3"></a>    <span class="k">for</span> <span class="n">datum</span><span class="p">,</span> <span class="n">aantal</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mutatie_geschiedenis</span><span class="p">:</span>
-<a id="__codelineno-7-4" name="__codelineno-7-4"></a>        <span class="k">if</span> <span class="n">aantal</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-<a id="__codelineno-7-5" name="__codelineno-7-5"></a>            <span class="n">mutatie_type</span> <span class="o">=</span> <span class="s2">"bijbesteld"</span>
+<span class="normal"><a href="#__codelineno-7-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">toon_betalingen</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2">Betalingsgeschiedenis van </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_naam</span><span class="si">}</span><span class="s2">:"</span><span class="p">)</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a>    <span class="k">for</span> <span class="n">datum</span><span class="p">,</span> <span class="n">bedrag</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_betalingsgeschiedenis</span><span class="p">:</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a>        <span class="k">if</span> <span class="n">bedrag</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a>            <span class="n">mutatie_type</span> <span class="o">=</span> <span class="s2">"gestort"</span>
 <a id="__codelineno-7-6" name="__codelineno-7-6"></a>        <span class="k">else</span><span class="p">:</span>
-<a id="__codelineno-7-7" name="__codelineno-7-7"></a>            <span class="n">mutatie_type</span> <span class="o">=</span> <span class="s2">"verkocht"</span>
-<a id="__codelineno-7-8" name="__codelineno-7-8"></a>            <span class="n">aantal</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">aantal</span><span class="p">)</span>
-<a id="__codelineno-7-9" name="__codelineno-7-9"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"  </span><span class="si">{</span><span class="n">datum</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">aantal</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">mutatie_type</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7"></a>            <span class="n">mutatie_type</span> <span class="o">=</span> <span class="s2">"les betaald"</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8"></a>            <span class="n">bedrag</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">bedrag</span><span class="p">)</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"  </span><span class="si">{</span><span class="n">datum</span><span class="si">}</span><span class="s2">: €</span><span class="si">{</span><span class="n">bedrag</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">mutatie_type</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </code></pre></div></td></tr></tbody></table></div>
 <p>In een lus wordt de volledige lijst van mutaties doorlopen en wordt de informatie naar het scherm geschreven.</p>
-<h2 id="de-volledige-code">De volledige code<a class="headerlink" href="#de-volledige-code" title="Permanent link">¶</a></h2>
-<p>De volledige klasse ziet er nu als volgt uit:</p>
-<div class="language-python highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-8-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-8-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-8-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-8-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-8-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-8-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-8-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-8-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-8-10">10</a></span>
-<span class="normal"><a href="#__codelineno-8-11">11</a></span>
-<span class="normal"><a href="#__codelineno-8-12">12</a></span>
-<span class="normal"><a href="#__codelineno-8-13">13</a></span>
-<span class="normal"><a href="#__codelineno-8-14">14</a></span>
-<span class="normal"><a href="#__codelineno-8-15">15</a></span>
-<span class="normal"><a href="#__codelineno-8-16">16</a></span>
-<span class="normal"><a href="#__codelineno-8-17">17</a></span>
-<span class="normal"><a href="#__codelineno-8-18">18</a></span>
-<span class="normal"><a href="#__codelineno-8-19">19</a></span>
-<span class="normal"><a href="#__codelineno-8-20">20</a></span>
-<span class="normal"><a href="#__codelineno-8-21">21</a></span>
-<span class="normal"><a href="#__codelineno-8-22">22</a></span>
-<span class="normal"><a href="#__codelineno-8-23">23</a></span>
-<span class="normal"><a href="#__codelineno-8-24">24</a></span>
-<span class="normal"><a href="#__codelineno-8-25">25</a></span>
-<span class="normal"><a href="#__codelineno-8-26">26</a></span>
-<span class="normal"><a href="#__codelineno-8-27">27</a></span>
-<span class="normal"><a href="#__codelineno-8-28">28</a></span>
-<span class="normal"><a href="#__codelineno-8-29">29</a></span>
-<span class="normal"><a href="#__codelineno-8-30">30</a></span>
-<span class="normal"><a href="#__codelineno-8-31">31</a></span>
-<span class="normal"><a href="#__codelineno-8-32">32</a></span>
-<span class="normal"><a href="#__codelineno-8-33">33</a></span>
-<span class="normal"><a href="#__codelineno-8-34">34</a></span>
-<span class="normal"><a href="#__codelineno-8-35">35</a></span>
-<span class="normal"><a href="#__codelineno-8-36">36</a></span>
-<span class="normal"><a href="#__codelineno-8-37">37</a></span>
-<span class="normal"><a href="#__codelineno-8-38">38</a></span>
-<span class="normal"><a href="#__codelineno-8-39">39</a></span>
-<span class="normal"><a href="#__codelineno-8-40">40</a></span>
-<span class="normal"><a href="#__codelineno-8-41">41</a></span>
-<span class="normal"><a href="#__codelineno-8-42">42</a></span>
-<span class="normal"><a href="#__codelineno-8-43">43</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">datetime</span>
-<a id="__codelineno-8-2" name="__codelineno-8-2"></a>
-<a id="__codelineno-8-3" name="__codelineno-8-3"></a>
-<a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="k">class</span><span class="w"> </span><span class="nc">Voorraad</span><span class="p">:</span>
-<a id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="w">    </span><span class="sd">"""Klasse voor het bijhouden van productvoorraad"""</span>
-<a id="__codelineno-8-6" name="__codelineno-8-6"></a>
-<a id="__codelineno-8-7" name="__codelineno-8-7"></a>    <span class="nd">@staticmethod</span>
-<a id="__codelineno-8-8" name="__codelineno-8-8"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">_current_time</span><span class="p">():</span>
-<a id="__codelineno-8-9" name="__codelineno-8-9"></a>        <span class="n">now</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
-<a id="__codelineno-8-10" name="__codelineno-8-10"></a>        <span class="k">return</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">now</span><span class="si">:</span><span class="s2"> %Y-%m-%d %H:%M:%S</span><span class="si">}</span><span class="s2">"</span>
-<a id="__codelineno-8-11" name="__codelineno-8-11"></a>
-<a id="__codelineno-8-12" name="__codelineno-8-12"></a>    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">product_naam</span><span class="p">,</span> <span class="n">aantal</span><span class="p">):</span>
-<a id="__codelineno-8-13" name="__codelineno-8-13"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_product_naam</span> <span class="o">=</span> <span class="n">product_naam</span>
-<a id="__codelineno-8-14" name="__codelineno-8-14"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">__aantal</span> <span class="o">=</span> <span class="n">aantal</span>
-<a id="__codelineno-8-15" name="__codelineno-8-15"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">_mutatie_geschiedenis</span> <span class="o">=</span> <span class="p">[]</span>
-<a id="__codelineno-8-16" name="__codelineno-8-16"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Voorraad aangemaakt voor </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_product_naam</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-<a id="__codelineno-8-17" name="__codelineno-8-17"></a>
-<a id="__codelineno-8-18" name="__codelineno-8-18"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">bijbestellen</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">aantal</span><span class="p">):</span>
-<a id="__codelineno-8-19" name="__codelineno-8-19"></a>        <span class="k">if</span> <span class="n">aantal</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-<a id="__codelineno-8-20" name="__codelineno-8-20"></a>            <span class="bp">self</span><span class="o">.</span><span class="n">__aantal</span> <span class="o">+=</span> <span class="n">aantal</span>
-<a id="__codelineno-8-21" name="__codelineno-8-21"></a>            <span class="bp">self</span><span class="o">.</span><span class="n">_mutatie_geschiedenis</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">Voorraad</span><span class="o">.</span><span class="n">_current_time</span><span class="p">(),</span> <span class="n">aantal</span><span class="p">))</span>
-<a id="__codelineno-8-22" name="__codelineno-8-22"></a>            <span class="bp">self</span><span class="o">.</span><span class="n">toon_voorraad</span><span class="p">()</span>
-<a id="__codelineno-8-23" name="__codelineno-8-23"></a>
-<a id="__codelineno-8-24" name="__codelineno-8-24"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">verkoop</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">aantal</span><span class="p">):</span>
-<a id="__codelineno-8-25" name="__codelineno-8-25"></a>        <span class="k">if</span> <span class="mi">0</span> <span class="o">&lt;</span> <span class="n">aantal</span> <span class="o">&lt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__aantal</span><span class="p">:</span>
-<a id="__codelineno-8-26" name="__codelineno-8-26"></a>            <span class="bp">self</span><span class="o">.</span><span class="n">__aantal</span> <span class="o">-=</span> <span class="n">aantal</span>
-<a id="__codelineno-8-27" name="__codelineno-8-27"></a>            <span class="bp">self</span><span class="o">.</span><span class="n">_mutatie_geschiedenis</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">Voorraad</span><span class="o">.</span><span class="n">_current_time</span><span class="p">(),</span> <span class="o">-</span><span class="n">aantal</span><span class="p">))</span>
-<a id="__codelineno-8-28" name="__codelineno-8-28"></a>        <span class="k">else</span><span class="p">:</span>
-<a id="__codelineno-8-29" name="__codelineno-8-29"></a>            <span class="nb">print</span><span class="p">(</span><span class="s2">"Het aantal dient groter dan nul (0) en maximaal gelijk aan de voorraad te zijn"</span><span class="p">)</span>
-<a id="__codelineno-8-30" name="__codelineno-8-30"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">toon_voorraad</span><span class="p">()</span>
-<a id="__codelineno-8-31" name="__codelineno-8-31"></a>
-<a id="__codelineno-8-32" name="__codelineno-8-32"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">toon_voorraad</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<a id="__codelineno-8-33" name="__codelineno-8-33"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Voorraad </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_product_naam</span><span class="si">}</span><span class="s2"> bedraagt </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">__aantal</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-<a id="__codelineno-8-34" name="__codelineno-8-34"></a>
-<a id="__codelineno-8-35" name="__codelineno-8-35"></a>    <span class="k">def</span><span class="w"> </span><span class="nf">toon_mutaties</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<a id="__codelineno-8-36" name="__codelineno-8-36"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2">Mutatie-geschiedenis voor </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_product_naam</span><span class="si">}</span><span class="s2">:"</span><span class="p">)</span>
-<a id="__codelineno-8-37" name="__codelineno-8-37"></a>        <span class="k">for</span> <span class="n">datum</span><span class="p">,</span> <span class="n">aantal</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mutatie_geschiedenis</span><span class="p">:</span>
-<a id="__codelineno-8-38" name="__codelineno-8-38"></a>            <span class="k">if</span> <span class="n">aantal</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-<a id="__codelineno-8-39" name="__codelineno-8-39"></a>                <span class="n">mutatie_type</span> <span class="o">=</span> <span class="s2">"bijbesteld"</span>
-<a id="__codelineno-8-40" name="__codelineno-8-40"></a>            <span class="k">else</span><span class="p">:</span>
-<a id="__codelineno-8-41" name="__codelineno-8-41"></a>                <span class="n">mutatie_type</span> <span class="o">=</span> <span class="s2">"verkocht"</span>
-<a id="__codelineno-8-42" name="__codelineno-8-42"></a>                <span class="n">aantal</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">aantal</span><span class="p">)</span>
-<a id="__codelineno-8-43" name="__codelineno-8-43"></a>            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"  </span><span class="si">{</span><span class="n">datum</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">aantal</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">mutatie_type</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-</code></pre></div></td></tr></tbody></table></div>
 <h2 id="testen">Testen<a class="headerlink" href="#testen" title="Permanent link">¶</a></h2>
-<p>Nu is het tijd om de voorraad te testen!</p>
-<div class="language-python highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
-<span class="normal"><a href="#__codelineno-9-2">2</a></span>
-<span class="normal"><a href="#__codelineno-9-3">3</a></span>
-<span class="normal"><a href="#__codelineno-9-4">4</a></span>
-<span class="normal"><a href="#__codelineno-9-5">5</a></span>
-<span class="normal"><a href="#__codelineno-9-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="n">laptop_voorraad</span> <span class="o">=</span> <span class="n">Voorraad</span><span class="p">(</span><span class="s2">"Laptop"</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
-<a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="n">laptop_voorraad</span><span class="o">.</span><span class="n">bijbestellen</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
-<a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="n">laptop_voorraad</span><span class="o">.</span><span class="n">verkoop</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
-<a id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="n">laptop_voorraad</span><span class="o">.</span><span class="n">verkoop</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
-<a id="__codelineno-9-5" name="__codelineno-9-5"></a><span class="n">laptop_voorraad</span><span class="o">.</span><span class="n">bijbestellen</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
-<a id="__codelineno-9-6" name="__codelineno-9-6"></a><span class="n">laptop_voorraad</span><span class="o">.</span><span class="n">toon_mutaties</span><span class="p">()</span>
+<p>Nu is het tijd om het tegoed te testen!</p>
+<div class="language-python highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
+<span class="normal"><a href="#__codelineno-8-2">2</a></span>
+<span class="normal"><a href="#__codelineno-8-3">3</a></span>
+<span class="normal"><a href="#__codelineno-8-4">4</a></span>
+<span class="normal"><a href="#__codelineno-8-5">5</a></span>
+<span class="normal"><a href="#__codelineno-8-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="n">joyce</span> <span class="o">=</span> <span class="n">Cursist</span><span class="p">(</span><span class="s2">"Joyce"</span><span class="p">,</span> <span class="s2">"joyce@email.nl"</span><span class="p">)</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="n">joyce</span><span class="o">.</span><span class="n">stort</span><span class="p">(</span><span class="mf">100.0</span><span class="p">)</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="n">joyce</span><span class="o">.</span><span class="n">betaal_les</span><span class="p">(</span><span class="mf">35.0</span><span class="p">)</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="n">joyce</span><span class="o">.</span><span class="n">betaal_les</span><span class="p">(</span><span class="mf">80.0</span><span class="p">)</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="n">joyce</span><span class="o">.</span><span class="n">stort</span><span class="p">(</span><span class="mf">50.0</span><span class="p">)</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6"></a><span class="n">joyce</span><span class="o">.</span><span class="n">toon_betalingen</span><span class="p">()</span>
 </code></pre></div></td></tr></tbody></table></div>
 <p>Dit geeft de volgende uitvoer:</p>
-<div class="language-console highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-10-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-10-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-10-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-10-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-10-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-10-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-10-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-10-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-10-10">10</a></span>
-<span class="normal"><a href="#__codelineno-10-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="go">Voorraad aangemaakt voor Laptop</span>
-<a id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="go">Voorraad Laptop bedraagt 15</span>
-<a id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="go">Voorraad Laptop bedraagt 12</span>
-<a id="__codelineno-10-4" name="__codelineno-10-4"></a><span class="go">Voorraad Laptop bedraagt 5</span>
-<a id="__codelineno-10-5" name="__codelineno-10-5"></a><span class="go">Voorraad Laptop bedraagt 15</span>
-<a id="__codelineno-10-6" name="__codelineno-10-6"></a>
-<a id="__codelineno-10-7" name="__codelineno-10-7"></a><span class="go">Mutatie-geschiedenis voor Laptop:</span>
-<a id="__codelineno-10-8" name="__codelineno-10-8"></a><span class="go">  2026-01-31 14:23:15: 5 bijbesteld</span>
-<a id="__codelineno-10-9" name="__codelineno-10-9"></a><span class="go">  2026-01-31 14:23:15: 3 verkocht</span>
-<a id="__codelineno-10-10" name="__codelineno-10-10"></a><span class="go">  2026-01-31 14:23:15: 7 verkocht</span>
-<a id="__codelineno-10-11" name="__codelineno-10-11"></a><span class="go">  2026-01-31 14:23:16: 10 bijbesteld</span>
+<div class="language-console highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-9-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-9-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-9-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-9-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-9-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-9-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-9-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-9-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-9-10">10</a></span>
+<span class="normal"><a href="#__codelineno-9-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="go">Cursist Joyce ingeschreven bij Sessions</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="go">Tegoed van Joyce bedraagt €100.00</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="go">Tegoed van Joyce bedraagt €65.00</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="go">Het bedrag dient groter dan nul (0) en maximaal gelijk aan het tegoed te zijn</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5"></a><span class="go">Tegoed van Joyce bedraagt €65.00</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6"></a><span class="go">Tegoed van Joyce bedraagt €115.00</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7"></a>
+<a id="__codelineno-9-8" name="__codelineno-9-8"></a><span class="go">Betalingsgeschiedenis van Joyce:</span>
+<a id="__codelineno-9-9" name="__codelineno-9-9"></a><span class="go">  2026-02-02 14:23:15: €100.00 gestort</span>
+<a id="__codelineno-9-10" name="__codelineno-9-10"></a><span class="go">  2026-02-02 14:23:15: €35.00 les betaald</span>
+<a id="__codelineno-9-11" name="__codelineno-9-11"></a><span class="go">  2026-02-02 14:23:16: €50.00 gestort</span>
 </code></pre></div></td></tr></tbody></table></div>
 <h2 id="private-versus-protected-attributen">Private versus Protected attributen<a class="headerlink" href="#private-versus-protected-attributen" title="Permanent link">¶</a></h2>
 <p>Je ziet in de code dat we twee soorten underscores gebruiken:</p>
 <ul>
-<li><strong>Enkele underscore</strong> (<code>_product_naam</code>): Dit is een <em>conventie</em> in Python om aan te geven dat een attribuut "protected" is. Het is bedoeld voor intern gebruik maar is nog steeds toegankelijk van buitenaf.</li>
-<li><strong>Dubbele underscore</strong> (<code>__aantal</code>): Dit triggert Python's <em>name mangling</em> mechanisme, waardoor het attribuut moeilijker direct toegankelijk wordt van buitenaf.</li>
+<li><strong>Enkele underscore</strong> (<code>_naam</code>): Dit is een <em>conventie</em> in Python om aan te geven dat een attribuut "protected" is. Het is bedoeld voor intern gebruik maar is nog steeds toegankelijk van buitenaf.</li>
+<li><strong>Dubbele underscore</strong> (<code>__tegoed</code>): Dit triggert Python's <em>name mangling</em> mechanisme, waardoor het attribuut moeilijker direct toegankelijk wordt van buitenaf.</li>
 </ul>
 <p>Laten we dit demonstreren:</p>
-<div class="language-python highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span>
-<span class="normal"><a href="#__codelineno-11-2">2</a></span>
-<span class="normal"><a href="#__codelineno-11-3">3</a></span>
-<span class="normal"><a href="#__codelineno-11-4">4</a></span>
-<span class="normal"><a href="#__codelineno-11-5">5</a></span>
-<span class="normal"><a href="#__codelineno-11-6">6</a></span>
-<span class="normal"><a href="#__codelineno-11-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="n">laptop_voorraad</span> <span class="o">=</span> <span class="n">Voorraad</span><span class="p">(</span><span class="s2">"Laptop"</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
-<a id="__codelineno-11-2" name="__codelineno-11-2"></a>
-<a id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="c1"># Dit werkt (protected met enkele underscore):</span>
-<a id="__codelineno-11-4" name="__codelineno-11-4"></a><span class="nb">print</span><span class="p">(</span><span class="n">laptop_voorraad</span><span class="o">.</span><span class="n">_product_naam</span><span class="p">)</span>  <span class="c1"># Output: Laptop</span>
-<a id="__codelineno-11-5" name="__codelineno-11-5"></a>
-<a id="__codelineno-11-6" name="__codelineno-11-6"></a><span class="c1"># Dit werkt NIET (private met dubbele underscore):</span>
-<a id="__codelineno-11-7" name="__codelineno-11-7"></a><span class="nb">print</span><span class="p">(</span><span class="n">laptop_voorraad</span><span class="o">.</span><span class="n">__aantal</span><span class="p">)</span>  <span class="c1"># AttributeError!</span>
+<div class="language-python highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span>
+<span class="normal"><a href="#__codelineno-10-2">2</a></span>
+<span class="normal"><a href="#__codelineno-10-3">3</a></span>
+<span class="normal"><a href="#__codelineno-10-4">4</a></span>
+<span class="normal"><a href="#__codelineno-10-5">5</a></span>
+<span class="normal"><a href="#__codelineno-10-6">6</a></span>
+<span class="normal"><a href="#__codelineno-10-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="n">joyce</span> <span class="o">=</span> <span class="n">Cursist</span><span class="p">(</span><span class="s2">"Joyce"</span><span class="p">,</span> <span class="s2">"joyce@email.nl"</span><span class="p">,</span> <span class="mf">100.0</span><span class="p">)</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2"></a>
+<a id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="c1"># Dit werkt (protected met enkele underscore):</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4"></a><span class="nb">print</span><span class="p">(</span><span class="n">joyce</span><span class="o">.</span><span class="n">_naam</span><span class="p">)</span>  <span class="c1"># Output: Joyce</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5"></a>
+<a id="__codelineno-10-6" name="__codelineno-10-6"></a><span class="c1"># Dit werkt NIET (private met dubbele underscore):</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7"></a><span class="nb">print</span><span class="p">(</span><span class="n">joyce</span><span class="o">.</span><span class="n">__tegoed</span><span class="p">)</span>  <span class="c1"># AttributeError!</span>
 </code></pre></div></td></tr></tbody></table></div>
 <p>Het tweede voorbeeld geeft een foutmelding:</p>
-<div class="language-console highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="go">AttributeError: 'Voorraad' object has no attribute '__aantal'</span>
+<div class="language-console highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="go">AttributeError: 'Cursist' object has no attribute '__tegoed'</span>
 </code></pre></div></td></tr></tbody></table></div>
-<p>Python heeft het attribuut <code>__aantal</code> hernoemd naar <code>_Voorraad__aantal</code> (name mangling) om directe toegang te voorkomen. Dit is Python's manier om attributen meer "private" te maken, hoewel ze technisch gezien nog steeds toegankelijk zijn via <code>laptop_voorraad._Voorraad__aantal</code>.</p>
+<p>Python heeft het attribuut <code>__tegoed</code> hernoemd naar <code>_Cursist__tegoed</code> (name mangling) om directe toegang te voorkomen. Dit is Python's manier om attributen meer "private" te maken, hoewel ze technisch gezien nog steeds toegankelijk zijn via <code>joyce._Cursist__tegoed</code>.</p>
+<h2 id="getters-setters-en-de-property-decorator">Getters, setters en de @property decorator<a class="headerlink" href="#getters-setters-en-de-property-decorator" title="Permanent link">¶</a></h2>
+<p>Hoe kan de buitenwereld nu tóch op een nette manier bij het tegoed? Daarvoor gebruiken we een <em>getter</em> (waarde opvragen) en een <em>setter</em> (waarde aanpassen). In veel programmeertalen schrijf je daarvoor methoden als <code>get_tegoed()</code> en <code>set_tegoed()</code>. Python biedt een elegantere manier: de <code>@property</code> decorator.</p>
+<div class="language-python highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-12-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-12-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-12-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-12-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-12-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-12-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-12-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-12-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-12-10">10</a></span>
+<span class="normal"><a href="#__codelineno-12-11">11</a></span>
+<span class="normal"><a href="#__codelineno-12-12">12</a></span>
+<span class="normal"><a href="#__codelineno-12-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="nd">@property</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2"></a><span class="k">def</span><span class="w"> </span><span class="nf">tegoed</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="w">    </span><span class="sd">"""Getter voor tegoed"""</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4"></a>    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__tegoed</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5"></a>
+<a id="__codelineno-12-6" name="__codelineno-12-6"></a><span class="nd">@tegoed</span><span class="o">.</span><span class="n">setter</span>
+<a id="__codelineno-12-7" name="__codelineno-12-7"></a><span class="k">def</span><span class="w"> </span><span class="nf">tegoed</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">waarde</span><span class="p">):</span>
+<a id="__codelineno-12-8" name="__codelineno-12-8"></a><span class="w">    </span><span class="sd">"""Setter voor tegoed"""</span>
+<a id="__codelineno-12-9" name="__codelineno-12-9"></a>    <span class="k">if</span> <span class="n">waarde</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
+<a id="__codelineno-12-10" name="__codelineno-12-10"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">__tegoed</span> <span class="o">=</span> <span class="n">waarde</span>
+<a id="__codelineno-12-11" name="__codelineno-12-11"></a>    <span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-12-12" name="__codelineno-12-12"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">"Tegoed kan geen negatieve waarde krijgen"</span><span class="p">)</span>
+<a id="__codelineno-12-13" name="__codelineno-12-13"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">__tegoed</span> <span class="o">=</span> <span class="mi">0</span>
+</code></pre></div></td></tr></tbody></table></div>
+<p>Met de <code>@property</code> decorator kunnen we het tegoed gebruiken alsof het een gewoon attribuut is, maar achter de schermen worden wel de getter en setter aangeroepen — inclusief de validatie in de setter:</p>
+<div class="language-python highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-13-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-13-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-13-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-13-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-13-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-13-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-13-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-13-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-13-10">10</a></span>
+<span class="normal"><a href="#__codelineno-13-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="n">joyce</span> <span class="o">=</span> <span class="n">Cursist</span><span class="p">(</span><span class="s2">"Joyce"</span><span class="p">,</span> <span class="s2">"joyce@email.nl"</span><span class="p">,</span> <span class="mf">100.0</span><span class="p">)</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2"></a>
+<a id="__codelineno-13-3" name="__codelineno-13-3"></a><span class="c1"># Gebruik als gewoon attribuut (maar de getter wordt aangeroepen)</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Tegoed: €</span><span class="si">{</span><span class="n">joyce</span><span class="o">.</span><span class="n">tegoed</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5"></a>
+<a id="__codelineno-13-6" name="__codelineno-13-6"></a><span class="c1"># De setter wordt automatisch aangeroepen</span>
+<a id="__codelineno-13-7" name="__codelineno-13-7"></a><span class="n">joyce</span><span class="o">.</span><span class="n">tegoed</span> <span class="o">=</span> <span class="mf">150.0</span>
+<a id="__codelineno-13-8" name="__codelineno-13-8"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Nieuw tegoed: €</span><span class="si">{</span><span class="n">joyce</span><span class="o">.</span><span class="n">tegoed</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<a id="__codelineno-13-9" name="__codelineno-13-9"></a>
+<a id="__codelineno-13-10" name="__codelineno-13-10"></a><span class="c1"># Validatie werkt nog steeds</span>
+<a id="__codelineno-13-11" name="__codelineno-13-11"></a><span class="n">joyce</span><span class="o">.</span><span class="n">tegoed</span> <span class="o">=</span> <span class="o">-</span><span class="mi">10</span>  <span class="c1"># Dit wordt afgewezen</span>
+</code></pre></div></td></tr></tbody></table></div>
+<p>Uitkomst:</p>
+<div class="language-console highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span>
+<span class="normal"><a href="#__codelineno-14-2">2</a></span>
+<span class="normal"><a href="#__codelineno-14-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="go">Tegoed: €100.00</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2"></a><span class="go">Nieuw tegoed: €150.00</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3"></a><span class="go">Tegoed kan geen negatieve waarde krijgen</span>
+</code></pre></div></td></tr></tbody></table></div>
+<p>Je gebruikt dus <code>joyce.tegoed</code> in plaats van <code>joyce.get_tegoed()</code>, maar de validatie gebeurt nog steeds. Een property zonder setter is ook mogelijk; het attribuut is dan van buitenaf <em>read-only</em>:</p>
+<div class="language-python highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1">1</a></span>
+<span class="normal"><a href="#__codelineno-15-2">2</a></span>
+<span class="normal"><a href="#__codelineno-15-3">3</a></span>
+<span class="normal"><a href="#__codelineno-15-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="nd">@property</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2"></a><span class="k">def</span><span class="w"> </span><span class="nf">volledige_naam</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3"></a><span class="w">    </span><span class="sd">"""Read-only property"""</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4"></a>    <span class="k">return</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_naam</span><span class="si">}</span><span class="s2"> (</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_email</span><span class="si">}</span><span class="s2">)"</span>
+</code></pre></div></td></tr></tbody></table></div>
 <h2 id="waarom-inkapseling">Waarom inkapseling?<a class="headerlink" href="#waarom-inkapseling" title="Permanent link">¶</a></h2>
 <p>Inkapseling heeft verschillende voordelen:</p>
 <ol>
-<li><strong>Controle</strong>: Je kunt validatie toevoegen (zoals in <code>verkoop()</code> waar we checken of er genoeg voorraad is)</li>
+<li><strong>Controle</strong>: Je kunt validatie toevoegen (zoals in <code>betaal_les()</code> waar we checken of het tegoed toereikend is)</li>
 <li><strong>Flexibiliteit</strong>: Je kunt later de interne implementatie aanpassen zonder de interface te wijzigen</li>
 <li><strong>Beveiliging</strong>: Je voorkomt dat gebruikers per ongeluk of opzettelijk ongeldige waarden instellen</li>
 </ol>
-<p>In het volgende deel gaan we kijken naar getters en setters, en hoe we de <code>@property</code> decorator kunnen gebruiken voor elegantere toegang tot private attributen.</p>
 <h2 id="samenvatting">Samenvatting<a class="headerlink" href="#samenvatting" title="Permanent link">¶</a></h2>
 <p>In dit deel hebben we geleerd over:</p>
 <ul>
 <li>Inkapseling als OOP-principe</li>
 <li>Het verschil tussen <code>_</code> (protected) en <code>__</code> (private) attributen</li>
-<li>Het gebruik van <code>@staticmethod</code> voor klassemethoden</li>
+<li>Het gebruik van <code>@staticmethod</code> voor functies die bij de klasse horen</li>
 <li>Het bijhouden van een geschiedenis met tijdstempels</li>
-<li>Het valideren van input in methoden</li>
+<li>Getters en setters met de <code>@property</code> decorator, inclusief validatie</li>
 </ul>
-<p>In het volgende deel gaan we kijken naar meerdere klassen die met elkaar samenwerken.</p>
+<p>In het volgende deel gaan we kijken naar overerving: klassen die eigenschappen van andere klassen overnemen.</p>
 <p>Maak nu <a href="oefeningen/oop-oefening1.html">oefening nummer 1</a>.</p>
 
 
